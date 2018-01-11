@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETH.PayrollBLL", "ETH.Payro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETH.DAL", "ETH.DAL\ETH.DAL\ETH.DAL.csproj", "{6579F699-CB63-4BEB-B8DB-4EC9C7E8C698}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETH.Controllers", "ETH.Controllers\ETH.Controllers.csproj", "{A3D92456-B0E9-47D8-848A-1F03C3E43AB6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{6579F699-CB63-4BEB-B8DB-4EC9C7E8C698}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6579F699-CB63-4BEB-B8DB-4EC9C7E8C698}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6579F699-CB63-4BEB-B8DB-4EC9C7E8C698}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3D92456-B0E9-47D8-848A-1F03C3E43AB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3D92456-B0E9-47D8-848A-1F03C3E43AB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3D92456-B0E9-47D8-848A-1F03C3E43AB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3D92456-B0E9-47D8-848A-1F03C3E43AB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
