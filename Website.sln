@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Website", "Website\Website\Website.csproj", "{09682908-B14C-41C3-9AA4-75E65970DED9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETH.PayrollBLL", "ETH.PayrollBLL\ETH.PayrollBLL\ETH.PayrollBLL.csproj", "{C2585466-238A-40F1-B859-5A369092C5EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETH.DAL", "ETH.DAL\ETH.DAL\ETH.DAL.csproj", "{6579F699-CB63-4BEB-B8DB-4EC9C7E8C698}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09682908-B14C-41C3-9AA4-75E65970DED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09682908-B14C-41C3-9AA4-75E65970DED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09682908-B14C-41C3-9AA4-75E65970DED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09682908-B14C-41C3-9AA4-75E65970DED9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2585466-238A-40F1-B859-5A369092C5EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2585466-238A-40F1-B859-5A369092C5EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2585466-238A-40F1-B859-5A369092C5EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2585466-238A-40F1-B859-5A369092C5EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6579F699-CB63-4BEB-B8DB-4EC9C7E8C698}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6579F699-CB63-4BEB-B8DB-4EC9C7E8C698}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6579F699-CB63-4BEB-B8DB-4EC9C7E8C698}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6579F699-CB63-4BEB-B8DB-4EC9C7E8C698}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
