@@ -1,0 +1,7 @@
+D:\GIT-CLONES\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\bin\Debug\ETH.PayrollBLL.dll
+D:\GIT-CLONES\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\bin\Debug\ETH.PayrollBLL.pdb
+D:\GIT-CLONES\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\bin\Debug\ETH.DAL.dll
+D:\GIT-CLONES\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\bin\Debug\ETH.DAL.pdb
+D:\GIT-CLONES\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\obj\Debug\ETH.PayrollBLL.csprojResolveAssemblyReference.cache
+D:\GIT-CLONES\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\obj\Debug\ETH.PayrollBLL.dll
+D:\GIT-CLONES\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\obj\Debug\ETH.PayrollBLL.pdb

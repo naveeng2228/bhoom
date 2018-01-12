@@ -16,7 +16,8 @@ namespace ETH.DAL
         /// <summary>  
         /// string server, string database, string login, string pass, int port  
         /// </summary>  
-        public static readonly string connectionString = "Data Source = (local); Initial Catalog = db; User Id: sa; Password = Admin@1234;";
+        //public static readonly string connectionString = "Data Source = (local); Initial Catalog = db; User Id: sa; Password = Admin@1234;";
+        public static readonly string connectionString = "Data Source = 10.10.60.71; Initial Catalog = so_erp; User Id: devadmin; Password = devadmin;";
 
         #region ExecuteNonQuery
 

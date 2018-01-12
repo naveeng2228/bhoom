@@ -6,8 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using ETH.DAL;
 using System.Data;
-using MySql.Data;
-using MySql.Data.MySqlClient;
 
 namespace ETH.PayrollBLL
 {
@@ -50,10 +48,10 @@ namespace ETH.PayrollBLL
                     }
                 case "1":
                     {
-                        DBController objDBCtrl = new DBController(DBController.DBTypes.MSSQL);
-                        List<MySqlParameter> parms = new List<MySqlParameter>();
-                        parms.Add(new MySqlParameter());
-                        dt = objDBCtrl.ExecuteDataTable<MySqlParameter>(Query, parms.ToArray());
+                        //DBController objDBCtrl = new DBController(DBController.DBTypes.MSSQL);
+                        //List<MySqlParameter> parms = new List<MySqlParameter>();
+                        //parms.Add(new MySqlParameter());
+                        //dt = objDBCtrl.ExecuteDataTable<MySqlParameter>(Query, parms.ToArray());
                         break;
                     }
                 case "2":
@@ -101,10 +99,10 @@ namespace ETH.PayrollBLL
                     }
                 case "1":
                     {
-                        DBController objDBCtrl = new DBController(DBController.DBTypes.MSSQL);
-                        List<MySqlParameter> parms = new List<MySqlParameter>();
-                        parms.Add(new MySqlParameter());
-                        objDBCtrl.ExecuteNonQuery<MySqlParameter>(Query, parms.ToArray());
+                        //DBController objDBCtrl = new DBController(DBController.DBTypes.MSSQL);
+                        //List<MySqlParameter> parms = new List<MySqlParameter>();
+                        //parms.Add(new MySqlParameter());
+                        //objDBCtrl.ExecuteNonQuery<MySqlParameter>(Query, parms.ToArray());
                         break;
                     }
                 case "2":

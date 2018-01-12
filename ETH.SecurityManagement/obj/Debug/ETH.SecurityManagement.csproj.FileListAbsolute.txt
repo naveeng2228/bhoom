@@ -1,0 +1,4 @@
+D:\GIT-CLONES\bhoom\ETH.SecurityManagement\bin\Debug\ETH.SecurityManagement.dll
+D:\GIT-CLONES\bhoom\ETH.SecurityManagement\bin\Debug\ETH.SecurityManagement.pdb
+D:\GIT-CLONES\bhoom\ETH.SecurityManagement\obj\Debug\ETH.SecurityManagement.dll
+D:\GIT-CLONES\bhoom\ETH.SecurityManagement\obj\Debug\ETH.SecurityManagement.pdb

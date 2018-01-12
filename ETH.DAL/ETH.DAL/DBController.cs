@@ -1,5 +1,5 @@
 ﻿using ETH.DAL;
-using MySql.Data.MySqlClient;
+//using MySql.Data.MySqlClient;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -38,7 +38,8 @@ namespace ETH.DAL
         {
             if (myDBType == DBTypes.MySQL)
             {
-                return MySQLHelper.ExecuteNonQuery(SQLString);
+                //return MySQLHelper.ExecuteNonQuery(SQLString);
+                return -1;
             }
             else if (myDBType == DBTypes.MSSQL)
             {
@@ -60,7 +61,8 @@ namespace ETH.DAL
         {
             if (myDBType == DBTypes.MySQL)
             {
-                return MySQLHelper.ExecuteNonQuery(SQLString, cmdParms as MySqlParameter[]);
+                //return MySQLHelper.ExecuteNonQuery(SQLString, cmdParms as MySqlParameter[]);
+                return -1;
             }
             else if (myDBType == DBTypes.MSSQL)
             {
@@ -85,7 +87,8 @@ namespace ETH.DAL
         {
             if (myDBType == DBTypes.MySQL)
             {
-                return MySQLHelper.ExecuteScalar(SQLString);
+                //return MySQLHelper.ExecuteScalar(SQLString);
+                return -1;
             }
             else if (myDBType == DBTypes.MSSQL)
             {
@@ -107,7 +110,8 @@ namespace ETH.DAL
         {
             if (myDBType == DBTypes.MySQL)
             {
-                return MySQLHelper.ExecuteScalar(SQLString, cmdParms as MySqlParameter[]);
+                //return MySQLHelper.ExecuteScalar(SQLString, cmdParms as MySqlParameter[]);
+                return -1;
             }
             else if (myDBType == DBTypes.MSSQL)
             {
@@ -131,7 +135,8 @@ namespace ETH.DAL
         {
             if (myDBType == DBTypes.MySQL)
             {
-                return MySQLHelper.ExecuteReader(SQLString);
+                //return MySQLHelper.ExecuteReader(SQLString);
+                return -1;
             }
             else if (myDBType == DBTypes.MSSQL)
             {
@@ -153,7 +158,8 @@ namespace ETH.DAL
         {
             if (myDBType == DBTypes.MySQL)
             {
-                return MySQLHelper.ExecuteReader(SQLString, cmdParms as MySqlParameter[]);
+                //return MySQLHelper.ExecuteReader(SQLString, cmdParms as MySqlParameter[]);
+                return -1;
             }
             else if (myDBType == DBTypes.MSSQL)
             {
@@ -177,7 +183,8 @@ namespace ETH.DAL
         {
             if (myDBType == DBTypes.MySQL)
             {
-                return MySQLHelper.ExecuteTransaction(cmds as MySqlCommand[]);
+                //return MySQLHelper.ExecuteTransaction(cmds as MySqlCommand[]);
+                return false;
             }
             else if (myDBType == DBTypes.MSSQL)
             {
@@ -202,7 +209,8 @@ namespace ETH.DAL
         {
             if (myDBType == DBTypes.MySQL)
             {
-                return MySQLHelper.ExecuteDataTable(SQLString);
+                //return MySQLHelper.ExecuteDataTable(SQLString);
+                return null;
             }
             else if (myDBType == DBTypes.MSSQL)
             {
@@ -224,7 +232,8 @@ namespace ETH.DAL
         {
             if (myDBType == DBTypes.MySQL)
             {
-                return MySQLHelper.ExecuteDataTable(SQLString, cmdParms as MySqlParameter[]);
+                //return MySQLHelper.ExecuteDataTable(SQLString, cmdParms as MySqlParameter[]);
+                return null;
             }
             else if (myDBType == DBTypes.MSSQL)
             {
@@ -247,7 +256,8 @@ namespace ETH.DAL
         {
             if (myDBType == DBTypes.MySQL)
             {
-                return MySQLHelper.ExecuteDataTable(cmdText, startResord, maxRecord);
+                //return MySQLHelper.ExecuteDataTable(cmdText, startResord, maxRecord);
+                return null;
             }
             else if (myDBType == DBTypes.MSSQL)
             {
@@ -278,7 +288,9 @@ namespace ETH.DAL
         {
             if (myDBType == DBTypes.MySQL)
             {
-                return MySQLHelper.getPager(out recordCount, selectList, tableName, whereStr, orderExpression, pageIdex, pageSize);
+                // return MySQLHelper.getPager(out recordCount, selectList, tableName, whereStr, orderExpression, pageIdex, pageSize);
+                recordCount = 0;
+                return null;
             }
             else if (myDBType == DBTypes.MSSQL)
             {

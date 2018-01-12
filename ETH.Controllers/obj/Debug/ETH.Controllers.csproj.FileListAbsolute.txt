@@ -1,0 +1,5 @@
+D:\GIT-CLONES\bhoom\ETH.Controllers\bin\Debug\ETH.Controllers.dll
+D:\GIT-CLONES\bhoom\ETH.Controllers\bin\Debug\ETH.Controllers.pdb
+D:\GIT-CLONES\bhoom\ETH.Controllers\obj\Debug\ETH.Controllers.csprojResolveAssemblyReference.cache
+D:\GIT-CLONES\bhoom\ETH.Controllers\obj\Debug\ETH.Controllers.dll
+D:\GIT-CLONES\bhoom\ETH.Controllers\obj\Debug\ETH.Controllers.pdb

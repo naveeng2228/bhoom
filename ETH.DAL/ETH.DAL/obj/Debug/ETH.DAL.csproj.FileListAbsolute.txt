@@ -1,1 +1,7 @@
 D:\Ethon\ETH.DAL\ETH.DAL\obj\Debug\ETH.DAL.csprojResolveAssemblyReference.cache
+D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\bin\Debug\ETH.DAL.dll.config
+D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\bin\Debug\ETH.DAL.dll
+D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\bin\Debug\ETH.DAL.pdb
+D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\obj\Debug\ETH.DAL.dll
+D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\obj\Debug\ETH.DAL.pdb
+D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\obj\Debug\ETH.DAL.csprojResolveAssemblyReference.cache
