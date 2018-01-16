@@ -26,6 +26,7 @@ namespace Website
             routes.MapPageRoute("Forgot-Page", "forgot", "~/Forgot.aspx");
             #endregion
 
+            routes.MapPageRoute("Dashboard", "dashboard", "~/dashboard.aspx");
 
         }
 

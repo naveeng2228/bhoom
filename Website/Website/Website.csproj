@@ -6598,6 +6598,7 @@
     <Content Include="Components\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.all.min.js" />
     <Content Include="Components\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.css" />
     <Content Include="Components\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.min.css" />
+    <Content Include="Components\plugins\encryption\aes.js" />
     <Content Include="Components\plugins\iCheck\all.css" />
     <Content Include="Components\plugins\iCheck\flat\aero%402x.png" />
     <Content Include="Components\plugins\iCheck\flat\aero.css" />
@@ -6734,6 +6735,7 @@
     <Content Include="Components\plugins\timepicker\bootstrap-timepicker.js" />
     <Content Include="Components\plugins\timepicker\bootstrap-timepicker.min.css" />
     <Content Include="Components\plugins\timepicker\bootstrap-timepicker.min.js" />
+    <Content Include="Dashboard.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="ETH500.aspx" />
     <Content Include="Global.asax" />
@@ -6741,6 +6743,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

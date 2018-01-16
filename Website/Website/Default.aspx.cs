@@ -17,10 +17,6 @@ namespace Website
             string DBTYpe = ConfigurationManager.AppSettings["DBType"].ToString();
             //Allowances objAllow = new Allowances(DBTYpe);
             Session["__DBTYpe__"] = DBTYpe;
-
-            LoginManagement objLogin = new LoginManagement();
-            objLogin.VerifyLogin("a", "b");
-
             Response.Redirect("~/login");
         }
     }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETH.BLL
+namespace ETH.BLL.Security
 {
     public class LoginHistory
     {

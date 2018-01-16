@@ -40,16 +40,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administration\Company.cs" />
     <Compile Include="Allowances.cs" />
+    <Compile Include="AppMasters\Country.cs" />
+    <Compile Include="AppMasters\Form.cs" />
+    <Compile Include="AppMasters\Module.cs" />
+    <Compile Include="AppMasters\State.cs" />
     <Compile Include="EmployeeSalary.cs" />
-    <Compile Include="Login.cs" />
+    <Compile Include="Security\Login.cs" />
+    <Compile Include="Misc\AESEncrytDecry.cs" />
     <Compile Include="Misc\CryptographyController.cs" />
+    <Compile Include="Misc\CustomInputs.cs" />
     <Compile Include="Misc\ExceptionHandler.cs" />
     <Compile Include="Misc\NetworkController.cs" />
     <Compile Include="Misc\OTPController.cs" />
     <Compile Include="Misc\SessionController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="Security\Permissions.cs" />
+    <Compile Include="Security\Role.cs" />
+    <Compile Include="Security\User.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\ETH.DAL\ETH.DAL\ETH.DAL.csproj">

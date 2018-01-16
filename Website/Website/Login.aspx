@@ -60,11 +60,13 @@
                     </div>
                     <!-- /.col -->
                     <div class="col-xs-4">
-                        <asp:Button ID="btnSubmit" runat="server" Text="Sign In" CssClass="btn btn-primary btn-block btn-flat" />
+                        <asp:Button ID="btnSubmit" runat="server" Text="Sign In"
+                            CssClass="btn btn-primary btn-block btn-flat" OnClientClick="return SubmitsEncry();"
+                            OnClick="btnSubmit_Click" />
                     </div>
                     <!-- /.col -->
                 </div>
-               <br>
+                <br>
             </div>
             <!-- /.login-box-body -->
         </div>
@@ -82,13 +84,45 @@
 <script src="<%=ResolveUrl("~") %>Components/dist/js/adminlte.min.js"></script>
 <!-- iCheck -->
 <script src="<%=ResolveUrl("~") %>Components/plugins/iCheck/icheck.min.js"></script>
+<!-- AES Encryption -->
+<script src="<%=ResolveUrl("~") %>Components/plugins/encryption/aes.js"></script>
+
 <script>
-    $(function () {
-        $('input').iCheck({
-            checkboxClass: 'icheckbox_square-blue',
-            radioClass: 'iradio_square-blue',
-            increaseArea: '20%' /* optional */
-        });
+
+    function SubmitsEncry() {
+
+        var txtpassword = document.getElementById("<%=txtPassword.ClientID %>").value.trim();
+
+        if (txtUserName == "") {
+            alert('Please enter UserName');
+            return false;
+        }
+        else if (txtpassword == "") {
+            alert('Please enter Password');
+            return false;
+        }
+        else {
+            var key = CryptoJS.enc.Utf8.parse('8080808080808080');
+            var iv = CryptoJS.enc.Utf8.parse('8080808080808080');
+
+            var encryptedpassword = CryptoJS.AES.encrypt(CryptoJS.enc.Utf8.parse(txtpassword), key,
+            {
+                keySize: 128 / 8,
+                iv: iv,
+                mode: CryptoJS.mode.CBC,
+                padding: CryptoJS.pad.Pkcs7
+            });
+
+            document.getElementById("<%=txtPassword.ClientID %>").value = encryptedpassword;
+        }
+}
+
+$(function () {
+    $('input').iCheck({
+        checkboxClass: 'icheckbox_square-blue',
+        radioClass: 'iradio_square-blue',
+        increaseArea: '20%' /* optional */
     });
+});
 </script>
 </html>

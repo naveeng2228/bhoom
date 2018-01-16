@@ -1,4 +1,4 @@
-﻿using ETH.BLL;
+﻿using ETH.BLL.Security;
 using ETH.BLL.Misc;
 using ETH.DAL;
 using System;
@@ -15,6 +15,12 @@ namespace ETH.SecurityManagement
     {
         private string _Username, _Password;
 
+        /// <summary>
+        /// This method will verify user login and returns user object
+        /// </summary>
+        /// <param name="Username"></param>
+        /// <param name="Password"></param>
+        /// <returns></returns>
         public LoginHistory VerifyLogin(string Username, string Password)
         {
             _Username = Username;
@@ -51,6 +57,11 @@ namespace ETH.SecurityManagement
             return null;
         }
 
+        /// <summary>
+        /// This method will insert a new login entry to LoginHistory Table
+        /// </summary>
+        /// <param name="objLogin"></param>
+        /// <returns></returns>
         private int InsertLoginHistory(LoginHistory objLogin)
         {
             int _result = 0;
@@ -85,6 +96,11 @@ namespace ETH.SecurityManagement
             return _result;
         }
 
+        /// <summary>
+        /// This method will get userid based on sessionid.
+        /// </summary>
+        /// <param name="sessionId"></param>
+        /// <returns></returns>
         public string GetUserIdBySession(string sessionId)
         {
             string UserId = string.Empty;

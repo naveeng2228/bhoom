@@ -7,18 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace Website
 {
-    public partial class Ethon : System.Web.UI.MasterPage
+    public partial class Dashboard : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(Session["__LoginHistory__"] != null)
-            {
 
-            }
-            else
-            {
-                //Response.Redirect("~/login");
-            }
         }
     }
 }
