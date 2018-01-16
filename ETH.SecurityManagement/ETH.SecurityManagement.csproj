@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,6 +42,17 @@
   <ItemGroup>
     <Compile Include="LoginManagement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrationController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ETH.DAL\ETH.DAL\ETH.DAL.csproj">
+      <Project>{6579F699-CB63-4BEB-B8DB-4EC9C7E8C698}</Project>
+      <Name>ETH.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ETH.PayrollBLL\ETH.PayrollBLL\ETH.BLL.csproj">
+      <Project>{C2585466-238A-40F1-B859-5A369092C5EB}</Project>
+      <Name>ETH.BLL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

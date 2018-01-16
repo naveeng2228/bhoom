@@ -6,16 +6,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace ETH.Controllers.Misc
+namespace ETH.BLL.Misc
 {
     public static class SessionController
     {
         public static string VerifyActiveSession(string UserId)
         {
             string ActiveSessionId = string.Empty;
-            if (HttpContext.Current.Session["__USER__"] != null)
+            if (HttpContext.Current.Session["__LoginHistory__"] != null)
             {
-                User
+                LoginHistory objLoginHistory = (LoginHistory)HttpContext.Current.Session["__LoginHistory__"];
+                if (objLoginHistory.UserId == UserId && objLoginHistory.hasActiveSession == true)
+                {
+                    ActiveSessionId = objLoginHistory.SessionId;
+                }
             }
             return ActiveSessionId;
         }

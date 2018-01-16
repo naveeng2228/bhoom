@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ETH.PayrollBLL
+namespace ETH.BLL
 {
     public class EmployeeSalary
     {

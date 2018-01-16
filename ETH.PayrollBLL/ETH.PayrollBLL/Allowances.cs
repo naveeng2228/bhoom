@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using ETH.DAL;
 using System.Data;
 
-namespace ETH.PayrollBLL
+namespace ETH.BLL
 {
     public class Allowances
     {

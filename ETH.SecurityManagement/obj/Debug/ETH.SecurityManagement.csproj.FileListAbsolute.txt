@@ -2,3 +2,8 @@ D:\GIT-CLONES\bhoom\ETH.SecurityManagement\bin\Debug\ETH.SecurityManagement.dll
 D:\GIT-CLONES\bhoom\ETH.SecurityManagement\bin\Debug\ETH.SecurityManagement.pdb
 D:\GIT-CLONES\bhoom\ETH.SecurityManagement\obj\Debug\ETH.SecurityManagement.dll
 D:\GIT-CLONES\bhoom\ETH.SecurityManagement\obj\Debug\ETH.SecurityManagement.pdb
+D:\GIT-CLONES\bhoom\ETH.SecurityManagement\obj\Debug\ETH.SecurityManagement.csprojResolveAssemblyReference.cache
+D:\GIT-CLONES\bhoom\ETH.SecurityManagement\bin\Debug\ETH.BLL.dll
+D:\GIT-CLONES\bhoom\ETH.SecurityManagement\bin\Debug\ETH.DAL.dll
+D:\GIT-CLONES\bhoom\ETH.SecurityManagement\bin\Debug\ETH.BLL.pdb
+D:\GIT-CLONES\bhoom\ETH.SecurityManagement\bin\Debug\ETH.DAL.pdb

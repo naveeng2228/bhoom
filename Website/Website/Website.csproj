@@ -7276,9 +7276,13 @@
       <Project>{6579f699-cb63-4beb-b8db-4ec9c7e8c698}</Project>
       <Name>ETH.DAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\ETH.PayrollBLL\ETH.PayrollBLL\ETH.PayrollBLL.csproj">
+    <ProjectReference Include="..\..\ETH.PayrollBLL\ETH.PayrollBLL\ETH.BLL.csproj">
       <Project>{c2585466-238a-40f1-b859-5a369092c5eb}</Project>
-      <Name>ETH.PayrollBLL</Name>
+      <Name>ETH.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ETH.SecurityManagement\ETH.SecurityManagement.csproj">
+      <Project>{46E51F05-4566-4711-9F58-A432FE7AD0FE}</Project>
+      <Name>ETH.SecurityManagement</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

@@ -19,10 +19,14 @@ namespace Website
 
         private void RegisterRoutes(RouteCollection routes)
         {
+            #region Default Roots
             routes.MapPageRoute("Home-Page", "home", "~/Default.aspx");
             routes.MapPageRoute("Default-Page", "default", "~/Default.aspx");
             routes.MapPageRoute("Login-Page", "login", "~/Login.aspx");
             routes.MapPageRoute("Forgot-Page", "forgot", "~/Forgot.aspx");
+            #endregion
+
+
         }
 
         protected void Session_Start(object sender, EventArgs e)

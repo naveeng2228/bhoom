@@ -4,7 +4,6 @@ D:\GIT-CLONES\bhoom\Website\Website\bin\Website.dll
 D:\GIT-CLONES\bhoom\Website\Website\bin\Website.pdb
 D:\GIT-CLONES\bhoom\Website\Website\bin\Antlr3.Runtime.dll
 D:\GIT-CLONES\bhoom\Website\Website\bin\ETH.DAL.dll
-D:\GIT-CLONES\bhoom\Website\Website\bin\ETH.PayrollBLL.dll
 D:\GIT-CLONES\bhoom\Website\Website\bin\Microsoft.AI.Agent.Intercept.dll
 D:\GIT-CLONES\bhoom\Website\Website\bin\Microsoft.AI.DependencyCollector.dll
 D:\GIT-CLONES\bhoom\Website\Website\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -24,7 +23,6 @@ D:\GIT-CLONES\bhoom\Website\Website\bin\System.Threading.Tasks.dll
 D:\GIT-CLONES\bhoom\Website\Website\bin\System.Web.Optimization.dll
 D:\GIT-CLONES\bhoom\Website\Website\bin\WebGrease.dll
 D:\GIT-CLONES\bhoom\Website\Website\bin\ETH.DAL.pdb
-D:\GIT-CLONES\bhoom\Website\Website\bin\ETH.PayrollBLL.pdb
 D:\GIT-CLONES\bhoom\Website\Website\bin\Antlr3.Runtime.pdb
 D:\GIT-CLONES\bhoom\Website\Website\bin\Microsoft.AI.DependencyCollector.xml
 D:\GIT-CLONES\bhoom\Website\Website\bin\Microsoft.AI.ServerTelemetryChannel.xml
@@ -44,3 +42,7 @@ D:\GIT-CLONES\bhoom\Website\Website\obj\Debug\Website.csproj.App.config
 D:\GIT-CLONES\bhoom\Website\Website\obj\Debug\Website.csprojResolveAssemblyReference.cache
 D:\GIT-CLONES\bhoom\Website\Website\obj\Debug\Website.dll
 D:\GIT-CLONES\bhoom\Website\Website\obj\Debug\Website.pdb
+D:\GIT-CLONES\bhoom\Website\Website\bin\ETH.BLL.dll
+D:\GIT-CLONES\bhoom\Website\Website\bin\ETH.BLL.pdb
+D:\GIT-CLONES\bhoom\Website\Website\bin\ETH.SecurityManagement.dll
+D:\GIT-CLONES\bhoom\Website\Website\bin\ETH.SecurityManagement.pdb

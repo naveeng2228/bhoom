@@ -4,8 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using ETH.PayrollBLL;
+using ETH.BLL;
 using System.Configuration;
+using ETH.SecurityManagement;
 
 namespace Website
 {
@@ -14,7 +15,13 @@ namespace Website
         protected void Page_Load(object sender, EventArgs e)
         {
             string DBTYpe = ConfigurationManager.AppSettings["DBType"].ToString();
-            Allowances objAllow = new Allowances(DBTYpe);
+            //Allowances objAllow = new Allowances(DBTYpe);
+            Session["__DBTYpe__"] = DBTYpe;
+
+            LoginManagement objLogin = new LoginManagement();
+            objLogin.VerifyLogin("a", "b");
+
+            Response.Redirect("~/login");
         }
     }
 }
