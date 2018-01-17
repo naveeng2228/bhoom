@@ -8,7 +8,7 @@ namespace ETH.BLL.Security
 {
     public class LoginHistory
     {
-        public string LoginId { get; set; }
+        public Int64 LoginId { get; set; }
         public string UserId { get; set; }
         public string UserName { get; set; }
         public string LastLoginDate { get; set; } // "dd/MM/yyyy"

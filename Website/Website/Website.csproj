@@ -7294,7 +7294,9 @@
       <Name>ETH.SecurityManagement</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Administration\" />
+  </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Components\bower_components\moment\moment.d.ts" />
   </ItemGroup>

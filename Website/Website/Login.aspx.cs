@@ -1,7 +1,9 @@
 ﻿using ETH.BLL;
+using ETH.BLL.Security;
 using ETH.SecurityManagement;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -13,16 +15,35 @@ namespace Website
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["__Config__"] == null)
+            {
+                string DBTYpe = ConfigurationManager.AppSettings["DBType"].ToString();
+                string CustomerID = ConfigurationManager.AppSettings["CustomerID"].ToString();
+                string AppDateFormat = ConfigurationManager.AppSettings["AppDateFormat"].ToString();
+                string AppTimeFormat = ConfigurationManager.AppSettings["AppTimeFormat"].ToString();
 
+                Config ObjConfig = new Config();
+                ObjConfig.DBType = DBTYpe;
+                ObjConfig.CustomerID = CustomerID;
+                ObjConfig.AppDateFormat = AppDateFormat;
+                ObjConfig.AppTimeFormat = AppTimeFormat;
+
+                //Allowances objAllow = new Allowances(DBTYpe);
+                Session["__Config__"] = ObjConfig;                
+            }
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
+            if(string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtPassword.Text))
+            {
+                return;
+            }
+
             LoginManagement ObjLogin = new LoginManagement();
             LoginHistory ObjLoginHistory = ObjLogin.VerifyLogin(txtEmail.Text, txtPassword.Text);
             if (ObjLoginHistory != null)
             {
-                Session["__LoginHistory__"] = ObjLoginHistory;
                 Response.Redirect("~/Dashboard");
             }
         }

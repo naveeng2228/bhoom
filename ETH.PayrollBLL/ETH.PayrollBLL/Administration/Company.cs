@@ -55,9 +55,9 @@ namespace ETH.BLL.Administration
         {
             int _result = 0;
             Company objCompany = this;
-            string DBTYpe = HttpContext.Current.Session["__DBTYpe__"].ToString();
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
             string Query = "SP_Company";
-            switch (DBTYpe)
+            switch (ObjConfig.DBType)
             {
                 // MS-SQL
                 case "0":
@@ -109,9 +109,9 @@ namespace ETH.BLL.Administration
         {
             int _result = 0;
             Company objCompany = this;
-            string DBTYpe = HttpContext.Current.Session["__DBTYpe__"].ToString();
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
             string Query = "SP_Company";
-            switch (DBTYpe)
+            switch (ObjConfig.DBType)
             {
                 // MS-SQL
                 case "0":
@@ -160,9 +160,9 @@ namespace ETH.BLL.Administration
         {
             int _result = 0;
             Company objCompany = this;
-            string DBTYpe = HttpContext.Current.Session["__DBTYpe__"].ToString();
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
             string Query = "SP_Company";
-            switch (DBTYpe)
+            switch (ObjConfig.DBType)
             {
                 // MS-SQL
                 case "0":
@@ -191,9 +191,9 @@ namespace ETH.BLL.Administration
         {
             int _result = 0;
             Company objCompany = this;
-            string DBTYpe = HttpContext.Current.Session["__DBTYpe__"].ToString();
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
             string Query = "SP_Company";
-            switch (DBTYpe)
+            switch (ObjConfig.DBType)
             {
                 // MS-SQL
                 case "0":
@@ -224,9 +224,9 @@ namespace ETH.BLL.Administration
         private DataTable Select(Status status, DB_Flags flag, bool ShowAll = false)
         {
             DataTable _result = null;
-            string DBTYpe = HttpContext.Current.Session["__DBTYpe__"].ToString();
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
             string Query = "SP_Company";
-            switch (DBTYpe)
+            switch (ObjConfig.DBType)
             {
                 // MS-SQL
                 case "0":

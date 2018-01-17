@@ -14,9 +14,22 @@ namespace Website
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string DBTYpe = ConfigurationManager.AppSettings["DBType"].ToString();
-            //Allowances objAllow = new Allowances(DBTYpe);
-            Session["__DBTYpe__"] = DBTYpe;
+            if (Session["__Config__"] == null)
+            {
+                string DBTYpe = ConfigurationManager.AppSettings["DBType"].ToString();
+                string CustomerID = ConfigurationManager.AppSettings["CustomerID"].ToString();
+                string AppDateFormat = ConfigurationManager.AppSettings["AppDateFormat"].ToString();
+                string AppTimeFormat = ConfigurationManager.AppSettings["AppTimeFormat"].ToString();
+
+                Config ObjConfig = new Config();
+                ObjConfig.DBType = DBTYpe;
+                ObjConfig.CustomerID = CustomerID;
+                ObjConfig.AppDateFormat = AppDateFormat;
+                ObjConfig.AppTimeFormat = AppTimeFormat;
+
+                //Allowances objAllow = new Allowances(DBTYpe);
+                Session["__Config__"] = ObjConfig;
+            }
             Response.Redirect("~/login");
         }
     }

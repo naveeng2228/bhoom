@@ -40,13 +40,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administration\AllowanceGroup.cs" />
     <Compile Include="Administration\Company.cs" />
+    <Compile Include="Administration\Department.cs" />
+    <Compile Include="Administration\Designition.cs" />
+    <Compile Include="Administration\Division.cs" />
+    <Compile Include="Administration\Holiday.cs" />
+    <Compile Include="Administration\HolidayGroup.cs" />
+    <Compile Include="Administration\LeaveGroup.cs" />
+    <Compile Include="Administration\LeaveType.cs" />
+    <Compile Include="Administration\Shift.cs" />
+    <Compile Include="Administration\ShiftGroup.cs" />
+    <Compile Include="Administration\Workarea.cs" />
     <Compile Include="Allowances.cs" />
     <Compile Include="AppMasters\Country.cs" />
-    <Compile Include="AppMasters\Form.cs" />
+    <Compile Include="AppMasters\Form.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="AppMasters\Module.cs" />
     <Compile Include="AppMasters\State.cs" />
+    <Compile Include="Config.cs" />
     <Compile Include="EmployeeSalary.cs" />
+    <Compile Include="LeaveManagement\Leave.cs" />
     <Compile Include="Security\Login.cs" />
     <Compile Include="Misc\AESEncrytDecry.cs" />
     <Compile Include="Misc\CryptographyController.cs" />

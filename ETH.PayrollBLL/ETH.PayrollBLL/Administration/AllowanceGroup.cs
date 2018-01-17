@@ -8,17 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Web;
 
-namespace ETH.BLL.Security
+namespace ETH.BLL.Administration
 {
-    public class Role
+    public class AllowanceGroup
     {
-        public int RoleID { get; set; }
-        public string RoleName { get; set; }
-        public string Description { get; set; }
-
-        //CompanyDetails
-        public int CompanyID { get; set; }
-        public int WorkAreaID { get; set; }
+        public string AllowanceGroupID { get; set; }
+        public string AllowanceGroupName { get; set; }
 
         //Auto Input Fields
         public string CreatedDate { get; set; }
@@ -32,15 +27,15 @@ namespace ETH.BLL.Security
         public Status Status { get; set; }
 
         /// <summary>
-        /// Insert a new Role to db (Master)
+        /// Insert a new AllowanceGroup to db (Master)
         /// </summary>
         /// <returns></returns>
         public int Insert()
         {
             int _result = 0;
-            Role objRole = this;
+            AllowanceGroup objAllowanceGroup = this;
             Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
-            string Query = "SP_Roles";
+            string Query = "SP_AllowanceGroup";
             switch (ObjConfig.DBType)
             {
                 // MS-SQL
@@ -49,18 +44,15 @@ namespace ETH.BLL.Security
                         DBController ObjDB = new DBController(DBController.DBTypes.MSSQL);
                         List<SqlParameter> parms = new List<SqlParameter>();
 
-                        parms.Add(new SqlParameter("RoleID", objRole.RoleID));
-                        parms.Add(new SqlParameter("RoleName", objRole.RoleName));
-                        parms.Add(new SqlParameter("Description", objRole.Description));
-                        parms.Add(new SqlParameter("CompanyID", objRole.CompanyID));
-                        parms.Add(new SqlParameter("WorkAreaID", objRole.WorkAreaID));
-                        parms.Add(new SqlParameter("CreatedDate", objRole.CreatedDate));
-                        parms.Add(new SqlParameter("CreatedTime", objRole.CreatedTime));
-                        parms.Add(new SqlParameter("CreatedBy", objRole.CreatedBy));
-                        parms.Add(new SqlParameter("ModifiedDate", objRole.ModifiedDate));
-                        parms.Add(new SqlParameter("ModifiedTime", objRole.ModifiedTime));
-                        parms.Add(new SqlParameter("ModifiedBy", objRole.ModifiedBy));
-                        parms.Add(new SqlParameter("Status", objRole.Status));
+                        parms.Add(new SqlParameter("AllowanceGroupID", objAllowanceGroup.AllowanceGroupID));
+                        parms.Add(new SqlParameter("AllowanceGroupName", objAllowanceGroup.AllowanceGroupName));
+                        parms.Add(new SqlParameter("CreatedDate", objAllowanceGroup.CreatedDate));
+                        parms.Add(new SqlParameter("CreatedTime", objAllowanceGroup.CreatedTime));
+                        parms.Add(new SqlParameter("CreatedBy", objAllowanceGroup.CreatedBy));
+                        parms.Add(new SqlParameter("ModifiedDate", objAllowanceGroup.ModifiedDate));
+                        parms.Add(new SqlParameter("ModifiedTime", objAllowanceGroup.ModifiedTime));
+                        parms.Add(new SqlParameter("ModifiedBy", objAllowanceGroup.ModifiedBy));
+                        parms.Add(new SqlParameter("Status", objAllowanceGroup.Status));
 
                         parms.Add(new SqlParameter("Flag", DB_Flags.Insert));
 
@@ -72,15 +64,15 @@ namespace ETH.BLL.Security
         }
 
         /// <summary>
-        /// Update a Role in db (Master)
+        /// Update a AllowanceGroup in db (Master)
         /// </summary>
         /// <returns></returns>
         public int Update()
         {
             int _result = 0;
-            Role objRole = this;
+            AllowanceGroup objAllowanceGroup = this;
             Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
-            string Query = "SP_Roles";
+            string Query = "SP_AllowanceGroup";
             switch (ObjConfig.DBType)
             {
                 // MS-SQL
@@ -89,18 +81,12 @@ namespace ETH.BLL.Security
                         DBController ObjDB = new DBController(DBController.DBTypes.MSSQL);
                         List<SqlParameter> parms = new List<SqlParameter>();
 
-                        parms.Add(new SqlParameter("RoleID", objRole.RoleID));
-                        parms.Add(new SqlParameter("RoleName", objRole.RoleName));
-                        parms.Add(new SqlParameter("Description", objRole.Description));
-                        parms.Add(new SqlParameter("CompanyID", objRole.CompanyID));
-                        parms.Add(new SqlParameter("WorkAreaID", objRole.WorkAreaID));
-                        parms.Add(new SqlParameter("CreatedDate", objRole.CreatedDate));
-                        parms.Add(new SqlParameter("CreatedTime", objRole.CreatedTime));
-                        parms.Add(new SqlParameter("CreatedBy", objRole.CreatedBy));
-                        parms.Add(new SqlParameter("ModifiedDate", objRole.ModifiedDate));
-                        parms.Add(new SqlParameter("ModifiedTime", objRole.ModifiedTime));
-                        parms.Add(new SqlParameter("ModifiedBy", objRole.ModifiedBy));
-                        parms.Add(new SqlParameter("Status", objRole.Status));
+                        parms.Add(new SqlParameter("AllowanceGroupID", objAllowanceGroup.AllowanceGroupID));
+                        parms.Add(new SqlParameter("AllowanceGroupName", objAllowanceGroup.AllowanceGroupName));
+                        parms.Add(new SqlParameter("ModifiedDate", objAllowanceGroup.ModifiedDate));
+                        parms.Add(new SqlParameter("ModifiedTime", objAllowanceGroup.ModifiedTime));
+                        parms.Add(new SqlParameter("ModifiedBy", objAllowanceGroup.ModifiedBy));
+                        parms.Add(new SqlParameter("Status", objAllowanceGroup.Status));
 
                         parms.Add(new SqlParameter("Flag", DB_Flags.Update));
 
@@ -112,15 +98,15 @@ namespace ETH.BLL.Security
         }
 
         /// <summary>
-        /// Partial delete a Role in db (Master)
+        /// Partial delete a AllowanceGroup in db (Master)
         /// </summary>
         /// <returns></returns>
         public int PartialDelete()
         {
             int _result = 0;
-            Role objRole = this;
+            AllowanceGroup objAllowanceGroup = this;
             Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
-            string Query = "SP_Roles";
+            string Query = "SP_AllowanceGroup";
             switch (ObjConfig.DBType)
             {
                 // MS-SQL
@@ -129,9 +115,7 @@ namespace ETH.BLL.Security
                         DBController ObjDB = new DBController(DBController.DBTypes.MSSQL);
                         List<SqlParameter> parms = new List<SqlParameter>();
 
-                        parms.Add(new SqlParameter("RoleID", objRole.RoleID));
-                        parms.Add(new SqlParameter("CompanyID", objRole.CompanyID));
-                        parms.Add(new SqlParameter("WorkAreaID", objRole.WorkAreaID));
+                        parms.Add(new SqlParameter("AllowanceGroupID", objAllowanceGroup.AllowanceGroupID));
                         parms.Add(new SqlParameter("Status", Status.PartiallyDeleted));
 
                         parms.Add(new SqlParameter("Flag", DB_Flags.PartialDelete));
@@ -144,15 +128,15 @@ namespace ETH.BLL.Security
         }
 
         /// <summary>
-        /// Delete a Role in db (Master)
+        /// Delete a AllowanceGroup in db (Master)
         /// </summary>
         /// <returns></returns>
         public int Delete()
         {
             int _result = 0;
-            Role objRole = this;
+            AllowanceGroup objAllowanceGroup = this;
             Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
-            string Query = "SP_Roles";
+            string Query = "SP_AllowanceGroup";
             switch (ObjConfig.DBType)
             {
                 // MS-SQL
@@ -161,9 +145,7 @@ namespace ETH.BLL.Security
                         DBController ObjDB = new DBController(DBController.DBTypes.MSSQL);
                         List<SqlParameter> parms = new List<SqlParameter>();
 
-                        parms.Add(new SqlParameter("RoleID", objRole.RoleID));
-                        parms.Add(new SqlParameter("CompanyID", objRole.CompanyID));
-                        parms.Add(new SqlParameter("WorkAreaID", objRole.WorkAreaID));
+                        parms.Add(new SqlParameter("AllowanceGroupID", objAllowanceGroup.AllowanceGroupID));
                         parms.Add(new SqlParameter("Status", Status.Deleted));
 
                         parms.Add(new SqlParameter("Flag", DB_Flags.FullDelete));
@@ -186,7 +168,7 @@ namespace ETH.BLL.Security
         {
             DataTable _result = null;
             Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
-            string Query = "SP_Roles";
+            string Query = "SP_AllowanceGroup";
             switch (ObjConfig.DBType)
             {
                 // MS-SQL
@@ -259,70 +241,6 @@ namespace ETH.BLL.Security
         {
             DataTable _result = null;
             _result = Select(Status.Active, DB_Flags.SelectActive, true);
-            return _result;
-        }
-
-        /// <summary>
-        /// Mapping roles to users
-        /// </summary>
-        /// <param name="UserID"></param>
-        /// <param name="RoleID"></param>
-        /// <returns></returns>
-        public int UserRoleAssignment(string UserID, int RoleID)
-        {
-            int _result = 0;
-            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
-            string Query = "SP_UserController";
-            switch (ObjConfig.DBType)
-            {
-                // MS-SQL
-                case "0":
-                    {
-                        DBController ObjDB = new DBController(DBController.DBTypes.MSSQL);
-                        List<SqlParameter> parms = new List<SqlParameter>();
-
-                        parms.Add(new SqlParameter("UserId", UserID));
-                        parms.Add(new SqlParameter("RoleId", RoleID));
-
-                        parms.Add(new SqlParameter("Flag", 9));
-
-                        _result = ObjDB.ExecuteNonQuery(Query, parms.ToArray());
-                        break;
-                    }
-            }
-            return _result;
-        }
-
-        public int ApplyFormWiseSecurity(List<Permissions> permissions)
-        {
-            int _result = 0;
-            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
-            string Query = "SP_UserController";
-            switch (ObjConfig.DBType)
-            {
-                // MS-SQL
-                case "0":
-                    {
-                        foreach (Permissions permission in permissions)
-                        {
-                            DBController ObjDB = new DBController(DBController.DBTypes.MSSQL);
-                            List<SqlParameter> parms = new List<SqlParameter>();
-
-                            parms.Add(new SqlParameter("ModuleID", permission.ModuleID));
-                            parms.Add(new SqlParameter("FormID", permission.FormID));
-                            parms.Add(new SqlParameter("UserID", permission.UserID));
-                            parms.Add(new SqlParameter("RoleId", permission.RoleID));
-                            parms.Add(new SqlParameter("CanView", permission.CanView));
-                            parms.Add(new SqlParameter("CanSave", permission.CanSave));
-                            parms.Add(new SqlParameter("CanDelete", permission.CanDelete));
-
-                            parms.Add(new SqlParameter("Flag", 10));
-
-                            _result = ObjDB.ExecuteNonQuery(Query, parms.ToArray());
-                        }
-                        break;
-                    }
-            }
             return _result;
         }
     }

@@ -11,7 +11,7 @@ using System.Web;
 
 namespace ETH.BLL.AppMasters
 {
-    public class Form
+    public class Form : System.Web.UI.Page
     {
         public string ModuleID { get; set; }
         public string FormID { get; set; }
@@ -37,9 +37,9 @@ namespace ETH.BLL.AppMasters
         {
             int _result = 0;
             Form objForm = this;
-            string DBTYpe = HttpContext.Current.Session["__DBTYpe__"].ToString();
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
             string Query = "SP_Forms";
-            switch (DBTYpe)
+            switch (ObjConfig.DBType)
             {
                 // MS-SQL
                 case "0":
@@ -76,9 +76,9 @@ namespace ETH.BLL.AppMasters
         {
             int _result = 0;
             Form objForm = this;
-            string DBTYpe = HttpContext.Current.Session["__DBTYpe__"].ToString();
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
             string Query = "SP_Forms";
-            switch (DBTYpe)
+            switch (ObjConfig.DBType)
             {
                 // MS-SQL
                 case "0":
@@ -112,9 +112,9 @@ namespace ETH.BLL.AppMasters
         {
             int _result = 0;
             Form objForm = this;
-            string DBTYpe = HttpContext.Current.Session["__DBTYpe__"].ToString();
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
             string Query = "SP_Forms";
-            switch (DBTYpe)
+            switch (ObjConfig.DBType)
             {
                 // MS-SQL
                 case "0":
@@ -143,9 +143,9 @@ namespace ETH.BLL.AppMasters
         {
             int _result = 0;
             Form objForm = this;
-            string DBTYpe = HttpContext.Current.Session["__DBTYpe__"].ToString();
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
             string Query = "SP_Forms";
-            switch (DBTYpe)
+            switch (ObjConfig.DBType)
             {
                 // MS-SQL
                 case "0":
@@ -176,9 +176,9 @@ namespace ETH.BLL.AppMasters
         private DataTable Select(Status status, DB_Flags flag, bool ShowAll = false)
         {
             DataTable _result = null;
-            string DBTYpe = HttpContext.Current.Session["__DBTYpe__"].ToString();
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
             string Query = "SP_Forms";
-            switch (DBTYpe)
+            switch (ObjConfig.DBType)
             {
                 // MS-SQL
                 case "0":

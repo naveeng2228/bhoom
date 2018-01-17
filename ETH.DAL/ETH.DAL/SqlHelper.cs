@@ -17,7 +17,7 @@ namespace ETH.DAL
         /// string server, string database, string login, string pass, int port  
         /// </summary>  
         //public static readonly string connectionString = "Data Source = (local); Initial Catalog = db; User Id: sa; Password = Admin@1234;";
-        public static readonly string connectionString = "Data Source = 10.10.60.71; Initial Catalog = so_erp; User Id: devadmin; Password = devadmin;";
+        public static readonly string connectionString = "Data Source = 10.10.60.71; Initial Catalog = so_erp; User Id= devadmin; Password = devadmin;";
 
         #region ExecuteNonQuery
 
@@ -363,6 +363,10 @@ namespace ETH.DAL
             if (trans != null)
                 cmd.Transaction = trans;
             cmd.CommandType = CommandType.Text;
+            if(cmdParms.Length > 0)
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+            }
             if (cmdParms != null)
             {
                 foreach (SqlParameter parameter in cmdParms)

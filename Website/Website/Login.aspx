@@ -60,9 +60,8 @@
                     </div>
                     <!-- /.col -->
                     <div class="col-xs-4">
-                        <asp:Button ID="btnSubmit" runat="server" Text="Sign In"
-                            CssClass="btn btn-primary btn-block btn-flat" OnClientClick="return SubmitsEncry();"
-                            OnClick="btnSubmit_Click" />
+                        <asp:Button ID="btnSubmit" runat="server" Text="Sign In" OnClientClick="return SubmitsEncry();"
+                            OnClick="btnSubmit_Click" CssClass="btn btn-primary btn-block btn-flat" />
                     </div>
                     <!-- /.col -->
                 </div>
@@ -90,7 +89,7 @@
 <script>
 
     function SubmitsEncry() {
-
+        var txtUserName = document.getElementById("<%=txtEmail.ClientID %>").value.trim();
         var txtpassword = document.getElementById("<%=txtPassword.ClientID %>").value.trim();
 
         if (txtUserName == "") {

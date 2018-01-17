@@ -35,9 +35,9 @@ namespace ETH.BLL.AppMasters
         {
             int _result = 0;
             Module objModule = this;
-            string DBTYpe = HttpContext.Current.Session["__DBTYpe__"].ToString();
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
             string Query = "SP_Modules";
-            switch (DBTYpe)
+            switch (ObjConfig.DBType)
             {
                 // MS-SQL
                 case "0":
@@ -73,9 +73,9 @@ namespace ETH.BLL.AppMasters
         {
             int _result = 0;
             Module objModule = this;
-            string DBTYpe = HttpContext.Current.Session["__DBTYpe__"].ToString();
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
             string Query = "SP_Modules";
-            switch (DBTYpe)
+            switch (ObjConfig.DBType)
             {
                 // MS-SQL
                 case "0":
@@ -108,9 +108,9 @@ namespace ETH.BLL.AppMasters
         {
             int _result = 0;
             Module objModule = this;
-            string DBTYpe = HttpContext.Current.Session["__DBTYpe__"].ToString();
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
             string Query = "SP_Modules";
-            switch (DBTYpe)
+            switch (ObjConfig.DBType)
             {
                 // MS-SQL
                 case "0":
@@ -138,9 +138,9 @@ namespace ETH.BLL.AppMasters
         {
             int _result = 0;
             Module objModule = this;
-            string DBTYpe = HttpContext.Current.Session["__DBTYpe__"].ToString();
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
             string Query = "SP_Modules";
-            switch (DBTYpe)
+            switch (ObjConfig.DBType)
             {
                 // MS-SQL
                 case "0":
@@ -170,9 +170,9 @@ namespace ETH.BLL.AppMasters
         private DataTable Select(Status status, DB_Flags flag, bool ShowAll = false)
         {
             DataTable _result = null;
-            string DBTYpe = HttpContext.Current.Session["__DBTYpe__"].ToString();
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
             string Query = "SP_Modules";
-            switch (DBTYpe)
+            switch (ObjConfig.DBType)
             {
                 // MS-SQL
                 case "0":

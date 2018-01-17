@@ -34,9 +34,9 @@ namespace ETH.BLL.AppMasters
         {
             int _result = 0;
             Country objCountry = this;
-            string DBTYpe = HttpContext.Current.Session["__DBTYpe__"].ToString();
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
             string Query = "SP_Countries";
-            switch (DBTYpe)
+            switch (ObjConfig.DBType)
             {
                 // MS-SQL
                 case "0":
@@ -71,9 +71,9 @@ namespace ETH.BLL.AppMasters
         {
             int _result = 0;
             Country objCountry = this;
-            string DBTYpe = HttpContext.Current.Session["__DBTYpe__"].ToString();
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
             string Query = "SP_Countries";
-            switch (DBTYpe)
+            switch (ObjConfig.DBType)
             {
                 // MS-SQL
                 case "0":
@@ -104,9 +104,9 @@ namespace ETH.BLL.AppMasters
         public int PartialDelete(string CountryID)
         {
             int _result = 0;
-            string DBTYpe = HttpContext.Current.Session["__DBTYpe__"].ToString();
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
             string Query = "SP_Countries";
-            switch (DBTYpe)
+            switch (ObjConfig.DBType)
             {
                 // MS-SQL
                 case "0":
@@ -134,9 +134,9 @@ namespace ETH.BLL.AppMasters
         {
             int _result = 0;
             Country objCountry = this;
-            string DBTYpe = HttpContext.Current.Session["__DBTYpe__"].ToString();
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
             string Query = "SP_Countries";
-            switch (DBTYpe)
+            switch (ObjConfig.DBType)
             {
                 // MS-SQL
                 case "0":
@@ -166,9 +166,9 @@ namespace ETH.BLL.AppMasters
         private DataTable Select(Status status, DB_Flags flag, bool ShowAll = false)
         {
             DataTable _result = null;
-            string DBTYpe = HttpContext.Current.Session["__DBTYpe__"].ToString();
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
             string Query = "SP_Countries";
-            switch (DBTYpe)
+            switch (ObjConfig.DBType)
             {
                 // MS-SQL
                 case "0":

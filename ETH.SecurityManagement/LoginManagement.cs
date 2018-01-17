@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Web;
+using ETH.BLL;
 
 namespace ETH.SecurityManagement
 {
@@ -26,6 +27,10 @@ namespace ETH.SecurityManagement
             _Username = Username;
             _Password = Password;
 
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
+            string CurrentDate = DateTime.Now.ToString(ObjConfig.AppDateFormat);
+            string CurrentTime = DateTime.Now.ToString(ObjConfig.AppTimeFormat);
+
             string UserId = VerifyUser();
             if (UserId != string.Empty)
             {
@@ -42,19 +47,69 @@ namespace ETH.SecurityManagement
                 objLogin.IPAddress = NetworkController.GetIPAddress();
                 objLogin.SessionId = ActiveSessionID == string.Empty ? SessionController.GenerateNewSessionId(UserId) : ActiveSessionID;
                 objLogin.hasActiveSession = ActiveSessionID == string.Empty ? false : true;
+                objLogin.LastLoginDate = CurrentDate;
+                objLogin.LastLoginTime = CurrentTime;
                 if (LastLoginDateInfo.Count > 0)
                 {
                     objLogin.LastLoginDate = LastLoginDateInfo.Where(x => x.Key == "Date").FirstOrDefault().Value;
                     objLogin.LastLoginTime = LastLoginDateInfo.Where(x => x.Key == "Time").FirstOrDefault().Value;
                 }
+                objLogin.CreatedDate = CurrentDate;
+                objLogin.CreatedTime = CurrentTime;
 
                 if (InsertLoginHistory(objLogin) > 0)
                 {
+                    DataTable dtUserInfo = GetUserByUserID(UserId);
+                    IList<User> users = dtUserInfo.AsEnumerable().Select(row => new User
+                    {
+                        //Age = row.Field<int>("Age"),
+                        CompanyID = CheckDBNull(row.Field<string>("CompanyID")),
+                        CountryId = row.Field<string>("CountryId"),
+                        CreatedBy = row.Field<string>("CreatedBy"),
+                        CreatedDate = row.Field<string>("CreatedDate"),
+                        //CreatedTime = row.Field<string>("CreatedTime"),
+                        //CustomerId = row.Field<string>("CustomerId"),
+                        DateOfBirth = row.Field<string>("DateOfBirth"),
+                        Email = row.Field<string>("Email"),
+                        FirstName = row.Field<string>("FirstName"),
+                        Gender = row.Field<Gender>("Gender"),
+                        LastName = row.Field<string>("LastName"),
+                        //MaritalStatus = row.Field<MaritalStatus>("MaritalStatus"),
+                        MiddleName = row.Field<string>("MiddleName"),
+                        Mobile = row.Field<string>("Mobile"),
+                        ModifiedBy = row.Field<string>("ModifiedBy"),
+                        ModifiedDate = row.Field<string>("ModifiedDate"),
+                        //ModifiedTime = row.Field<string>("ModifiedTime"),
+                        Password = row.Field<string>("Password"),
+                        PasswordAnswer1 = row.Field<string>("PasswordAnswer1"),
+                        PasswordAnswer2 = row.Field<string>("PasswordAnswer2"),
+                        PasswordQuestion1 = row.Field<string>("PasswordQuestion1"),
+                        PasswordQuestion2 = row.Field<string>("PasswordQuestion2"),
+                        PrimaryAddress = row.Field<string>("PrimaryAddress"),
+                        ProfilePicUrl = row.Field<string>("ProfilePicUrl"),
+                        StateId = row.Field<string>("StateId"),
+                        Status = row.Field<Status>("Status"),
+                        UniqueAccessPath = row.Field<string>("UniqueAccessPath"),
+                        UserId = CheckDBNull(row.Field<int>("Id")),
+                        UserName = row.Field<string>("UserName"),
+                        UserType = row.Field<UserType>("UserType"),
+                        WorkAreaID = CheckDBNull(row.Field<string>("WorkAreaID"))
+                    }).ToList();
+                    if (users.Count > 0)
+                    {
+                        ObjConfig.UserInfo = users[0];
+                        HttpContext.Current.Session["__Config__"] = ObjConfig;
+                    }
                     return objLogin;
                 }
 
             }
             return null;
+        }
+
+        private string CheckDBNull(Object Value)
+        {
+            return Value == DBNull.Value ? Value.ToString() : string.Empty;
         }
 
         /// <summary>
@@ -65,9 +120,9 @@ namespace ETH.SecurityManagement
         private int InsertLoginHistory(LoginHistory objLogin)
         {
             int _result = 0;
-            string DBTYpe = HttpContext.Current.Session["__DBTYpe__"].ToString();
-            string Query = "SP_UserController";
-            switch (DBTYpe)
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
+            string Query = "SP_LoginHistory";
+            switch (ObjConfig.DBType)
             {
                 // MS-SQL
                 case "0":
@@ -82,13 +137,13 @@ namespace ETH.SecurityManagement
                         parms.Add(new SqlParameter("LastLoginTime", objLogin.LastLoginTime));
                         parms.Add(new SqlParameter("IPAddress", objLogin.IPAddress));
                         parms.Add(new SqlParameter("SessionId", objLogin.SessionId));
-                        parms.Add(new SqlParameter("hasActiveSession", objLogin.hasActiveSession));
+                        parms.Add(new SqlParameter("hasActiveSession", objLogin.hasActiveSession.ToString().ToLower()));
                         parms.Add(new SqlParameter("AuthenticatedOTP", objLogin.AuthenticatedOTP));
                         parms.Add(new SqlParameter("CreatedDate", objLogin.CreatedDate));
                         parms.Add(new SqlParameter("CreatedTime", objLogin.CreatedTime));
 
                         // Flag: 3 refers to Insert record to LoginHistory Table
-                        parms.Add(new SqlParameter("Flag", 3));
+                        parms.Add(new SqlParameter("Flag", DB_Flags.Insert));
                         _result = ObjDB.ExecuteNonQuery(Query, parms.ToArray());
                         break;
                     }
@@ -104,9 +159,9 @@ namespace ETH.SecurityManagement
         public string GetUserIdBySession(string sessionId)
         {
             string UserId = string.Empty;
-            string DBTYpe = HttpContext.Current.Session["__DBTYpe__"].ToString();
-            string Query = "SP_UserController";
-            switch (DBTYpe)
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
+            string Query = "SP_LoginHistory";
+            switch (ObjConfig.DBType)
             {
                 // MS-SQL
                 case "0":
@@ -116,7 +171,7 @@ namespace ETH.SecurityManagement
 
                         parms.Add(new SqlParameter("sessionId", sessionId));
                         // Flag: 0 refers to VerifyUser
-                        parms.Add(new SqlParameter("Flag", 2));
+                        parms.Add(new SqlParameter("Flag", 10));
                         Object _result = ObjDB.ExecuteScalar(Query, parms.ToArray());
                         UserId = _result != DBNull.Value ? _result.ToString() : string.Empty;
                         break;
@@ -133,9 +188,9 @@ namespace ETH.SecurityManagement
         private List<KeyValuePair<string, string>> GetLastLoginInfo(string UserId)
         {
             List<KeyValuePair<string, string>> Info = new List<KeyValuePair<string, string>>();
-            string DBTYpe = HttpContext.Current.Session["__DBTYpe__"].ToString();
-            string Query = "SP_UserController";
-            switch (DBTYpe)
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
+            string Query = "SP_LoginHistory";
+            switch (ObjConfig.DBType)
             {
                 // MS-SQL
                 case "0":
@@ -145,11 +200,11 @@ namespace ETH.SecurityManagement
 
                         parms.Add(new SqlParameter("UserId", UserId));
                         // Flag: 0 refers to VerifyUser
-                        parms.Add(new SqlParameter("Flag", 1));
+                        parms.Add(new SqlParameter("Flag", 9));
                         DataTable _result = ObjDB.ExecuteDataTable(Query, parms.ToArray());
-                        if(_result != null)
+                        if (_result != null)
                         {
-                            if(_result.Rows.Count > 0)
+                            if (_result.Rows.Count > 0)
                             {
                                 DataRow _row = _result.Rows[0];
                                 if (_row["LastLoginDate"] != DBNull.Value)
@@ -177,9 +232,9 @@ namespace ETH.SecurityManagement
         private string VerifyUser()
         {
             string UserId = string.Empty;
-            string DBTYpe = HttpContext.Current.Session["__DBTYpe__"].ToString();
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
             string Query = "SP_UserController";
-            switch(DBTYpe)
+            switch (ObjConfig.DBType)
             {
                 // MS-SQL
                 case "0":
@@ -190,13 +245,41 @@ namespace ETH.SecurityManagement
                         parms.Add(new SqlParameter("username", _Username));
                         parms.Add(new SqlParameter("password", _Password));
                         // Flag: 0 refers to VerifyUser
-                        parms.Add(new SqlParameter("Flag", 0));
+                        parms.Add(new SqlParameter("Flag", 9));
                         Object _result = ObjDB.ExecuteScalar(Query, parms.ToArray());
                         UserId = _result != DBNull.Value ? _result.ToString() : string.Empty;
                         break;
                     }
             }
             return UserId;
+        }
+
+        /// <summary>
+        /// This method will get userid based on sessionid.
+        /// </summary>
+        /// <param name="sessionId"></param>
+        /// <returns></returns>
+        public DataTable GetUserByUserID(string UserId)
+        {
+            DataTable _result = null;
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
+            string Query = "SP_UserController";
+            switch (ObjConfig.DBType)
+            {
+                // MS-SQL
+                case "0":
+                    {
+                        DBController ObjDB = new DBController(DBController.DBTypes.MSSQL);
+                        List<SqlParameter> parms = new List<SqlParameter>();
+
+                        parms.Add(new SqlParameter("UserId", UserId));
+                        // Flag: 0 refers to VerifyUser
+                        parms.Add(new SqlParameter("Flag", 10));
+                        _result = ObjDB.ExecuteDataTable(Query, parms.ToArray());
+                        break;
+                    }
+            }
+            return _result;
         }
     }
 }
