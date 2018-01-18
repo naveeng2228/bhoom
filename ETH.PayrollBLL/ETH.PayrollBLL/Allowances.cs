@@ -6,15 +6,19 @@ using System.Text;
 using System.Threading.Tasks;
 using ETH.DAL;
 using System.Data;
+using ETH.BLL.Misc;
 
 namespace ETH.BLL
 {
     public class Allowances
     {
+        public string CompanyID { get; set; }
+        public string WorkareaID { get; set; }
+        public int AllowanceGroupID { get; set; }
         public int AllowanceID { get; set; }
         public string AllowanceName { get; set; }
-        public int Type { get; set; }
-        public float Value { get; set; }
+        public AllowanceTypes Type { get; set; }
+        public string Value { get; set; }
         public int BasedON { get; set; }
         public int Status { get; set; }
         public string CreatedBy { get; set; }
@@ -85,7 +89,7 @@ namespace ETH.BLL
         public int InsertAllowance()
         {
             Allowances objAll = this;
-            string Query = "";
+            string Query = "SP_Allowances";
             int returnValue = 0;
             switch (DBType)
             {

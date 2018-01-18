@@ -1,0 +1,327 @@
+TABLE NAME: TBL_MODULE, SP NAME: SP_Modules
+=============================================
+VARCHAR(20) ModuleID NOT NULL
+VARCHAR(35) ModuleName NOT NULL
+VARCHAR(300) ModuleUrl NOT NULL
+VARCHAR(20) CreatedDate NOT NULL
+VARCHAR(15) CreatedTime NOT NULL
+INT CreatedBy NOT NULL
+VARCHAR(20) ModifiedDate NULL
+VARCHAR(15) ModifiedTime NULL
+INT ModifiedBy NULL
+INT Status NOT NULL
+
+
+TABLE NAME: TBL_FORM, SP NAME: SP_Forms
+=============================================
+VARCHAR(20) ModuleID
+VARCHAR(20) FormID
+VARCHAR(35) FormName
+VARCHAR(300) FormUrl
+VARCHAR(20) CreatedDate NOT NULL
+VARCHAR(15) CreatedTime NOT NULL
+INT CreatedBy NOT NULL
+VARCHAR(20) ModifiedDate NULL
+VARCHAR(15) ModifiedTime NULL
+INT ModifiedBy NULL
+INT Status NOT NULL
+
+
+TABLE NAME: TBL_COUNTRY, SP NAME: SP_Countries
+=============================================
+VARCHAR(20) CountryID NOT NULL
+VARCHAR(35) CountryName NOT NULL
+VARCHAR(20) CreatedDate NOT NULL
+VARCHAR(15) CreatedTime NOT NULL
+INT CreatedBy NOT NULL
+VARCHAR(20) ModifiedDate NULL
+VARCHAR(15) ModifiedTime NULL
+INT ModifiedBy NULL
+INT Status NOT NULL
+
+
+TABLE NAME: TBL_STATES, SP NAME: SP_States
+=============================================
+VARCHAR(20) CountryID
+VARCHAR(20) StateID
+VARCHAR(35) StateName
+VARCHAR(20) CreatedDate NOT NULL
+VARCHAR(15) CreatedTime NOT NULL
+INT CreatedBy NOT NULL
+VARCHAR(20) ModifiedDate NULL
+VARCHAR(15) ModifiedTime NULL
+INT ModifiedBy NULL
+INT Status NOT NULL
+
+
+TABLE NAME: TBL_ROLES, SP NAME: SP_Roles, FLAG: 9
+==========================================================================
+VARCHAR(20) CompanyID (FK WITH TABLE: TBL_COMPANY, COLUMN: CompanyID) NOT NULL
+VARCHAR(20) WorkareaID (FK WITH TABLE: TBL_WORKAREA, COLUMN: WorkareaID) NOT NULL
+VARCHAR(20) RoleID PK NOT NULL
+VARCHAR(35) RoleName NOT NULL
+VARCHAR(300) Description NULL
+VARCHAR(20) CreatedDate NOT NULL
+VARCHAR(15) CreatedTime NOT NULL
+INT CreatedBy NOT NULL
+VARCHAR(20) ModifiedDate NULL
+VARCHAR(15) ModifiedTime NULL
+INT ModifiedBy NULL
+INT Status NOT NULL
+
+
+TABLE NAME: TBL_USERROLEASSIGNMENTS, SP NAME: SP_Roles, FLAG: 9
+==========================================================================
+INT RECORDID IDENTITY NOT NULL
+INT UserID (FK WITH TABLE: TBL_USERS, COLUMN: ID)
+VARCHAR(20) RoleID (FK WITH TABLE: TBL_ROLES, COLUMN: RoleID)
+
+
+TABLE NAME: TBL_FORMWISESECURITY, SP NAME: SP_Roles, FLAG: 10
+==========================================================================
+INT RECORDID IDENTITY NOT NULL
+VARCHAR(20) ModuleID NOT NULL (FK WITH TABLE: TBL_MODULE, COLUMN: ModuleID)
+VARCHAR(20) FormID NOT NULL (FK WITH TABLE: TBL_FORM, COLUMN: FormID)
+INT UserID (FK WITH TABLE: TBL_USERS, COLUMN: ID)
+VARCHAR(20) RoleID (FK WITH TABLE: TBL_ROLES, COLUMN: RoleID)
+
+
+TABLE NAME: TBL_CUSTOMERS, SP NAME: SP_Customers
+==========================================================================
+TAKE SIMILAR STRUCTURE FROM PREVIOUS DB
+AND ADD THE FOLLOWING FIELDS IF NOT EXISTS
+
+VARCHAR(20) CreatedDate NOT NULL
+VARCHAR(15) CreatedTime NOT NULL
+INT CreatedBy NOT NULL
+VARCHAR(20) ModifiedDate NULL
+VARCHAR(15) ModifiedTime NULL
+INT ModifiedBy NULL
+INT Status NOT NULL
+
+
+TABLE NAME: TBL_COMPANY, SP NAME: SP_Company
+==========================================================================
+VARCHAR(20) CustomerID (FK WITH TABLE: TBL_CUSTOMERS, COLUMN: CustomerID) NOT NULL
+VARCHAR(20) CompanyID PK NOT NULL
+VARCHAR(100) CompanyName NOT NULL
+VARCHAR(6) CompanyCode NOT NULL
+VARCHAR(300) Description NULL
+VARCHAR(6) YearOfEstablishment NOT NULL
+VARCHAR(300) CompanyLogo NOT NULL
+VARCHAR(50) CompanyEmail NOT NULL
+VARCHAR(300) PrimaryAddress NOT NULL
+VARCHAR(20) CountryID (FK WITH TABLE: TBL_COUNTRY, COLUMN: CountryID) NOT NULL
+VARCHAR(20) StateID (FK WITH TABLE: TBL_STATES, COLUMN: StateID) NOT NULL
+int Pincode NULL
+VARCHAR(50) Website NULL
+VARCHAR(20) PhoneNumber NOT NULL
+int Priority NOT NULL
+VARCHAR(20) CST NULL
+VARCHAR(20) TIN NULL
+VARCHAR(20) PAN NULL
+VARCHAR(20) TAN NULL
+VARCHAR(20) GST NULL
+VARCHAR(20) CreatedDate NOT NULL
+VARCHAR(15) CreatedTime NOT NULL
+INT CreatedBy NOT NULL
+VARCHAR(20) ModifiedDate NULL
+VARCHAR(15) ModifiedTime NULL
+INT ModifiedBy NULL
+INT Status NOT NULL
+
+
+TABLE NAME: TBL_ALLOWANCEGROUP, SP NAME: SP_AllowanceGroup
+==========================================================================
+VARCHAR(20) AllowanceGroupID NOT NULL
+VARCHAR(35) AllowanceGroupName NOT NULL
+VARCHAR(20) CreatedDate NOT NULL
+VARCHAR(15) CreatedTime NOT NULL
+INT CreatedBy NOT NULL
+VARCHAR(20) ModifiedDate NULL
+VARCHAR(15) ModifiedTime NULL
+INT ModifiedBy NULL
+INT Status NOT NULL
+
+
+TABLE NAME: TBL_HOLIDAYGROUP, SP NAME: SP_HolidayGroup
+==========================================================================
+VARCHAR(20) HolidayGroupID NOT NULL
+VARCHAR(35) HolidayGroupName NOT NULL
+VARCHAR(20) CreatedDate NOT NULL
+VARCHAR(15) CreatedTime NOT NULL
+INT CreatedBy NOT NULL
+VARCHAR(20) ModifiedDate NULL
+VARCHAR(15) ModifiedTime NULL
+INT ModifiedBy NULL
+INT Status NOT NULL
+
+
+TABLE NAME: TBL_SHIFTGROUP, SP NAME: SP_ShiftGroup
+==========================================================================
+VARCHAR(20) ShiftGroupID NOT NULL
+VARCHAR(35) ShiftGroupName NOT NULL
+VARCHAR(20) CreatedDate NOT NULL
+VARCHAR(15) CreatedTime NOT NULL
+INT CreatedBy NOT NULL
+VARCHAR(20) ModifiedDate NULL
+VARCHAR(15) ModifiedTime NULL
+INT ModifiedBy NULL
+INT Status NOT NULL
+
+
+TABLE NAME: TBL_LEAVEGROUP, SP NAME: SP_LeaveGroup
+==========================================================================
+VARCHAR(20) LeaveGroupID NOT NULL
+VARCHAR(35) LeaveGroupName NOT NULL
+VARCHAR(20) CreatedDate NOT NULL
+VARCHAR(15) CreatedTime NOT NULL
+INT CreatedBy NOT NULL
+VARCHAR(20) ModifiedDate NULL
+VARCHAR(15) ModifiedTime NULL
+INT ModifiedBy NULL
+INT Status NOT NULL
+
+
+TABLE NAME: TBL_WORKAREA, SP NAME: SP_Workarea
+==========================================================================
+VARCHAR(20) CustomerID (FK WITH TABLE: TBL_CUSTOMERS, COLUMN: CustomerID) NOT NULL
+VARCHAR(20) CompanyID (FK WITH TABLE: TBL_COMPANY, COLUMN: CompanyID) NOT NULL
+VARCHAR(20) WorkareaID PK NOT NULL
+VARCHAR(35) WorkareaName NOT NULL
+VARCHAR(6) WorkareaCode NOT NULL
+VARCHAR(6) YearOfEstablishment NOT NULL
+int Priority NOT NULL
+VARCHAR(300) PrimaryAddress NOT NULL
+VARCHAR(20) CountryID (FK WITH TABLE: TBL_COUNTRY, COLUMN: CountryID) NOT NULL
+VARCHAR(20) StateID (FK WITH TABLE: TBL_STATES, COLUMN: StateID) NOT NULL
+INT Pincode NULL
+VARCHAR(20) PhoneNumber NOT NULL
+VARCHAR(20) FaxNumber NULL
+VARCHAR(50) Email NOT NULL
+VARCHAR(60) Website NULL
+VARCHAR(20) LeaveGroupID (FK WITH TABLE: TBL_LEAVEGROUP, COLUMN: LeaveGroupID) NULL
+VARCHAR(20) ShiftGroupID (FK WITH TABLE: TBL_SHIFTGROUP, COLUMN: ShiftGroupID) NULL
+VARCHAR(20) AllowanceGroupID (FK WITH TABLE: TBL_ALLOWANCEGROUP, COLUMN: AllowanceGroupID) NULL
+VARCHAR(20) HolidayGroupID (FK WITH TABLE: TBL_HOLIDAYGROUP, COLUMN: HolidayGroupID) NULL
+VARCHAR(20) CST NULL
+VARCHAR(20) TIN NULL
+VARCHAR(20) TAN NULL
+VARCHAR(20) PAN NULL
+VARCHAR(20) GST NULL
+VARCHAR(20) PFCode NULL
+VARCHAR(20) ESICode NULL
+VARCHAR(20) CreatedDate NOT NULL
+VARCHAR(15) CreatedTime NOT NULL
+INT CreatedBy NOT NULL
+VARCHAR(20) ModifiedDate NULL
+VARCHAR(15) ModifiedTime NULL
+INT ModifiedBy NULL
+INT Status NOT NULL
+
+
+TABLE NAME: TBL_DIVISIONS, SP NAME: SP_Division
+==========================================================================
+VARCHAR(20) CompanyID (FK WITH TABLE: TBL_COMPANY, COLUMN: CompanyID) NOT NULL
+VARCHAR(20) WorkareaID (FK WITH TABLE: TBL_WORKAREA, COLUMN: WorkareaID) NOT NULL
+VARCHAR(20) DivisionID PK
+VARCHAR(35) DivisionName
+VARCHAR(20) CreatedDate NOT NULL
+VARCHAR(15) CreatedTime NOT NULL
+INT CreatedBy NOT NULL
+VARCHAR(20) ModifiedDate NULL
+VARCHAR(15) ModifiedTime NULL
+INT ModifiedBy NULL
+INT Status NOT NULL
+
+
+TABLE NAME: TBL_DEPARTMENTS, SP NAME: SP_Department
+==========================================================================
+VARCHAR(20) CompanyID (FK WITH TABLE: TBL_COMPANY, COLUMN: CompanyID) NOT NULL
+VARCHAR(20) WorkareaID (FK WITH TABLE: TBL_WORKAREA, COLUMN: WorkareaID) NOT NULL
+VARCHAR(20) DivisionID (FK WITH TABLE: TBL_DIVISIONS, COLUMN: DivisionID) NOT NULL
+VARCHAR(20) DepartmentID PK
+VARCHAR(35) DepartmentName
+VARCHAR(20) CreatedDate NOT NULL
+VARCHAR(15) CreatedTime NOT NULL
+INT CreatedBy NOT NULL
+VARCHAR(20) ModifiedDate NULL
+VARCHAR(15) ModifiedTime NULL
+INT ModifiedBy NULL
+
+
+TABLE NAME: TBL_DESIGNATIONS, SP NAME: SP_Designition
+==========================================================================
+VARCHAR(20) CompanyID (FK WITH TABLE: TBL_COMPANY, COLUMN: CompanyID) NOT NULL
+VARCHAR(20) WorkareaID (FK WITH TABLE: TBL_WORKAREA, COLUMN: WorkareaID) NOT NULL
+VARCHAR(20) DivisionID (FK WITH TABLE: TBL_DIVISIONS, COLUMN: DivisionID) NOT NULL
+VARCHAR(20) DepartmentID (FK WITH TABLE: TBL_DEPARTMENTS, COLUMN: DepartmentID) NOT NULL
+VARCHAR(20) DesignitionID PK
+VARCHAR(35) DesignitionName
+VARCHAR(20) CreatedDate NOT NULL
+VARCHAR(15) CreatedTime NOT NULL
+INT CreatedBy NOT NULL
+VARCHAR(20) ModifiedDate NULL
+VARCHAR(15) ModifiedTime NULL
+INT ModifiedBy NULL
+INT Status NOT NULL
+
+
+TABLE NAME: TBL_HOLIDAY, SP NAME: SP_Holiday
+==========================================================================
+VARCHAR(20) CompanyID (FK WITH TABLE: TBL_COMPANY, COLUMN: CompanyID) NOT NULL
+VARCHAR(20) HolidayGroupID (FK WITH TABLE: TBL_HOLIDAYGROUP, COLUMN: HolidayGroupID) NOT NULL
+INT ID PK
+VARCHAR(35) Name NOT NULL
+VARCHAR(6) YEAR NOT NULL
+VARCHAR(300) Reason NULL
+VARCHAR(15) FromDate NOT NULL
+VARCHAR(15) ToDate NOT NULL
+VARCHAR(15) FromTime NULL
+VARCHAR(15) ToTime NULL
+VARCHAR(20) CreatedDate NOT NULL
+VARCHAR(15) CreatedTime NOT NULL
+INT CreatedBy NOT NULL
+VARCHAR(20) ModifiedDate NULL
+VARCHAR(15) ModifiedTime NULL
+INT ModifiedBy NULL
+INT Status NOT NULL
+
+
+TABLE NAME: TBL_LEAVETYPE, SP NAME: SP_LeaveTypes
+==========================================================================
+VARCHAR(20) CompanyID (FK WITH TABLE: TBL_COMPANY, COLUMN: CompanyID) NOT NULL
+VARCHAR(20) LeaveGroupID (FK WITH TABLE: TBL_LEAVEGROUP, COLUMN: LeaveGroupID) NOT NULL
+INT ID PK
+VARCHAR(35) LeaveName NOT NULL
+VARCHAR(6) Abbreviation NOT NULL
+INT IsPaidType NULL
+INT IsEncashable NULL
+INT IsCummulative NULL
+INT NoOfDays NULL DEFAULT = 0
+VARCHAR(20) CreatedDate NOT NULL
+VARCHAR(15) CreatedTime NOT NULL
+INT CreatedBy NOT NULL
+VARCHAR(20) ModifiedDate NULL
+VARCHAR(15) ModifiedTime NULL
+INT ModifiedBy NULL
+INT Status NOT NULL
+
+
+TABLE NAME: TBL_ALLOWANCES, SP NAME: SP_Allowances
+==========================================================================
+VARCHAR(20) CompanyID (FK WITH TABLE: TBL_COMPANY, COLUMN: CompanyID) NOT NULL
+VARCHAR(20) WorkareaID (FK WITH TABLE: TBL_WORKAREA, COLUMN: WorkareaID) NOT NULL
+VARCHAR(20) AllowanceGroupID (FK WITH TABLE: TBL_ALLOWANCEGROUP, COLUMN: AllowanceGroupID) NOT NULL
+VARCHAR(20) AllowanceID PK
+VARCHAR(35) AllowanceName NOT NULL
+INT Type NOT NULL
+VARCHAR(100) Value NOT NULL
+VARCHAR(20) BasedON NOT NULL
+VARCHAR(20) CreatedDate NOT NULL
+VARCHAR(15) CreatedTime NOT NULL
+INT CreatedBy NOT NULL
+VARCHAR(20) ModifiedDate NULL
+VARCHAR(15) ModifiedTime NULL
+INT ModifiedBy NULL
+INT Status NOT NULL

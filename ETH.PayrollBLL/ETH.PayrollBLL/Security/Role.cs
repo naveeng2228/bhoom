@@ -272,7 +272,7 @@ namespace ETH.BLL.Security
         {
             int _result = 0;
             Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
-            string Query = "SP_UserController";
+            string Query = "SP_Roles";
             switch (ObjConfig.DBType)
             {
                 // MS-SQL
@@ -297,7 +297,7 @@ namespace ETH.BLL.Security
         {
             int _result = 0;
             Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
-            string Query = "SP_UserController";
+            string Query = "SP_Roles";
             switch (ObjConfig.DBType)
             {
                 // MS-SQL

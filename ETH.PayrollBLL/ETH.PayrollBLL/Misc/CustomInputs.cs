@@ -57,4 +57,12 @@ namespace ETH.BLL.Misc
         ApplicationUser = 4,
         Developer = 5
     }
+
+    public enum AllowanceTypes
+    {
+        Amount = 0,
+        Percentage = 1,
+        Slab = 2,
+        Custom = 3
+    }
 }

@@ -16,7 +16,7 @@ namespace ETH.BLL.Administration
         public string LeaveGroupID { get; set; }
         public int ID { get; set; }
         public string LeaveName { get; set; }
-        public string Abbrivation { get; set; }
+        public string Abbreviation { get; set; }
         public bool IsPaidType { get; set; }
         public bool IsEncashable { get; set; }
         public bool IsCummulative { get; set; }
@@ -55,7 +55,7 @@ namespace ETH.BLL.Administration
                         parms.Add(new SqlParameter("LeaveGroupID", objLeaveType.LeaveGroupID));
                         parms.Add(new SqlParameter("ID", objLeaveType.ID));
                         parms.Add(new SqlParameter("LeaveName", objLeaveType.LeaveName));
-                        parms.Add(new SqlParameter("Abbrivation", objLeaveType.Abbrivation));
+                        parms.Add(new SqlParameter("Abbrivation", objLeaveType.Abbreviation));
                         parms.Add(new SqlParameter("IsPaidType", objLeaveType.IsPaidType));
                         parms.Add(new SqlParameter("IsEncashable", objLeaveType.IsEncashable));
                         parms.Add(new SqlParameter("IsCummulative", objLeaveType.IsCummulative));
@@ -99,7 +99,7 @@ namespace ETH.BLL.Administration
                         parms.Add(new SqlParameter("LeaveGroupID", objLeaveType.LeaveGroupID));
                         parms.Add(new SqlParameter("ID", objLeaveType.ID));
                         parms.Add(new SqlParameter("LeaveName", objLeaveType.LeaveName));
-                        parms.Add(new SqlParameter("Abbrivation", objLeaveType.Abbrivation));
+                        parms.Add(new SqlParameter("Abbrivation", objLeaveType.Abbreviation));
                         parms.Add(new SqlParameter("IsPaidType", objLeaveType.IsPaidType));
                         parms.Add(new SqlParameter("IsEncashable", objLeaveType.IsEncashable));
                         parms.Add(new SqlParameter("IsCummulative", objLeaveType.IsCummulative));
