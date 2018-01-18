@@ -1,0 +1,13 @@
+Log Type : Exception
+Log Message : Could not find stored procedure 'SP_Company'.
+StackTrace :    at ETH.DAL.SQLHelper.ExecuteDataTable(String SQLString, SqlParameter[] cmdParms) in E:\Projects\GIT\bhoom\ETH.DAL\ETH.DAL\SqlHelper.cs:line 297
+   at ETH.DAL.DBController.ExecuteDataTable[TParams](String SQLString, TParams[] cmdParms) in E:\Projects\GIT\bhoom\ETH.DAL\ETH.DAL\DBController.cs:line 240
+   at ETH.BLL.Administration.Company.Select(Status status, DB_Flags flag, Boolean ShowAll) in E:\Projects\GIT\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\Administration\Company.cs:line 243
+   at ETH.BLL.Administration.Company.Select(Status status) in E:\Projects\GIT\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\Administration\Company.cs:line 262
+   at Website.Administration.Company.LoadCompanies() in E:\Projects\GIT\bhoom\Website\Website\Administration\Company.aspx.cs:line 58
+   at Website.Administration.Company.Page_Load(Object sender, EventArgs e) in E:\Projects\GIT\bhoom\Website\Website\Administration\Company.aspx.cs:line 25
+Log Date : Thursday, 18 Jan, 2018
+Log Time : 11:17:34 PM
+
+-----------------------------------------------------------------------------
+

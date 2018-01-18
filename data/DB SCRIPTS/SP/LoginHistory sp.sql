@@ -3,18 +3,17 @@
 
 create procedure SP_LoginHistory
 (
-	 @RecordID BIGINT = null
-	,@LoginId VARCHAR(15) = null
+	@LoginId BIGINT = null
 	,@UserId nvarchar(20) = null
 	,@Username nvarchar = null
-	,@LastLogin_dte DATE = null
-	,@LastLogin_time time = null
+	,@LastLoginDate DATE = null
+	,@LastLoginTime time = null
 	,@IPAddress VARCHAR(15) = null
 	,@SessionId VARCHAR(50) = null
 	,@hasActiveSession BIT = null
 	,@AuthenticatedOTP VARCHAR(6) = null
-	,@Created_dte DATE = null
-	,@Created_Time time = null
+	,@CreatedDate DATE = null
+	,@CreatedTime time = null
 	,@Flag int = null
 )
 
@@ -25,10 +24,10 @@ begin
 if (@Flag = 0)
 begin
 INSERT INTO tbl_LoginHistory
- ( RecordID, LoginId, UserId, UserName, LastLogin_dte, IPAddress, SessionId, hasActiveSession, AuthenticatedOTP, Created_dte)
+ ( LoginId, UserId, UserName, LastLoginDate, IPAddress, SessionId, hasActiveSession, AuthenticatedOTP, CreatedDate)
  
-SELECT  @RecordID,@LoginId,@UserId,@Username,CAST(CONVERT(Varchar(10), @LastLogin_dte, 112) + ' ' + CONVERT(Varchar(8), @LastLogin_time) AS DateTime)
-,@IPAddress,@SessionId,@hasActiveSession,@AuthenticatedOTP,CAST(CONVERT(Varchar(10), @Created_dte, 112) + ' ' + CONVERT(Varchar(8), @Created_Time) AS DateTime)
+SELECT  @LoginId,@UserId,@Username,CAST(CONVERT(Varchar(10), @LastLoginDate, 112) + ' ' + CONVERT(Varchar(8), @LastLoginTime) AS DateTime)
+,@IPAddress,@SessionId,@hasActiveSession,@AuthenticatedOTP,CAST(CONVERT(Varchar(10), @CreatedDate, 112) + ' ' + CONVERT(Varchar(8), @CreatedTime) AS DateTime)
 
 end
 
@@ -37,21 +36,20 @@ else if (@Flag = 9)
 begin
 
 select top 1
-RecordID
-,LoginId
+LoginId
 ,UserId
 ,UserName
-,convert(varchar(10),LastLogin_dte,101) as Last_Login_date
-,LTRIM(RIGHT(CONVERT(CHAR(20), LastLogin_dte, 22), 11)) as Last_Login_Time
+,convert(varchar(10),LastLoginDate,101) as LastLoginDate
+,LTRIM(RIGHT(CONVERT(CHAR(20), LastLoginDate, 22), 11)) as LastLoginTime
 ,IPAddress
 ,SessionId
 ,hasActiveSession
 ,AuthenticatedOTP
-,convert(varchar(10),Created_dte,101) as Created_date
-,LTRIM(RIGHT(CONVERT(CHAR(20), Created_dte, 22), 11)) as Created_Time
+,convert(varchar(10),CreatedDate,101) as CreatedDate
+,LTRIM(RIGHT(CONVERT(CHAR(20), CreatedDate, 22), 11)) as CreatedTime
 from tbl_LoginHistory 
 where Userid = @UserId
-order by RecordID desc
+order by LoginID desc
 
 end
 

@@ -46,7 +46,7 @@ namespace ETH.SecurityManagement
                 objLogin.UserId = UserId;
                 objLogin.IPAddress = NetworkController.GetIPAddress();
                 objLogin.SessionId = ActiveSessionID == string.Empty ? SessionController.GenerateNewSessionId(UserId) : ActiveSessionID;
-                objLogin.hasActiveSession = ActiveSessionID == string.Empty ? false : true;
+                objLogin.hasActiveSession = true;
                 objLogin.LastLoginDate = CurrentDate;
                 objLogin.LastLoginTime = CurrentTime;
                 if (LastLoginDateInfo.Count > 0)
@@ -64,34 +64,34 @@ namespace ETH.SecurityManagement
                     {
                         //Age = row.Field<int>("Age"),
                         CompanyID = CheckDBNull(row.Field<string>("CompanyID")),
-                        CountryId = row.Field<string>("CountryId"),
-                        CreatedBy = row.Field<string>("CreatedBy"),
-                        CreatedDate = row.Field<string>("CreatedDate"),
-                        //CreatedTime = row.Field<string>("CreatedTime"),
-                        //CustomerId = row.Field<string>("CustomerId"),
-                        DateOfBirth = row.Field<string>("DateOfBirth"),
-                        Email = row.Field<string>("Email"),
-                        FirstName = row.Field<string>("FirstName"),
+                        CountryId = CheckDBNull(row.Field<string>("CountryId")),
+                        CreatedBy = CheckDBNull(row.Field<string>("CreatedBy")),
+                        CreatedDate = CheckDBNull(row.Field<string>("CreatedDate")),
+                        //CreatedTime = CheckDBNull(row.Field<string>("CreatedTime")),
+                        //CustomerId = CheckDBNull(row.Field<string>("CustomerId")),
+                        DateOfBirth = CheckDBNull(row.Field<string>("DateOfBirth")),
+                        Email = CheckDBNull(row.Field<string>("Email")),
+                        FirstName = CheckDBNull(row.Field<string>("FirstName")),
                         Gender = row.Field<Gender>("Gender"),
-                        LastName = row.Field<string>("LastName"),
-                        //MaritalStatus = row.Field<MaritalStatus>("MaritalStatus"),
-                        MiddleName = row.Field<string>("MiddleName"),
-                        Mobile = row.Field<string>("Mobile"),
-                        ModifiedBy = row.Field<string>("ModifiedBy"),
-                        ModifiedDate = row.Field<string>("ModifiedDate"),
-                        //ModifiedTime = row.Field<string>("ModifiedTime"),
-                        Password = row.Field<string>("Password"),
-                        PasswordAnswer1 = row.Field<string>("PasswordAnswer1"),
-                        PasswordAnswer2 = row.Field<string>("PasswordAnswer2"),
-                        PasswordQuestion1 = row.Field<string>("PasswordQuestion1"),
-                        PasswordQuestion2 = row.Field<string>("PasswordQuestion2"),
-                        PrimaryAddress = row.Field<string>("PrimaryAddress"),
-                        ProfilePicUrl = row.Field<string>("ProfilePicUrl"),
-                        StateId = row.Field<string>("StateId"),
+                        LastName = CheckDBNull(row.Field<string>("LastName")),
+                        //MaritalStatus = row.Field<MaritalStatus>("MaritalStatus")),
+                        MiddleName = CheckDBNull(row.Field<string>("MiddleName")),
+                        Mobile = CheckDBNull(row.Field<Int64>("Mobile")),
+                        ModifiedBy = CheckDBNull(row.Field<string>("ModifiedBy")),
+                        ModifiedDate = CheckDBNull(row.Field<string>("ModifiedDate")),
+                        //ModifiedTime = CheckDBNull(row.Field<string>("ModifiedTime")),
+                        Password = CheckDBNull(row.Field<string>("Password")),
+                        PasswordAnswer1 = CheckDBNull(row.Field<string>("PasswordAnswer1")),
+                        PasswordAnswer2 = CheckDBNull(row.Field<string>("PasswordAnswer2")),
+                        PasswordQuestion1 = CheckDBNull(row.Field<string>("PasswordQuestion1")),
+                        PasswordQuestion2 = CheckDBNull(row.Field<string>("PasswordQuestion2")),
+                        PrimaryAddress = CheckDBNull(row.Field<string>("PrimaryAddress")),
+                        ProfilePicUrl = CheckDBNull(row.Field<string>("ProfilePicUrl")),
+                        StateId = CheckDBNull(row.Field<string>("StateId")),
                         Status = row.Field<Status>("Status"),
-                        UniqueAccessPath = row.Field<string>("UniqueAccessPath"),
+                        UniqueAccessPath = CheckDBNull(row.Field<string>("UniqueAccessPath")),
                         UserId = CheckDBNull(row.Field<int>("Id")),
-                        UserName = row.Field<string>("UserName"),
+                        UserName = CheckDBNull(row.Field<string>("UserName")),
                         UserType = row.Field<UserType>("UserType"),
                         WorkAreaID = CheckDBNull(row.Field<string>("WorkAreaID"))
                     }).ToList();

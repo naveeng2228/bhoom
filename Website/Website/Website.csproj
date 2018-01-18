@@ -6742,6 +6742,7 @@
     <Content Include="ETH500.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
+    <Content Include="Logs\ErrorLogs.txt" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

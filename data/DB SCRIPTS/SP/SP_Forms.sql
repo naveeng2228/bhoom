@@ -2,7 +2,7 @@
 
 
 
-Alter procedure SP_Forms
+CREATE procedure SP_Forms
 (
   @FormId varchar(20) = null
 , @FormName varchar(35) = null

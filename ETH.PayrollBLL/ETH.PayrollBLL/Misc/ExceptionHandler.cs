@@ -48,16 +48,12 @@ namespace ETH.BLL.Misc
             Exception ex = Ex as Exception;
             //string filePath = "http://localhost:49966/Logs/ErrorLogs.txt";
             string RootFolderPath = HttpContext.Current.Server.MapPath("~/");
-            string FolderPath = "Logs/";
+            string FolderPath = "Logs\\";
             string FileName = "ErrorLogs";
             string Extension = ".txt";
             string FullPath = string.Concat(RootFolderPath, FolderPath, FileName, Extension);
 
             FileInfo logFile = new FileInfo(FullPath);
-            if (!logFile.Exists)
-            {
-                logFile.Create();
-            }
 
             using (StreamWriter writer = new StreamWriter(logFile.FullName, true))
             {
