@@ -10,7 +10,7 @@
 namespace Website.Administration {
     
     
-    public partial class Company {
+    public partial class ManageCompany {
         
         /// <summary>
         /// lblCompanyName control.
@@ -20,5 +20,14 @@ namespace Website.Administration {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblCompanyName;
+        
+        /// <summary>
+        /// divCompaniesList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divCompaniesList;
     }
 }

@@ -59,42 +59,42 @@ namespace ETH.SecurityManagement
 
                 if (InsertLoginHistory(objLogin) > 0)
                 {
-                    DataTable dtUserInfo = GetUserByUserID(UserId);
-                    IList<User> users = dtUserInfo.AsEnumerable().Select(row => new User
-                    {
-                        //Age = row.Field<int>("Age"),
-                        CompanyID = CheckDBNull(row.Field<string>("CompanyID")),
-                        CountryId = CheckDBNull(row.Field<string>("CountryId")),
-                        CreatedBy = CheckDBNull(row.Field<string>("CreatedBy")),
-                        CreatedDate = CheckDBNull(row.Field<string>("CreatedDate")),
-                        //CreatedTime = CheckDBNull(row.Field<string>("CreatedTime")),
-                        //CustomerId = CheckDBNull(row.Field<string>("CustomerId")),
-                        DateOfBirth = CheckDBNull(row.Field<string>("DateOfBirth")),
-                        Email = CheckDBNull(row.Field<string>("Email")),
-                        FirstName = CheckDBNull(row.Field<string>("FirstName")),
-                        Gender = row.Field<Gender>("Gender"),
-                        LastName = CheckDBNull(row.Field<string>("LastName")),
-                        //MaritalStatus = row.Field<MaritalStatus>("MaritalStatus")),
-                        MiddleName = CheckDBNull(row.Field<string>("MiddleName")),
-                        Mobile = CheckDBNull(row.Field<Int64>("Mobile")),
-                        ModifiedBy = CheckDBNull(row.Field<string>("ModifiedBy")),
-                        ModifiedDate = CheckDBNull(row.Field<string>("ModifiedDate")),
-                        //ModifiedTime = CheckDBNull(row.Field<string>("ModifiedTime")),
-                        Password = CheckDBNull(row.Field<string>("Password")),
-                        PasswordAnswer1 = CheckDBNull(row.Field<string>("PasswordAnswer1")),
-                        PasswordAnswer2 = CheckDBNull(row.Field<string>("PasswordAnswer2")),
-                        PasswordQuestion1 = CheckDBNull(row.Field<string>("PasswordQuestion1")),
-                        PasswordQuestion2 = CheckDBNull(row.Field<string>("PasswordQuestion2")),
-                        PrimaryAddress = CheckDBNull(row.Field<string>("PrimaryAddress")),
-                        ProfilePicUrl = CheckDBNull(row.Field<string>("ProfilePicUrl")),
-                        StateId = CheckDBNull(row.Field<string>("StateId")),
-                        Status = row.Field<Status>("Status"),
-                        UniqueAccessPath = CheckDBNull(row.Field<string>("UniqueAccessPath")),
-                        UserId = CheckDBNull(row.Field<int>("Id")),
-                        UserName = CheckDBNull(row.Field<string>("UserName")),
-                        UserType = row.Field<UserType>("UserType"),
-                        WorkAreaID = CheckDBNull(row.Field<string>("WorkAreaID"))
-                    }).ToList();
+                    List<User> users = GetUserByUserID(UserId);
+                    //IList<User> users = dtUserInfo.AsEnumerable().Select(row => new User
+                    //{
+                    //    //Age = row.Field<int>("Age"),
+                    //    CompanyID = CheckDBNull(row.Field<string>("CompanyID")),
+                    //    CountryId = CheckDBNull(row.Field<string>("CountryId")),
+                    //    CreatedBy = CheckDBNull(row.Field<string>("CreatedBy")),
+                    //    CreatedDate = CheckDBNull(row.Field<string>("CreatedDate")),
+                    //    //CreatedTime = CheckDBNull(row.Field<string>("CreatedTime")),
+                    //    //CustomerId = CheckDBNull(row.Field<string>("CustomerId")),
+                    //    DateOfBirth = CheckDBNull(row.Field<string>("DateOfBirth")),
+                    //    Email = CheckDBNull(row.Field<string>("Email")),
+                    //    FirstName = CheckDBNull(row.Field<string>("FirstName")),
+                    //    Gender = row.Field<Gender>("Gender"),
+                    //    LastName = CheckDBNull(row.Field<string>("LastName")),
+                    //    //MaritalStatus = row.Field<MaritalStatus>("MaritalStatus")),
+                    //    MiddleName = CheckDBNull(row.Field<string>("MiddleName")),
+                    //    Mobile = CheckDBNull(row.Field<Int64>("Mobile")),
+                    //    ModifiedBy = CheckDBNull(row.Field<string>("ModifiedBy")),
+                    //    ModifiedDate = CheckDBNull(row.Field<string>("ModifiedDate")),
+                    //    //ModifiedTime = CheckDBNull(row.Field<string>("ModifiedTime")),
+                    //    Password = CheckDBNull(row.Field<string>("Password")),
+                    //    PasswordAnswer1 = CheckDBNull(row.Field<string>("PasswordAnswer1")),
+                    //    PasswordAnswer2 = CheckDBNull(row.Field<string>("PasswordAnswer2")),
+                    //    PasswordQuestion1 = CheckDBNull(row.Field<string>("PasswordQuestion1")),
+                    //    PasswordQuestion2 = CheckDBNull(row.Field<string>("PasswordQuestion2")),
+                    //    PrimaryAddress = CheckDBNull(row.Field<string>("PrimaryAddress")),
+                    //    ProfilePicUrl = CheckDBNull(row.Field<string>("ProfilePicUrl")),
+                    //    StateId = CheckDBNull(row.Field<string>("StateId")),
+                    //    Status = row.Field<Status>("Status"),
+                    //    UniqueAccessPath = CheckDBNull(row.Field<string>("UniqueAccessPath")),
+                    //    UserId = CheckDBNull(row.Field<int>("Id")),
+                    //    UserName = CheckDBNull(row.Field<string>("UserName")),
+                    //    UserType = row.Field<UserType>("UserType"),
+                    //    WorkAreaID = CheckDBNull(row.Field<string>("WorkAreaID"))
+                    //}).ToList();
                     if (users.Count > 0)
                     {
                         ObjConfig.UserInfo = users[0];
@@ -259,9 +259,9 @@ namespace ETH.SecurityManagement
         /// </summary>
         /// <param name="sessionId"></param>
         /// <returns></returns>
-        public DataTable GetUserByUserID(string UserId)
+        public List<User> GetUserByUserID(string UserId)
         {
-            DataTable _result = null;
+            List<User> _result = null;
             Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
             string Query = "SP_UserController";
             switch (ObjConfig.DBType)
@@ -275,7 +275,8 @@ namespace ETH.SecurityManagement
                         parms.Add(new SqlParameter("UserId", UserId));
                         // Flag: 0 refers to VerifyUser
                         parms.Add(new SqlParameter("Flag", 10));
-                        _result = ObjDB.ExecuteDataTable(Query, parms.ToArray());
+                        DataTable _data = ObjDB.ExecuteDataTable(Query, parms.ToArray());
+                        _result = Helper.DataTableToList<User>(_data);
                         break;
                     }
             }

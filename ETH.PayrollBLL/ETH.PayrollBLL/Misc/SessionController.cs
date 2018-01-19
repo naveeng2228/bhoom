@@ -50,19 +50,7 @@ namespace ETH.BLL.Misc
                         // Flag: 0 refers to VerifyUser
                         parms.Add(new SqlParameter("Flag", 11));
                         _result = ObjDB.ExecuteDataTable(Query, parms.ToArray());
-                        IList<LoginHistory> logHIstory = _result.AsEnumerable().Select(row => new LoginHistory {
-                            LoginId = row.Field<Int64>("LoginId"),
-                            UserId = row.Field<string>("UserId"),
-                            UserName = row.Field<string>("UserName"),
-                            IPAddress = row.Field<string>("IPAddress"),
-                            SessionId = row.Field<string>("SessionId"),
-                            LastLoginDate = row.Field<string>("LastLoginDate"),
-                            LastLoginTime = row.Field<string>("LastLoginTime"),
-                            CreatedDate = row.Field<string>("CreatedDate"),
-                            CreatedTime = row.Field<string>("CreatedTime"),
-                            hasActiveSession = row.Field<bool>("hasActiveSession"),
-                            AuthenticatedOTP = row.Field<string>("AuthenticatedOTP")
-                        }).ToList();
+                        List<LoginHistory> logHIstory = Helper.DataTableToList<LoginHistory>(_result);
                         ObjConfig.LoginHistory = logHIstory.ToArray();
                         HttpContext.Current.Session["__Config__"] = ObjConfig;
                         break;

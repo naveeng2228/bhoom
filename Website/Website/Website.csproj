@@ -138,8 +138,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Administration\Company.aspx" />
+    <Content Include="Administration\Default.aspx" />
     <Content Include="Administration\logos\logo_placeholder.png" />
+    <Content Include="Administration\ManageCompany.aspx" />
     <Content Include="Components\bower_components\bootstrap-colorpicker\dist\css\bootstrap-colorpicker.css" />
     <Content Include="Components\bower_components\bootstrap-colorpicker\dist\css\bootstrap-colorpicker.min.css" />
     <Content Include="Components\bower_components\bootstrap-colorpicker\dist\img\bootstrap-colorpicker\alpha-horizontal.png" />
@@ -6743,15 +6744,23 @@
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
     <Content Include="Logs\ErrorLogs.txt" />
+    <Content Include="test.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administration\Company.aspx.cs">
-      <DependentUpon>Company.aspx</DependentUpon>
+    <Compile Include="Administration\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Administration\Company.aspx.designer.cs">
-      <DependentUpon>Company.aspx</DependentUpon>
+    <Compile Include="Administration\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\ManageCompany.aspx.cs">
+      <DependentUpon>ManageCompany.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\ManageCompany.aspx.designer.cs">
+      <DependentUpon>ManageCompany.aspx</DependentUpon>
     </Compile>
     <Compile Include="Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>

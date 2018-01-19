@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Company" Language="C#" MasterPageFile="~/Ethon.Master" AutoEventWireup="true" CodeBehind="Company.aspx.cs" Inherits="Website.Administration.Company" %>
+﻿<%@ Page Title="Company" Language="C#" MasterPageFile="~/Ethon.Master" AutoEventWireup="true" CodeBehind="ManageCompany.aspx.cs" Inherits="Website.Administration.ManageCompany" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -28,20 +28,7 @@
                         </h3>
 
                         <p class="text-muted text-center"></p>
-
-                        <ul class="list-group list-group-unbordered">
-                            <li class="list-group-item">
-                                <b>Followers</b> <a class="pull-right">1,322</a>
-                            </li>
-                            <li class="list-group-item">
-                                <b>Following</b> <a class="pull-right">543</a>
-                            </li>
-                            <li class="list-group-item">
-                                <b>Friends</b> <a class="pull-right">13,287</a>
-                            </li>
-                        </ul>
-
-                        <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a>
+                        <div id="divCompaniesList" runat="server"></div>
                     </div>
                     <!-- /.box-body -->
                 </div>
@@ -55,6 +42,7 @@
                     </ul>
                     <div class="tab-content">
                         <div class="active tab-pane" id="companydetails">
+                            
                         </div>
                         <!-- /.tab-pane -->
                     </div>
@@ -69,3 +57,4 @@
     </section>
     <!-- /.content -->
 </asp:Content>
+

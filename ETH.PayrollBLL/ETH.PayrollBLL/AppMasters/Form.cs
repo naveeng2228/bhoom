@@ -173,9 +173,9 @@ namespace ETH.BLL.AppMasters
         /// <param name="flag"></param>
         /// <param name="ShowAll"></param>
         /// <returns></returns>
-        private DataTable Select(Status status, DB_Flags flag, bool ShowAll = false)
+        private List<Form> Select(Status status, DB_Flags flag, bool ShowAll = false)
         {
-            DataTable _result = null;
+            List<Form> _result = null;
             Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
             string Query = "SP_Forms";
             switch (ObjConfig.DBType)
@@ -192,7 +192,8 @@ namespace ETH.BLL.AppMasters
                         }
                         parms.Add(new SqlParameter("Flag", flag));
 
-                        _result = ObjDB.ExecuteDataTable(Query, parms.ToArray());
+                        DataTable _data = ObjDB.ExecuteDataTable(Query, parms.ToArray());
+                        _result = Helper.DataTableToList<Form>(_data);
                         break;
                     }
             }
@@ -204,9 +205,9 @@ namespace ETH.BLL.AppMasters
         /// </summary>
         /// <param name="status"></param>
         /// <returns></returns>
-        public DataTable Select(Status status)
+        public List<Form> Select(Status status)
         {
-            DataTable _result = null;
+            List<Form> _result = null;
             switch (status)
             {
                 case Status.Active:
@@ -246,9 +247,9 @@ namespace ETH.BLL.AppMasters
         /// Select all irrespective of status
         /// </summary>
         /// <returns></returns>
-        public DataTable Select()
+        public List<Form> Select()
         {
-            DataTable _result = null;
+            List<Form> _result = null;
             _result = Select(Status.Active, DB_Flags.SelectActive, true);
             return _result;
         }

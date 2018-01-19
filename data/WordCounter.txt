@@ -1,0 +1,55 @@
+<textarea name="textWords" id="textWords" class="default" onkeyup="return validateMe(this.value);" onkeypress="return ValidateCount(this.value);"></textarea>
+                            <label id="textWordsCounter">You have entered 0 words.</label>
+                            <input id="hdnAllowCondition" type="hidden" value="N" /><br />
+                            <button onclick="return CheckValidation()">Check validation</button>
+                            <script>
+
+                                validateMe(document.getElementById("textWords").value);
+
+                                function validateMe(value)
+                                {
+                                    var count = trim(value).length > 0 ? trim(value).split(' ').length : 0;
+                                    if(count >= 15 && count <= 50)
+                                    {
+                                        document.getElementById("hdnAllowCondition").value = "Y";
+                                        document.getElementById("textWordsCounter").style.color = "green";
+                                    }
+                                    else
+                                    {
+                                        document.getElementById("hdnAllowCondition").value = "N";
+                                        document.getElementById("textWordsCounter").style.color = "red";
+                                    }
+
+                                    document.getElementById("textWordsCounter").innerText = "You have entered " + count + " words.";
+                                }
+
+
+                                function ValidateCount(value) {
+                                    var charcount = trim(value).length;
+                                    var count = value.split(' ').length;
+                                    if (count > 50) {
+                                        document.getElementById("textWords").value = trim(value.substr(0, charcount));
+                                        return false;
+                                    }
+                                    return true;
+                                }
+
+                                function trim(value)
+                                {
+                                    value = value.replace(/(^\s*)|(\s*$)/gi, "");
+                                    value = value.replace(/[ ]{2,}/gi, " ");
+                                    value = value.replace(/\n /, "\n");
+                                    return value;
+                                }
+
+                                function CheckValidation()
+                                {
+                                    if(document.getElementById("hdnAllowCondition").value == "N")
+                                    {
+                                        alert('Not valid');
+                                        return false;
+                                    }
+                                    alert('Validation Success');
+                                    return true;
+                                }
+                            </script>

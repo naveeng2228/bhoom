@@ -8,7 +8,7 @@ using ETH.DAL;
 using System.Data;
 using ETH.BLL.Misc;
 
-namespace ETH.BLL
+namespace ETH.BLL.Payroll
 {
     public class Allowances
     {

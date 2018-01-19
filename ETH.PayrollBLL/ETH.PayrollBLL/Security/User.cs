@@ -251,9 +251,9 @@ namespace ETH.BLL.Security
         /// <param name="flag"></param>
         /// <param name="ShowAll"></param>
         /// <returns></returns>
-        private DataTable Select(Status status, DB_Flags flag, bool ShowAll = false)
+        private List<User> Select(Status status, DB_Flags flag, bool ShowAll = false)
         {
-            DataTable _result = null;
+            List<User> _result = null;
             Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
             string Query = "SP_UserController";
             switch (ObjConfig.DBType)
@@ -270,7 +270,9 @@ namespace ETH.BLL.Security
                         }
                         parms.Add(new SqlParameter("Flag", flag));
 
-                        _result = ObjDB.ExecuteDataTable(Query, parms.ToArray());
+                        DataTable _data = ObjDB.ExecuteDataTable(Query, parms.ToArray());
+                        _result = Helper.DataTableToList<User>(_data);
+
                         break;
                     }
             }
@@ -282,9 +284,9 @@ namespace ETH.BLL.Security
         /// </summary>
         /// <param name="status"></param>
         /// <returns></returns>
-        public DataTable Select(Status status)
+        public List<User> Select(Status status)
         {
-            DataTable _result = null;
+            List<User> _result = null;
             switch (status)
             {
                 case Status.Active:
@@ -324,9 +326,9 @@ namespace ETH.BLL.Security
         /// Select all irrespective of status
         /// </summary>
         /// <returns></returns>
-        public DataTable Select()
+        public List<User> Select()
         {
-            DataTable _result = null;
+            List<User> _result = null;
             _result = Select(Status.Active, DB_Flags.SelectActive, true);
             return _result;
         }

@@ -52,7 +52,7 @@
     <Compile Include="Administration\Shift.cs" />
     <Compile Include="Administration\ShiftGroup.cs" />
     <Compile Include="Administration\Workarea.cs" />
-    <Compile Include="Allowances.cs" />
+    <Compile Include="Payroll\Allowances.cs" />
     <Compile Include="AppMasters\Country.cs" />
     <Compile Include="AppMasters\Form.cs">
       <SubType>ASPXCodeBehind</SubType>
@@ -61,6 +61,7 @@
     <Compile Include="AppMasters\State.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="EmployeeSalary.cs" />
+    <Compile Include="Helper.cs" />
     <Compile Include="LeaveManagement\Leave.cs" />
     <Compile Include="Security\Login.cs" />
     <Compile Include="Misc\AESEncrytDecry.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Misc\OTPController.cs" />
     <Compile Include="Misc\SessionController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\MasterMenu.cs" />
     <Compile Include="Security\Permissions.cs" />
     <Compile Include="Security\Role.cs" />
     <Compile Include="Security\User.cs" />
@@ -83,7 +85,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Attendance\" />
-    <Folder Include="Payroll\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -174,9 +174,9 @@ namespace ETH.BLL.Administration
         /// <param name="flag"></param>
         /// <param name="ShowAll"></param>
         /// <returns></returns>
-        private DataTable Select(Status status, DB_Flags flag, bool ShowAll = false)
+        private List<Division> Select(Status status, DB_Flags flag, bool ShowAll = false)
         {
-            DataTable _result = null;
+            List<Division> _result = null;
             Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
             string Query = "SP_Division";
             switch (ObjConfig.DBType)
@@ -193,7 +193,8 @@ namespace ETH.BLL.Administration
                         }
                         parms.Add(new SqlParameter("Flag", flag));
 
-                        _result = ObjDB.ExecuteDataTable(Query, parms.ToArray());
+                        DataTable _data = ObjDB.ExecuteDataTable(Query, parms.ToArray());
+                        _result = Helper.DataTableToList<Division>(_data);
                         break;
                     }
             }
@@ -205,9 +206,9 @@ namespace ETH.BLL.Administration
         /// </summary>
         /// <param name="status"></param>
         /// <returns></returns>
-        public DataTable Select(Status status)
+        public List<Division> Select(Status status)
         {
-            DataTable _result = null;
+            List<Division> _result = null;
             switch (status)
             {
                 case Status.Active:
@@ -247,9 +248,9 @@ namespace ETH.BLL.Administration
         /// Select all irrespective of status
         /// </summary>
         /// <returns></returns>
-        public DataTable Select()
+        public List<Division> Select()
         {
-            DataTable _result = null;
+            List<Division> _result = null;
             _result = Select(Status.Active, DB_Flags.SelectActive, true);
             return _result;
         }

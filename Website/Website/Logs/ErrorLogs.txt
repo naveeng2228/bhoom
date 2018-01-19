@@ -11,3 +11,380 @@ Log Time : 11:17:34 PM
 
 -----------------------------------------------------------------------------
 
+Log Type : Exception
+Log Message : Could not find stored procedure 'SP_Company'.
+StackTrace :    at ETH.DAL.SQLHelper.ExecuteDataTable(String SQLString, SqlParameter[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\SqlHelper.cs:line 297
+   at ETH.DAL.DBController.ExecuteDataTable[TParams](String SQLString, TParams[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\DBController.cs:line 240
+   at ETH.BLL.Administration.Company.Select(String CustomerID) in D:\GIT-CLONES\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\Administration\Company.cs:line 324
+   at Website.Administration.ManageCompany.LoadCompanies() in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 61
+   at Website.Administration.ManageCompany.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 27
+Log Date : Friday, 19 Jan, 2018
+Log Time : 10:51:02 AM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Could not find stored procedure 'SP_Company'.
+StackTrace :    at ETH.DAL.SQLHelper.ExecuteDataTable(String SQLString, SqlParameter[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\SqlHelper.cs:line 297
+   at ETH.DAL.DBController.ExecuteDataTable[TParams](String SQLString, TParams[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\DBController.cs:line 240
+   at ETH.BLL.Administration.Company.Select(String CustomerID) in D:\GIT-CLONES\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\Administration\Company.cs:line 324
+   at Website.Administration.ManageCompany.LoadCompanies() in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 61
+   at Website.Administration.ManageCompany.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 27
+Log Date : Friday, 19 Jan, 2018
+Log Time : 10:52:34 AM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Could not find stored procedure 'SP_Company'.
+StackTrace :    at ETH.DAL.SQLHelper.ExecuteDataTable(String SQLString, SqlParameter[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\SqlHelper.cs:line 297
+   at ETH.DAL.DBController.ExecuteDataTable[TParams](String SQLString, TParams[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\DBController.cs:line 240
+   at ETH.BLL.Administration.Company.Select(String CustomerID) in D:\GIT-CLONES\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\Administration\Company.cs:line 324
+   at Website.Administration.ManageCompany.LoadCompanies() in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 61
+   at Website.Administration.ManageCompany.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 27
+Log Date : Friday, 19 Jan, 2018
+Log Time : 10:52:52 AM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Could not find stored procedure 'SP_Company'.
+StackTrace :    at ETH.DAL.SQLHelper.ExecuteDataTable(String SQLString, SqlParameter[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\SqlHelper.cs:line 297
+   at ETH.DAL.DBController.ExecuteDataTable[TParams](String SQLString, TParams[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\DBController.cs:line 240
+   at ETH.BLL.Administration.Company.Select(String CustomerID) in D:\GIT-CLONES\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\Administration\Company.cs:line 324
+   at Website.Administration.ManageCompany.LoadCompanies() in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 61
+   at Website.Administration.ManageCompany.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 27
+Log Date : Friday, 19 Jan, 2018
+Log Time : 10:59:44 AM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Could not find stored procedure 'SP_Company'.
+StackTrace :    at ETH.DAL.SQLHelper.ExecuteDataTable(String SQLString, SqlParameter[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\SqlHelper.cs:line 297
+   at ETH.DAL.DBController.ExecuteDataTable[TParams](String SQLString, TParams[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\DBController.cs:line 240
+   at ETH.BLL.Administration.Company.Select(String CustomerID) in D:\GIT-CLONES\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\Administration\Company.cs:line 324
+   at Website.Administration.ManageCompany.LoadCompanies() in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 61
+   at Website.Administration.ManageCompany.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 27
+Log Date : Friday, 19 Jan, 2018
+Log Time : 11:01:27 AM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Could not find stored procedure 'SP_Company'.
+StackTrace :    at ETH.DAL.SQLHelper.ExecuteDataTable(String SQLString, SqlParameter[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\SqlHelper.cs:line 297
+   at ETH.DAL.DBController.ExecuteDataTable[TParams](String SQLString, TParams[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\DBController.cs:line 240
+   at ETH.BLL.Administration.Company.Select(String CustomerID) in D:\GIT-CLONES\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\Administration\Company.cs:line 324
+   at Website.Administration.ManageCompany.LoadCompanies() in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 61
+   at Website.Administration.ManageCompany.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 27
+Log Date : Friday, 19 Jan, 2018
+Log Time : 11:02:20 AM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Could not find stored procedure 'SP_Company'.
+StackTrace :    at ETH.DAL.SQLHelper.ExecuteDataTable(String SQLString, SqlParameter[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\SqlHelper.cs:line 297
+   at ETH.DAL.DBController.ExecuteDataTable[TParams](String SQLString, TParams[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\DBController.cs:line 240
+   at ETH.BLL.Administration.Company.Select(String CustomerID) in D:\GIT-CLONES\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\Administration\Company.cs:line 324
+   at Website.Administration.ManageCompany.LoadCompanies() in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 61
+   at Website.Administration.ManageCompany.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 27
+Log Date : Friday, 19 Jan, 2018
+Log Time : 11:09:58 AM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Could not find stored procedure 'SP_Company'.
+StackTrace :    at ETH.DAL.SQLHelper.ExecuteDataTable(String SQLString, SqlParameter[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\SqlHelper.cs:line 297
+   at ETH.DAL.DBController.ExecuteDataTable[TParams](String SQLString, TParams[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\DBController.cs:line 240
+   at ETH.BLL.Administration.Company.Select(String CustomerID) in D:\GIT-CLONES\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\Administration\Company.cs:line 324
+   at Website.Administration.ManageCompany.LoadCompanies() in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 61
+   at Website.Administration.ManageCompany.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 27
+Log Date : Friday, 19 Jan, 2018
+Log Time : 11:10:06 AM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Could not find stored procedure 'SP_Company'.
+StackTrace :    at ETH.DAL.SQLHelper.ExecuteDataTable(String SQLString, SqlParameter[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\SqlHelper.cs:line 297
+   at ETH.DAL.DBController.ExecuteDataTable[TParams](String SQLString, TParams[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\DBController.cs:line 240
+   at ETH.BLL.Administration.Company.Select(String CustomerID) in D:\GIT-CLONES\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\Administration\Company.cs:line 324
+   at Website.Administration.ManageCompany.LoadCompanies() in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 61
+   at Website.Administration.ManageCompany.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 27
+Log Date : Friday, 19 Jan, 2018
+Log Time : 11:10:28 AM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Could not find stored procedure 'SP_Company'.
+StackTrace :    at ETH.DAL.SQLHelper.ExecuteDataTable(String SQLString, SqlParameter[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\SqlHelper.cs:line 297
+   at ETH.DAL.DBController.ExecuteDataTable[TParams](String SQLString, TParams[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\DBController.cs:line 240
+   at ETH.BLL.Administration.Company.Select(String CustomerID) in D:\GIT-CLONES\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\Administration\Company.cs:line 324
+   at Website.Administration.ManageCompany.LoadCompanies() in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 61
+   at Website.Administration.ManageCompany.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 27
+Log Date : Friday, 19 Jan, 2018
+Log Time : 11:10:49 AM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Could not find stored procedure 'SP_Company'.
+StackTrace :    at ETH.DAL.SQLHelper.ExecuteDataTable(String SQLString, SqlParameter[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\SqlHelper.cs:line 297
+   at ETH.DAL.DBController.ExecuteDataTable[TParams](String SQLString, TParams[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\DBController.cs:line 240
+   at ETH.BLL.Administration.Company.Select(String CustomerID) in D:\GIT-CLONES\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\Administration\Company.cs:line 324
+   at Website.Administration.ManageCompany.LoadCompanies() in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 61
+   at Website.Administration.ManageCompany.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 27
+Log Date : Friday, 19 Jan, 2018
+Log Time : 11:12:20 AM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Could not find stored procedure 'SP_Company'.
+StackTrace :    at ETH.DAL.SQLHelper.ExecuteDataTable(String SQLString, SqlParameter[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\SqlHelper.cs:line 297
+   at ETH.DAL.DBController.ExecuteDataTable[TParams](String SQLString, TParams[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\DBController.cs:line 240
+   at ETH.BLL.Administration.Company.Select(String CustomerID) in D:\GIT-CLONES\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\Administration\Company.cs:line 324
+   at Website.Administration.ManageCompany.LoadCompanies() in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 61
+   at Website.Administration.ManageCompany.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 27
+Log Date : Friday, 19 Jan, 2018
+Log Time : 11:15:21 AM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Could not find stored procedure 'SP_Company'.
+StackTrace :    at ETH.DAL.SQLHelper.ExecuteDataTable(String SQLString, SqlParameter[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\SqlHelper.cs:line 297
+   at ETH.DAL.DBController.ExecuteDataTable[TParams](String SQLString, TParams[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\DBController.cs:line 240
+   at ETH.BLL.Administration.Company.Select(String CustomerID) in D:\GIT-CLONES\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\Administration\Company.cs:line 324
+   at Website.Administration.ManageCompany.LoadCompanies() in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 61
+   at Website.Administration.ManageCompany.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 27
+Log Date : Friday, 19 Jan, 2018
+Log Time : 11:16:27 AM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Could not find stored procedure 'SP_Company'.
+StackTrace :    at ETH.DAL.SQLHelper.ExecuteDataTable(String SQLString, SqlParameter[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\SqlHelper.cs:line 297
+   at ETH.DAL.DBController.ExecuteDataTable[TParams](String SQLString, TParams[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\DBController.cs:line 240
+   at ETH.BLL.Administration.Company.Select(String CustomerID) in D:\GIT-CLONES\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\Administration\Company.cs:line 324
+   at Website.Administration.ManageCompany.LoadCompanies() in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 61
+   at Website.Administration.ManageCompany.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 27
+Log Date : Friday, 19 Jan, 2018
+Log Time : 11:17:39 AM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Could not find stored procedure 'SP_Company'.
+StackTrace :    at ETH.DAL.SQLHelper.ExecuteDataTable(String SQLString, SqlParameter[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\SqlHelper.cs:line 297
+   at ETH.DAL.DBController.ExecuteDataTable[TParams](String SQLString, TParams[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\DBController.cs:line 240
+   at ETH.BLL.Administration.Company.Select(String CustomerID) in D:\GIT-CLONES\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\Administration\Company.cs:line 324
+   at Website.Administration.ManageCompany.LoadCompanies() in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 61
+   at Website.Administration.ManageCompany.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 27
+Log Date : Friday, 19 Jan, 2018
+Log Time : 11:20:04 AM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Could not find stored procedure 'SP_Company'.
+StackTrace :    at ETH.DAL.SQLHelper.ExecuteDataTable(String SQLString, SqlParameter[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\SqlHelper.cs:line 297
+   at ETH.DAL.DBController.ExecuteDataTable[TParams](String SQLString, TParams[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\DBController.cs:line 240
+   at ETH.BLL.Administration.Company.Select(String CustomerID) in D:\GIT-CLONES\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\Administration\Company.cs:line 324
+   at Website.Administration.ManageCompany.LoadCompanies() in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 61
+   at Website.Administration.ManageCompany.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 27
+Log Date : Friday, 19 Jan, 2018
+Log Time : 11:21:28 AM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Could not find stored procedure 'SP_Company'.
+StackTrace :    at ETH.DAL.SQLHelper.ExecuteDataTable(String SQLString, SqlParameter[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\SqlHelper.cs:line 297
+   at ETH.DAL.DBController.ExecuteDataTable[TParams](String SQLString, TParams[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\DBController.cs:line 240
+   at ETH.BLL.Administration.Company.Select(String CustomerID) in D:\GIT-CLONES\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\Administration\Company.cs:line 324
+   at Website.Administration.ManageCompany.LoadCompanies() in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 61
+   at Website.Administration.ManageCompany.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 27
+Log Date : Friday, 19 Jan, 2018
+Log Time : 11:23:46 AM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Could not find stored procedure 'SP_Company'.
+StackTrace :    at ETH.DAL.SQLHelper.ExecuteDataTable(String SQLString, SqlParameter[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\SqlHelper.cs:line 297
+   at ETH.DAL.DBController.ExecuteDataTable[TParams](String SQLString, TParams[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\DBController.cs:line 240
+   at ETH.BLL.Administration.Company.Select(String CustomerID) in D:\GIT-CLONES\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\Administration\Company.cs:line 324
+   at Website.Administration.ManageCompany.LoadCompanies() in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 61
+   at Website.Administration.ManageCompany.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 27
+Log Date : Friday, 19 Jan, 2018
+Log Time : 11:24:06 AM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Procedure or function 'SP_Company' expects parameter '@Website', which was not supplied.
+StackTrace :    at ETH.DAL.SQLHelper.ExecuteDataTable(String SQLString, SqlParameter[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\SqlHelper.cs:line 297
+   at ETH.DAL.DBController.ExecuteDataTable[TParams](String SQLString, TParams[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\DBController.cs:line 240
+   at ETH.BLL.Administration.Company.Select(String CustomerID) in D:\GIT-CLONES\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\Administration\Company.cs:line 324
+   at Website.Administration.ManageCompany.LoadCompanies() in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 61
+   at Website.Administration.ManageCompany.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 27
+Log Date : Friday, 19 Jan, 2018
+Log Time : 11:50:01 AM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Procedure or function 'SP_Company' expects parameter '@Website', which was not supplied.
+StackTrace :    at ETH.DAL.SQLHelper.ExecuteDataTable(String SQLString, SqlParameter[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\SqlHelper.cs:line 297
+   at ETH.DAL.DBController.ExecuteDataTable[TParams](String SQLString, TParams[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\DBController.cs:line 240
+   at ETH.BLL.Administration.Company.Select(String CustomerID) in D:\GIT-CLONES\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\Administration\Company.cs:line 324
+   at Website.Administration.ManageCompany.LoadCompanies() in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 61
+   at Website.Administration.ManageCompany.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 27
+Log Date : Friday, 19 Jan, 2018
+Log Time : 11:50:32 AM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Procedure or function 'SP_Company' expects parameter '@Website', which was not supplied.
+StackTrace :    at ETH.DAL.SQLHelper.ExecuteDataTable(String SQLString, SqlParameter[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\SqlHelper.cs:line 297
+   at ETH.DAL.DBController.ExecuteDataTable[TParams](String SQLString, TParams[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\DBController.cs:line 240
+   at ETH.BLL.Administration.Company.Select(String CustomerID) in D:\GIT-CLONES\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\Administration\Company.cs:line 324
+   at Website.Administration.ManageCompany.LoadCompanies() in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 61
+   at Website.Administration.ManageCompany.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 27
+Log Date : Friday, 19 Jan, 2018
+Log Time : 11:57:50 AM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Procedure or function 'SP_Company' expects parameter '@Website', which was not supplied.
+StackTrace :    at ETH.DAL.SQLHelper.ExecuteDataTable(String SQLString, SqlParameter[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\SqlHelper.cs:line 297
+   at ETH.DAL.DBController.ExecuteDataTable[TParams](String SQLString, TParams[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\DBController.cs:line 240
+   at ETH.BLL.Administration.Company.Select(String CustomerID) in D:\GIT-CLONES\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\Administration\Company.cs:line 324
+   at Website.Administration.ManageCompany.LoadCompanies() in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 61
+   at Website.Administration.ManageCompany.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 27
+Log Date : Friday, 19 Jan, 2018
+Log Time : 11:59:12 AM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Procedure or function 'SP_Company' expects parameter '@Website', which was not supplied.
+StackTrace :    at ETH.DAL.SQLHelper.ExecuteDataTable(String SQLString, SqlParameter[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\SqlHelper.cs:line 297
+   at ETH.DAL.DBController.ExecuteDataTable[TParams](String SQLString, TParams[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\DBController.cs:line 240
+   at ETH.BLL.Administration.Company.Select(String CustomerID) in D:\GIT-CLONES\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\Administration\Company.cs:line 324
+   at Website.Administration.ManageCompany.LoadCompanies() in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 61
+   at Website.Administration.ManageCompany.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 27
+Log Date : Friday, 19 Jan, 2018
+Log Time : 12:02:28 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Procedure or function 'SP_Company' expects parameter '@ModifiedDate', which was not supplied.
+StackTrace :    at ETH.DAL.SQLHelper.ExecuteDataTable(String SQLString, SqlParameter[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\SqlHelper.cs:line 297
+   at ETH.DAL.DBController.ExecuteDataTable[TParams](String SQLString, TParams[] cmdParms) in D:\GIT-CLONES\bhoom\ETH.DAL\ETH.DAL\DBController.cs:line 240
+   at ETH.BLL.Administration.Company.Select(String CustomerID) in D:\GIT-CLONES\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\Administration\Company.cs:line 324
+   at Website.Administration.ManageCompany.LoadCompanies() in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 61
+   at Website.Administration.ManageCompany.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 27
+Log Date : Friday, 19 Jan, 2018
+Log Time : 12:04:17 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Unable to cast object of type 'System.Int32' to type 'System.String'.
+StackTrace :    at System.Data.DataRowExtensions.UnboxT`1.ReferenceField(Object value)
+   at System.Data.DataRowExtensions.Field[T](DataRow row, String columnName)
+   at Website.Administration.ManageCompany.<LoadCompanies>b__3_0(DataRow row) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 68
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Website.Administration.ManageCompany.LoadCompanies() in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 67
+   at Website.Administration.ManageCompany.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 27
+Log Date : Friday, 19 Jan, 2018
+Log Time : 12:04:28 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Unable to cast object of type 'System.Int32' to type 'System.String'.
+StackTrace :    at System.Data.DataRowExtensions.UnboxT`1.ReferenceField(Object value)
+   at System.Data.DataRowExtensions.Field[T](DataRow row, String columnName)
+   at Website.Administration.ManageCompany.<LoadCompanies>b__3_0(DataRow row) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 68
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Website.Administration.ManageCompany.LoadCompanies() in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 67
+   at Website.Administration.ManageCompany.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 27
+Log Date : Friday, 19 Jan, 2018
+Log Time : 12:07:35 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Unable to cast object of type 'System.Int32' to type 'System.String'.
+StackTrace :    at System.Data.DataRowExtensions.UnboxT`1.ReferenceField(Object value)
+   at System.Data.DataRowExtensions.Field[T](DataRow row, String columnName)
+   at Website.Administration.ManageCompany.<LoadCompanies>b__3_0(DataRow row) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 68
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Website.Administration.ManageCompany.LoadCompanies() in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 67
+   at Website.Administration.ManageCompany.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 27
+Log Date : Friday, 19 Jan, 2018
+Log Time : 12:09:03 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Unable to cast object of type 'System.Int32' to type 'System.String'.
+StackTrace :    at System.Data.DataRowExtensions.UnboxT`1.ReferenceField(Object value)
+   at System.Data.DataRowExtensions.Field[T](DataRow row, String columnName)
+   at Website.Administration.ManageCompany.<LoadCompanies>b__3_0(DataRow row) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 68
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Website.Administration.ManageCompany.LoadCompanies() in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 67
+   at Website.Administration.ManageCompany.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageCompany.aspx.cs:line 27
+Log Date : Friday, 19 Jan, 2018
+Log Time : 12:11:11 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Unable to cast object of type 'System.Int32' to type 'System.String'.
+StackTrace :    at Website.Administration.ManageCompany.CheckDBNull[T](Object Value)
+   at Website.Administration.ManageCompany.<LoadCompanies>b__3_0(DataRow row)
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Website.Administration.ManageCompany.LoadCompanies()
+   at Website.Administration.ManageCompany.Page_Load(Object sender, EventArgs e)
+Log Date : Friday, 19 Jan, 2018
+Log Time : 12:14:20 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Cannot cast DBNull.Value to type 'System.Int32'. Please use a nullable type.
+StackTrace :    at System.Data.DataRowExtensions.UnboxT`1.ValueField(Object value)
+   at System.Data.DataRowExtensions.Field[T](DataRow row, String columnName)
+   at Website.Administration.ManageCompany.<LoadCompanies>b__3_0(DataRow row)
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Website.Administration.ManageCompany.LoadCompanies()
+   at Website.Administration.ManageCompany.Page_Load(Object sender, EventArgs e)
+Log Date : Friday, 19 Jan, 2018
+Log Time : 12:16:52 PM
+
+-----------------------------------------------------------------------------
+

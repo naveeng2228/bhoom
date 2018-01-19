@@ -1,5 +1,6 @@
 ﻿using ETH.BLL;
 using ETH.BLL.Misc;
+using ETH.BLL.Security;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,13 +23,23 @@ namespace Website
                 {
                     try
                     {
-
+                        BindUserMenu(objConfig.UserInfo.UserId);
                     }
                     catch (Exception Ex)
                     {
                         ExceptionHandler<Exception>.WriteException(Ex);
                     }
                 }
+            }
+        }
+
+        private void BindUserMenu(string userId)
+        {
+            MasterMenu ObjMenu = new MasterMenu();
+            List<MasterMenu> items = ObjMenu.getMenuItems(userId);
+            foreach (var item in items)
+            {
+
             }
         }
 

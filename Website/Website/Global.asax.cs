@@ -28,6 +28,11 @@ namespace Website
 
             routes.MapPageRoute("Dashboard", "dashboard", "~/dashboard.aspx");
 
+            #region Administration
+            routes.MapPageRoute("administration-home", "administration", "~/Administration/Default.aspx");
+            routes.MapPageRoute("administration-managecompany", "administration/managecompany/{CompanyId}", "~/Administration/ManageCompany.aspx");
+            #endregion
+
         }
 
         protected void Session_Start(object sender, EventArgs e)
