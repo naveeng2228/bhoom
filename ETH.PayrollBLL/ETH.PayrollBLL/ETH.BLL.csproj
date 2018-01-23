@@ -52,6 +52,7 @@
     <Compile Include="Administration\Shift.cs" />
     <Compile Include="Administration\ShiftGroup.cs" />
     <Compile Include="Administration\Workarea.cs" />
+    <Compile Include="EventManager.cs" />
     <Compile Include="Payroll\Allowances.cs" />
     <Compile Include="AppMasters\Country.cs" />
     <Compile Include="AppMasters\Form.cs">

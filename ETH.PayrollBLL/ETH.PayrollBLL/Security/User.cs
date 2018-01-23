@@ -13,6 +13,7 @@ namespace ETH.BLL.Security
     public class User
     {
         //Basic Details
+        public int Id { get; set; }
         public string CustomerId { get; set; }
         public string UserId { get; set; }
         public string UserName { get; set; }

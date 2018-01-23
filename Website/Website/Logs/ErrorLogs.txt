@@ -388,3 +388,16 @@ Log Time : 12:16:52 PM
 
 -----------------------------------------------------------------------------
 
+Log Type : Exception
+Log Message : 'ddlCountry' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+StackTrace :    at System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   at System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   at System.Web.UI.WebControls.ListControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   at Website.Administration.ManageCompany.Page_Load(Object sender, EventArgs e)
+Log Date : Tuesday, 23 Jan, 2018
+Log Time : 12:57:22 PM
+
+-----------------------------------------------------------------------------
+

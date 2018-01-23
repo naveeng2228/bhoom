@@ -325,3 +325,44 @@ VARCHAR(20) ModifiedDate NULL
 VARCHAR(15) ModifiedTime NULL
 INT ModifiedBy NULL
 INT Status NOT NULL
+
+
+
+TABLE NAME: TBL_WORKAREARULES_FIELDS, SP NAME: SP_Workarea
+==========================================================================
+VARCHAR(20) RuleID PK
+VARCHAR(5) RuleIndex NOT NULL
+VARCHAR(300) Rule Name NOT NULL
+VARCHAR(MAX) Description NULL
+VARCHAR(20) ModuleID NOT NULL
+VARCHAR(20) DefaultValue NULL
+INT IsEditable NOT NULL
+VARCHAR(20) CreatedDate NOT NULL
+VARCHAR(15) CreatedTime NOT NULL
+INT CreatedBy NOT NULL
+VARCHAR(20) ModifiedDate NULL
+VARCHAR(15) ModifiedTime NULL
+INT ModifiedBy NULL
+
+
+
+TABLE NAME: TBL_WORKAREARULES_VALUES, SP NAME: SP_Workarea
+==========================================================================
+VARCHAR(20) CompanyID (FK WITH TABLE: TBL_COMPANY, COLUMN: CompanyID) NOT NULL
+VARCHAR(20) WorkareaID (FK WITH TABLE: TBL_WORKAREA, COLUMN: WorkareaID) NOT NULL
+VARCHAR(20) RuleID FK
+VARCHAR(20) Value NOT NULL
+VARCHAR(20) CreatedDate NOT NULL
+VARCHAR(15) CreatedTime NOT NULL
+INT CreatedBy NOT NULL
+VARCHAR(20) ModifiedDate NULL
+VARCHAR(15) ModifiedTime NULL
+INT ModifiedBy NULL
+INT Status NOT NULL
+
+
+
+
+
+
+

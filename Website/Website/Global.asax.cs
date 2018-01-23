@@ -30,7 +30,28 @@ namespace Website
 
             #region Administration
             routes.MapPageRoute("administration-home", "administration", "~/Administration/Default.aspx");
+            routes.MapPageRoute("administration-managecompany-def", "administration/managecompany", "~/Administration/ManageCompany.aspx");
             routes.MapPageRoute("administration-managecompany", "administration/managecompany/{CompanyId}", "~/Administration/ManageCompany.aspx");
+            #endregion
+
+            #region Attendance
+            routes.MapPageRoute("attendance-home", "attendance", "~/Attendance/Default.aspx");
+            #endregion
+
+            #region Payroll
+            routes.MapPageRoute("payroll-home", "payroll", "~/Payroll/Default.aspx");
+            #endregion
+
+            #region Security
+            routes.MapPageRoute("security-home", "security", "~/Security/Default.aspx");
+            #endregion
+
+            #region Leave Management
+            routes.MapPageRoute("leavemanagement-home", "leavemanagement", "~/LeaveManagement/Default.aspx");
+            #endregion
+
+            #region Others
+            routes.MapPageRoute("other-home", "other", "~/Other/Default.aspx");
             #endregion
 
         }

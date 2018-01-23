@@ -1,4 +1,5 @@
-﻿using ETH.BLL.Misc;
+﻿using ETH.BLL;
+using ETH.BLL.Misc;
 using ETH.DAL;
 using System;
 using System.Collections.Generic;
@@ -8,14 +9,16 @@ using System.Linq;
 using System.Text;
 using System.Web;
 
-namespace ETH.BLL.AppMasters
+namespace ETH.BLL
 {
-    public class State
+    public class EventManager
     {
-        public string CountryID { get; set; }
-        public string StateID { get; set; }
-        public string StateName { get; set; }
-
+        public Guid EventID { get; set; }
+        public string EventName { get; set; }
+        public EventState EventState { get; set; }
+        public string FormID { get; set; }
+        public string ModuleID { get; set; }
+        
         //Auto Input Fields
         public string CreatedDate { get; set; }
         public string CreatedTime { get; set; }
@@ -28,15 +31,15 @@ namespace ETH.BLL.AppMasters
         public Status Status { get; set; }
 
         /// <summary>
-        /// Insert a new State to db (Master)
+        /// Insert a new EventManager to db (Master)
         /// </summary>
         /// <returns></returns>
         public int Insert()
         {
             int _result = 0;
-            State objState = this;
+            EventManager objEventManager = this;
             Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
-            string Query = "SP_States";
+            string Query = "SP_EventManager";
             switch (ObjConfig.DBType)
             {
                 // MS-SQL
@@ -45,16 +48,18 @@ namespace ETH.BLL.AppMasters
                         DBController ObjDB = new DBController(DBController.DBTypes.MSSQL);
                         List<SqlParameter> parms = new List<SqlParameter>();
 
-                        parms.Add(new SqlParameter("CountryID", objState.CountryID));
-                        parms.Add(new SqlParameter("StateID", objState.StateID));
-                        parms.Add(new SqlParameter("StateName", objState.StateName));
-                        parms.Add(new SqlParameter("CreatedDate", objState.CreatedDate));
-                        parms.Add(new SqlParameter("CreatedTime", objState.CreatedTime));
-                        parms.Add(new SqlParameter("CreatedBy", objState.CreatedBy));
-                        parms.Add(new SqlParameter("ModifiedDate", objState.ModifiedDate));
-                        parms.Add(new SqlParameter("ModifiedTime", objState.ModifiedTime));
-                        parms.Add(new SqlParameter("ModifiedBy", objState.ModifiedBy));
-                        parms.Add(new SqlParameter("Status", objState.Status));
+                        parms.Add(new SqlParameter("EventID", objEventManager.EventID));
+                        parms.Add(new SqlParameter("EventName", objEventManager.EventName));
+                        parms.Add(new SqlParameter("EventState", objEventManager.EventState));
+                        parms.Add(new SqlParameter("FormID", objEventManager.FormID));
+                        parms.Add(new SqlParameter("ModuleID", objEventManager.ModuleID));
+                        parms.Add(new SqlParameter("CreatedDate", objEventManager.CreatedDate));
+                        parms.Add(new SqlParameter("CreatedTime", objEventManager.CreatedTime));
+                        parms.Add(new SqlParameter("CreatedBy", objEventManager.CreatedBy));
+                        parms.Add(new SqlParameter("ModifiedDate", objEventManager.ModifiedDate));
+                        parms.Add(new SqlParameter("ModifiedTime", objEventManager.ModifiedTime));
+                        parms.Add(new SqlParameter("ModifiedBy", objEventManager.ModifiedBy));
+                        parms.Add(new SqlParameter("Status", objEventManager.Status));
 
                         parms.Add(new SqlParameter("Flag", DB_Flags.Insert));
 
@@ -66,15 +71,15 @@ namespace ETH.BLL.AppMasters
         }
 
         /// <summary>
-        /// Update a State in db (Master)
+        /// Update a EventManager in db (Master)
         /// </summary>
         /// <returns></returns>
         public int Update()
         {
             int _result = 0;
-            State objState = this;
+            EventManager objEventManager = this;
             Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
-            string Query = "SP_States";
+            string Query = "SP_EventManager";
             switch (ObjConfig.DBType)
             {
                 // MS-SQL
@@ -83,13 +88,15 @@ namespace ETH.BLL.AppMasters
                         DBController ObjDB = new DBController(DBController.DBTypes.MSSQL);
                         List<SqlParameter> parms = new List<SqlParameter>();
 
-                        parms.Add(new SqlParameter("CountryID", objState.CountryID));
-                        parms.Add(new SqlParameter("StateID", objState.StateID));
-                        parms.Add(new SqlParameter("StateName", objState.StateName));
-                        parms.Add(new SqlParameter("ModifiedDate", objState.ModifiedDate));
-                        parms.Add(new SqlParameter("ModifiedTime", objState.ModifiedTime));
-                        parms.Add(new SqlParameter("ModifiedBy", objState.ModifiedBy));
-                        parms.Add(new SqlParameter("Status", objState.Status));
+                        parms.Add(new SqlParameter("EventID", objEventManager.EventID));
+                        parms.Add(new SqlParameter("EventName", objEventManager.EventName));
+                        parms.Add(new SqlParameter("EventState", objEventManager.EventState));
+                        parms.Add(new SqlParameter("FormID", objEventManager.FormID));
+                        parms.Add(new SqlParameter("ModuleID", objEventManager.ModuleID));
+                        parms.Add(new SqlParameter("ModifiedDate", objEventManager.ModifiedDate));
+                        parms.Add(new SqlParameter("ModifiedTime", objEventManager.ModifiedTime));
+                        parms.Add(new SqlParameter("ModifiedBy", objEventManager.ModifiedBy));
+                        parms.Add(new SqlParameter("Status", objEventManager.Status));
 
                         parms.Add(new SqlParameter("Flag", DB_Flags.Update));
 
@@ -101,14 +108,14 @@ namespace ETH.BLL.AppMasters
         }
 
         /// <summary>
-        /// Partial delete a State in db (Master)
+        /// Partial delete a EventManager in db (Master)
         /// </summary>
         /// <returns></returns>
-        public int PartialDelete(string CountryID, string StateID)
+        public int PartialDelete(string EventID)
         {
             int _result = 0;
             Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
-            string Query = "SP_States";
+            string Query = "SP_EventManager";
             switch (ObjConfig.DBType)
             {
                 // MS-SQL
@@ -117,8 +124,7 @@ namespace ETH.BLL.AppMasters
                         DBController ObjDB = new DBController(DBController.DBTypes.MSSQL);
                         List<SqlParameter> parms = new List<SqlParameter>();
 
-                        parms.Add(new SqlParameter("CountryID", CountryID));
-                        parms.Add(new SqlParameter("StateID", StateID));
+                        parms.Add(new SqlParameter("EventID", EventID));
                         parms.Add(new SqlParameter("Status", Status.PartiallyDeleted));
 
                         parms.Add(new SqlParameter("Flag", DB_Flags.PartialDelete));
@@ -131,15 +137,15 @@ namespace ETH.BLL.AppMasters
         }
 
         /// <summary>
-        /// Delete a State in db (Master)
+        /// Delete a EventManager in db (Master)
         /// </summary>
         /// <returns></returns>
-        public int Delete(string CountryID, string StateID)
+        public int Delete(string EventID)
         {
             int _result = 0;
-            State objState = this;
+            EventManager objEventManager = this;
             Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
-            string Query = "SP_States";
+            string Query = "SP_EventManager";
             switch (ObjConfig.DBType)
             {
                 // MS-SQL
@@ -148,8 +154,7 @@ namespace ETH.BLL.AppMasters
                         DBController ObjDB = new DBController(DBController.DBTypes.MSSQL);
                         List<SqlParameter> parms = new List<SqlParameter>();
 
-                        parms.Add(new SqlParameter("CountryID", CountryID));
-                        parms.Add(new SqlParameter("StateID", StateID));
+                        parms.Add(new SqlParameter("EventID", EventID));
                         parms.Add(new SqlParameter("Status", Status.Deleted));
 
                         parms.Add(new SqlParameter("Flag", DB_Flags.FullDelete));
@@ -168,11 +173,11 @@ namespace ETH.BLL.AppMasters
         /// <param name="flag"></param>
         /// <param name="ShowAll"></param>
         /// <returns></returns>
-        private List<State> Select(Status status, DB_Flags flag, bool ShowAll = false)
+        private List<EventManager> Select(Status status, DB_Flags flag, bool ShowAll = false)
         {
-            List<State> _result = null;
+            List<EventManager> _result = null;
             Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
-            string Query = "SP_States";
+            string Query = "SP_EventManager";
             switch (ObjConfig.DBType)
             {
                 // MS-SQL
@@ -188,7 +193,7 @@ namespace ETH.BLL.AppMasters
                         parms.Add(new SqlParameter("Flag", flag));
 
                         DataTable _data = ObjDB.ExecuteDataTable(Query, parms.ToArray());
-                        _result = Helper.DataTableToList<State>(_data);
+                        _result = Helper.DataTableToList<EventManager>(_data);
 
                         break;
                     }
@@ -201,9 +206,9 @@ namespace ETH.BLL.AppMasters
         /// </summary>
         /// <param name="status"></param>
         /// <returns></returns>
-        public List<State> Select(Status status)
+        public List<EventManager> Select(Status status)
         {
-            List<State> _result = null;
+            List<EventManager> _result = null;
             switch (status)
             {
                 case Status.Active:
@@ -243,9 +248,9 @@ namespace ETH.BLL.AppMasters
         /// Select all irrespective of status
         /// </summary>
         /// <returns></returns>
-        public List<State> Select()
+        public List<EventManager> Select()
         {
-            List<State> _result = null;
+            List<EventManager> _result = null;
             _result = Select(Status.Active, DB_Flags.SelectActive, true);
             return _result;
         }
@@ -257,11 +262,11 @@ namespace ETH.BLL.AppMasters
         /// <param name="flag"></param>
         /// <param name="ShowAll"></param>
         /// <returns></returns>
-        public List<State> Select(string CountryID)
+        public List<EventManager> Select(string EventID)
         {
-            List<State> _result = null;
+            List<EventManager> _result = null;
             Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
-            string Query = "SP_States";
+            string Query = "SP_EventManager";
             switch (ObjConfig.DBType)
             {
                 // MS-SQL
@@ -269,16 +274,17 @@ namespace ETH.BLL.AppMasters
                     {
                         DBController ObjDB = new DBController(DBController.DBTypes.MSSQL);
                         List<SqlParameter> parms = new List<SqlParameter>();
-                        parms.Add(new SqlParameter("CountryID", CountryID));
+                        parms.Add(new SqlParameter("EventID", EventID));
                         parms.Add(new SqlParameter("Flag", 9));
 
                         DataTable _data = ObjDB.ExecuteDataTable(Query, parms.ToArray());
-                        _result = Helper.DataTableToList<State>(_data);
+                        _result = Helper.DataTableToList<EventManager>(_data);
 
                         break;
                     }
             }
             return _result;
         }
+
     }
 }

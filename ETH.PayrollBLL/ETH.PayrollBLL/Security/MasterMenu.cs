@@ -36,6 +36,7 @@ namespace ETH.BLL.Security
                     {
                         DBController ObjDB = new DBController(DBController.DBTypes.MSSQL);
                         List<SqlParameter> parms = new List<SqlParameter>();
+                        parms.Add(new SqlParameter("UserId", UserID));
                         parms.Add(new SqlParameter("Flag", 11));
 
                         DataTable _data = ObjDB.ExecuteDataTable(Query, parms.ToArray());

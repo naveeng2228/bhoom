@@ -14,5 +14,7 @@ namespace ETH.BLL
         public string AppTimeFormat { get; set; }
         public LoginHistory[] LoginHistory { get; set; }
         public User UserInfo { get; set; }
+        public int MinCompanyYearOfEstablishment { get; set; }
+        public EventManager CurrentEvent { get; set; }
     }
 }

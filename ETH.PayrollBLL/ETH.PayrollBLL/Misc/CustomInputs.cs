@@ -65,4 +65,41 @@ namespace ETH.BLL.Misc
         Slab = 2,
         Custom = 3
     }
+
+    public enum Available_Modules
+    {
+        Administration = 10001,
+        Attendance = 10002,
+        Payroll = 10003,
+        Security = 10004,
+        LeaveManagement = 10005,
+        Other = 10006
+    }
+
+    public enum Available_Forms
+    {
+        AdministrationHome = 10001,
+        ManageCompany = 10002,
+        ManageWorkarea = 10003,
+        ManageDivisions = 10004,
+        ManageDepartments = 10005,
+        ManageDesignations = 10006,
+        ManageHolidayGroups = 10007,
+        ManageLeaveGroups = 10008,
+        ManageShiftGroups = 10009,
+        ManageAllowanceGroups = 10010,
+        ManageHolidays = 10011,
+        ManageLeaveTypes = 10012,
+        ManageLeaves = 10013,
+        ManageShifts = 10014,
+        ManageAllowances = 10015
+    }
+
+    public enum EventState
+    {
+        NotStarted = 0,
+        Started = 1,
+        Locked = 2,
+        Released = 3
+    }
 }

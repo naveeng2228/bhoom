@@ -253,5 +253,39 @@ namespace ETH.BLL.AppMasters
             _result = Select(Status.Active, DB_Flags.SelectActive, true);
             return _result;
         }
+
+        /// <summary>
+        /// Select all irrespective of status
+        /// </summary>
+        /// <returns></returns>
+        public Form Select(string FormID)
+        {
+            Form _result = null;
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
+            string Query = "SP_Forms";
+            switch (ObjConfig.DBType)
+            {
+                // MS-SQL
+                case "0":
+                    {
+                        DBController ObjDB = new DBController(DBController.DBTypes.MSSQL);
+                        List<SqlParameter> parms = new List<SqlParameter>();
+                        parms.Add(new SqlParameter("FormID", FormID));
+                        parms.Add(new SqlParameter("Flag", 9));
+
+                        DataTable _data = ObjDB.ExecuteDataTable(Query, parms.ToArray());
+                        var _myresult = Helper.DataTableToList<Form>(_data);
+                        if(_myresult != null)
+                        {
+                            if(_myresult.Count > 0)
+                            {
+                                _result = _myresult[0];
+                            }
+                        }
+                        break;
+                    }
+            }
+            return _result;
+        }
     }
 }
