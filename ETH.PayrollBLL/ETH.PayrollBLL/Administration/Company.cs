@@ -77,6 +77,7 @@ namespace ETH.BLL.Administration
                         parms.Add(new SqlParameter("StateID", objCompany.StateID));
                         parms.Add(new SqlParameter("CountryID", objCompany.CountryID));
                         parms.Add(new SqlParameter("Pincode", objCompany.Pincode));
+                        parms.Add(new SqlParameter("PhoneNumber", objCompany.PhoneNumber));
                         parms.Add(new SqlParameter("Website", objCompany.Website));
                         parms.Add(new SqlParameter("Priority", objCompany.Priority));
                         parms.Add(new SqlParameter("CST", objCompany.CST));
@@ -90,9 +91,9 @@ namespace ETH.BLL.Administration
                         parms.Add(new SqlParameter("ModifiedDate", objCompany.ModifiedDate));
                         parms.Add(new SqlParameter("ModifiedTime", objCompany.ModifiedTime));
                         parms.Add(new SqlParameter("ModifiedBy", objCompany.ModifiedBy));
-                        parms.Add(new SqlParameter("Status", objCompany.Status));
+                        parms.Add(new SqlParameter("Status",((int) objCompany.Status).ToString()));
 
-                        parms.Add(new SqlParameter("Flag", DB_Flags.Insert));
+                        parms.Add(new SqlParameter("Flag", ((int)DB_Flags.Insert).ToString()));
 
                         _result = ObjDB.ExecuteNonQuery(Query, parms.ToArray());
                         break;
@@ -131,6 +132,7 @@ namespace ETH.BLL.Administration
                         parms.Add(new SqlParameter("StateID", objCompany.StateID));
                         parms.Add(new SqlParameter("CountryID", objCompany.CountryID));
                         parms.Add(new SqlParameter("Pincode", objCompany.Pincode));
+                        parms.Add(new SqlParameter("PhoneNumber", objCompany.PhoneNumber));
                         parms.Add(new SqlParameter("Website", objCompany.Website));
                         parms.Add(new SqlParameter("Priority", objCompany.Priority));
                         parms.Add(new SqlParameter("CST", objCompany.CST));
@@ -141,9 +143,9 @@ namespace ETH.BLL.Administration
                         parms.Add(new SqlParameter("ModifiedDate", objCompany.ModifiedDate));
                         parms.Add(new SqlParameter("ModifiedTime", objCompany.ModifiedTime));
                         parms.Add(new SqlParameter("ModifiedBy", objCompany.ModifiedBy));
-                        parms.Add(new SqlParameter("Status", objCompany.Status));
+                        parms.Add(new SqlParameter("Status", ((int)objCompany.Status).ToString()));
 
-                        parms.Add(new SqlParameter("Flag", DB_Flags.Update));
+                        parms.Add(new SqlParameter("Flag", ((int)DB_Flags.Update).ToString()));
 
                         _result = ObjDB.ExecuteNonQuery(Query, parms.ToArray());
                         break;
@@ -172,9 +174,9 @@ namespace ETH.BLL.Administration
 
                         parms.Add(new SqlParameter("CustomerID", objCompany.CustomerID));
                         parms.Add(new SqlParameter("CompanyID", objCompany.CompanyID));
-                        parms.Add(new SqlParameter("Status", Status.PartiallyDeleted));
+                        parms.Add(new SqlParameter("Status", ((int)Status.PartiallyDeleted).ToString()));
 
-                        parms.Add(new SqlParameter("Flag", DB_Flags.PartialDelete));
+                        parms.Add(new SqlParameter("Flag", ((int)DB_Flags.PartialDelete).ToString()));
 
                         _result = ObjDB.ExecuteNonQuery(Query, parms.ToArray());
                         break;
@@ -203,9 +205,9 @@ namespace ETH.BLL.Administration
 
                         parms.Add(new SqlParameter("CustomerID", objCompany.CustomerID));
                         parms.Add(new SqlParameter("CompanyID", objCompany.CompanyID));
-                        parms.Add(new SqlParameter("Status", Status.Deleted));
+                        parms.Add(new SqlParameter("Status", ((int)Status.Deleted).ToString()));
 
-                        parms.Add(new SqlParameter("Flag", DB_Flags.FullDelete));
+                        parms.Add(new SqlParameter("Flag", ((int)DB_Flags.FullDelete).ToString()));
 
                         _result = ObjDB.ExecuteNonQuery(Query, parms.ToArray());
                         break;
@@ -236,9 +238,9 @@ namespace ETH.BLL.Administration
 
                         if (!ShowAll)
                         {
-                            parms.Add(new SqlParameter("Status", status));
+                            parms.Add(new SqlParameter("Status", ((int)status).ToString()));
                         }
-                        parms.Add(new SqlParameter("Flag", flag));
+                        parms.Add(new SqlParameter("Flag", ((int)flag).ToString()));
 
                         DataTable _data = ObjDB.ExecuteDataTable(Query, parms.ToArray());
                         _result = Helper.DataTableToList<Company>(_data);
@@ -320,7 +322,7 @@ namespace ETH.BLL.Administration
                         DBController ObjDB = new DBController(DBController.DBTypes.MSSQL);
                         List<SqlParameter> parms = new List<SqlParameter>();
                         parms.Add(new SqlParameter("CustomerID", CustomerID));
-                        parms.Add(new SqlParameter("Status", Status.Active));
+                        parms.Add(new SqlParameter("Status", ((int)Status.Active).ToString()));
                         parms.Add(new SqlParameter("Flag", 10));
 
                         DataTable _data = ObjDB.ExecuteDataTable(Query, parms.ToArray());

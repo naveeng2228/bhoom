@@ -5,6 +5,7 @@ using ETH.BLL.Misc;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Web;
@@ -25,41 +26,46 @@ namespace Website.Administration
             if (objConfig != null)
             {
                 AssignPageDefaults();
-                CurrentCompanyID = RouteData.Values.Keys.Contains("CompanyId") ? RouteData.Values["CompanyId"].ToString() : "";
                 if (!IsPostBack)
                 {
                     try
                     {
-                        ViewState["__UpdateButton__Clicked__"] = "NO";
-                        List<int> Years = new List<int>();
-                        for (int i = objConfig.MinCompanyYearOfEstablishment; i <= Convert.ToInt32(DateTime.Now.ToString("yyyy")); i++)
-                        {
-                            Years.Add(i);
-                        }
-
-                        ddlYear.DataSource = Years;
-                        ddlYear.DataBind();
-                        ddlYear.SelectedValue = DateTime.Now.ToString("yyyy");
-
-                        // Load Countries
-                        Country objCountry = new Country();
-                        List<Country> countries = objCountry.Select(Status.Active);
-                        ddlCountry.DataSource = countries;
-                        ddlCountry.DataValueField = "CountryID";
-                        ddlCountry.DataTextField = "CountryName";
-                        ddlCountry.DataBind();
-
-                        LoadCompanies();
+                        LoadDefaults();
                     }
                     catch (Exception Ex)
                     {
                         ExceptionHandler<Exception>.WriteException(Ex);
                     }
-
-
-                    objCurrentEvent = (EventManager)Session["__CURRENT_EVENT__"];
                 }
             }
+        }
+
+        private void LoadDefaults()
+        {
+            CurrentCompanyID = RouteData.Values.Keys.Contains("CompanyId") ? RouteData.Values["CompanyId"].ToString() : "";
+            List<int> Years = new List<int>();
+            for (int i = objConfig.MinCompanyYearOfEstablishment; i <= Convert.ToInt32(DateTime.Now.ToString("yyyy")); i++)
+            {
+                Years.Add(i);
+            }
+
+            ddlYear.DataSource = Years;
+            ddlYear.DataBind();
+            ddlYear.SelectedValue = DateTime.Now.ToString("yyyy");
+
+            // Load Countries
+            Country objCountry = new Country();
+            List<Country> countries = objCountry.Select(Status.Active);
+            ddlCountry.DataSource = countries;
+            ddlCountry.DataValueField = "CountryID";
+            ddlCountry.DataTextField = "CountryName";
+            ddlCountry.DataBind();
+
+            var statuses = Enum.GetValues(typeof(Status));
+            ddlStatus.DataSource = statuses;
+            ddlStatus.DataBind();
+
+            LoadCompanies();
         }
 
         private void LoadCompanyDetails(Company company)
@@ -84,14 +90,15 @@ namespace Website.Administration
             txtTAN.Text = company.TAN;
             txtGST.Text = company.GST;
             ddlStatus.SelectedValue = company.Status.ToString();
+            hdnPriority.Value = company.Priority.ToString();
         }
 
         private void AssignPageDefaults()
         {
             FormID = "10002";
-            var form = Select(FormID);
-            FormName = form.FormName;
-            ModuleID = form.ModuleID;
+            var formData = Select(FormID);
+            FormName = formData.FormName;
+            ModuleID = formData.ModuleID;
         }
 
         private void CheckLoginStatus()
@@ -143,10 +150,14 @@ namespace Website.Administration
                     }
                     _result.Append("</ul>");
                     divCompaniesList.InnerHtml = _result.ToString();
+                    divNoCompanies.Visible = false;
+                    divUpdateCompany.Visible = true;
                 }
                 else
                 {
                     divCompaniesList.InnerHtml = "<p>No companies available.</p>";
+                    divNoCompanies.Visible = true;
+                    divUpdateCompany.Visible = false;
                 }
             }
         }
@@ -164,7 +175,60 @@ namespace Website.Administration
             }
 
             Company objCompany = new Company();
+            objCompany.CustomerID = objConfig.CustomerID;
             objCompany.CompanyID = txtCompanyID.Text;
+            objCompany.CompanyName = txtCompanyName.Text;
+            objCompany.CompanyCode = txtCompanyCode.Text;
+            objCompany.Description = txtDescription.Text;
+            objCompany.YearOfEstablishment = ddlYear.SelectedValue;
+            objCompany.CompanyLogo = UploadLogo(fuLogo, objCompany.CompanyName);
+            objCompany.CompanyEmail = txtCompanyEmail.Text;
+            objCompany.PrimaryAddress = txtPrimaryAddress.Text;
+            objCompany.CountryID = ddlCountry.SelectedValue;
+            objCompany.StateID = ddlState.SelectedValue;
+            objCompany.Pincode = txtPincode.Text == "" ? 0 : Convert.ToInt32(txtPincode.Text);
+            objCompany.Website = txtWebsite.Text;
+            objCompany.PhoneNumber = txtPhoneNumber.Text;
+            objCompany.Priority = Convert.ToInt32(hdnPriority.Value);
+            objCompany.CST = txtCST.Text;
+            objCompany.TIN = txtTIN.Text;
+            objCompany.PAN = txtPAN.Text;
+            objCompany.TAN = txtTAN.Text;
+            objCompany.GST = txtGST.Text;
+
+            objCompany.ModifiedBy = objConfig.UserInfo.Id.ToString();
+            objCompany.ModifiedDate = DateTime.Now.ToString(objConfig.AppDateFormat);
+            objCompany.ModifiedTime = DateTime.Now.ToString(objConfig.AppTimeFormat);
+
+            objCompany.Status = (Status)Enum.Parse(typeof(Status), ddlStatus.SelectedValue);
+
+            if (objCompany.Update() > 0)
+            {
+                LoadDefaults();
+                ShowMessage(string.Format("Company: {0}, updated successfully.", objCompany.CompanyName));
+            }
+            else
+            {
+                ShowMessage(string.Format("Something went wrong. Please try again after sometime."));
+            }
+        }
+
+        private void ShowMessage(string Message)
+        {
+            ScriptManager.RegisterStartupScript(Page, Page.GetType(), "custom-alert", string.Format("showMessage('{0}');", Message), true);
+        }
+
+        private string UploadLogo(FileUpload fuLogo, String CompanyName)
+        {
+            if (!fuLogo.HasFile)
+            {
+                return string.Empty;
+            }
+
+            string DirectoryPath = Server.MapPath("~/Administration/logos");
+            string LogoName = string.Format("{0}_{1}{2}", CompanyName, DateTime.Now.ToBinary().ToString(), Path.GetExtension(fuLogo.PostedFile.FileName));
+            fuLogo.PostedFile.SaveAs(LogoName);
+            return LogoName;
         }
 
         protected void ddlState_SelectedIndexChanged(object sender, EventArgs e)

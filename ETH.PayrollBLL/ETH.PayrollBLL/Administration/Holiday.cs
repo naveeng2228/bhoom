@@ -68,9 +68,9 @@ namespace ETH.BLL.Administration
                         parms.Add(new SqlParameter("ModifiedDate", objHoliday.ModifiedDate));
                         parms.Add(new SqlParameter("ModifiedTime", objHoliday.ModifiedTime));
                         parms.Add(new SqlParameter("ModifiedBy", objHoliday.ModifiedBy));
-                        parms.Add(new SqlParameter("Status", objHoliday.Status));
+                        parms.Add(new SqlParameter("Status", ((int)objHoliday.Status).ToString()));
 
-                        parms.Add(new SqlParameter("Flag", DB_Flags.Insert));
+                        parms.Add(new SqlParameter("Flag", ((int)DB_Flags.Insert).ToString()));
 
                         _result = ObjDB.ExecuteNonQuery(Query, parms.ToArray());
                         break;
@@ -110,9 +110,9 @@ namespace ETH.BLL.Administration
                         parms.Add(new SqlParameter("ModifiedDate", objHoliday.ModifiedDate));
                         parms.Add(new SqlParameter("ModifiedTime", objHoliday.ModifiedTime));
                         parms.Add(new SqlParameter("ModifiedBy", objHoliday.ModifiedBy));
-                        parms.Add(new SqlParameter("Status", objHoliday.Status));
+                        parms.Add(new SqlParameter("Status", ((int)objHoliday.Status).ToString()));
 
-                        parms.Add(new SqlParameter("Flag", DB_Flags.Update));
+                        parms.Add(new SqlParameter("Flag", ((int)DB_Flags.Update).ToString()));
 
                         _result = ObjDB.ExecuteNonQuery(Query, parms.ToArray());
                         break;
@@ -142,9 +142,9 @@ namespace ETH.BLL.Administration
                         parms.Add(new SqlParameter("CompanyID", objHoliday.CompanyID));
                         parms.Add(new SqlParameter("HolidayGroupID", objHoliday.HolidayGroupID));
                         parms.Add(new SqlParameter("ID", objHoliday.ID));
-                        parms.Add(new SqlParameter("Status", Status.PartiallyDeleted));
+                        parms.Add(new SqlParameter("Status", ((int)Status.PartiallyDeleted).ToString()));
 
-                        parms.Add(new SqlParameter("Flag", DB_Flags.PartialDelete));
+                        parms.Add(new SqlParameter("Flag", ((int)DB_Flags.PartialDelete).ToString()));
 
                         _result = ObjDB.ExecuteNonQuery(Query, parms.ToArray());
                         break;
@@ -174,9 +174,9 @@ namespace ETH.BLL.Administration
                         parms.Add(new SqlParameter("CompanyID", objHoliday.CompanyID));
                         parms.Add(new SqlParameter("HolidayGroupID", objHoliday.HolidayGroupID));
                         parms.Add(new SqlParameter("ID", objHoliday.ID));
-                        parms.Add(new SqlParameter("Status", Status.Deleted));
+                        parms.Add(new SqlParameter("Status", ((int)Status.Deleted).ToString()));
 
-                        parms.Add(new SqlParameter("Flag", DB_Flags.FullDelete));
+                        parms.Add(new SqlParameter("Flag", ((int)DB_Flags.FullDelete).ToString()));
 
                         _result = ObjDB.ExecuteNonQuery(Query, parms.ToArray());
                         break;
@@ -207,9 +207,9 @@ namespace ETH.BLL.Administration
 
                         if (!ShowAll)
                         {
-                            parms.Add(new SqlParameter("Status", status));
+                            parms.Add(new SqlParameter("Status", ((int)status).ToString()));
                         }
-                        parms.Add(new SqlParameter("Flag", flag));
+                        parms.Add(new SqlParameter("Flag", ((int)flag).ToString()));
 
                         DataTable _data = ObjDB.ExecuteDataTable(Query, parms.ToArray());
                         _result = Helper.DataTableToList<Holiday>(_data);

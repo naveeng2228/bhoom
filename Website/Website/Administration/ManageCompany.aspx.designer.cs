@@ -31,6 +31,15 @@ namespace Website.Administration {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divCompaniesList;
         
         /// <summary>
+        /// divUpdateCompany control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divUpdateCompany;
+        
+        /// <summary>
         /// txtCompanyID control.
         /// </summary>
         /// <remarks>
@@ -209,5 +218,23 @@ namespace Website.Administration {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnUpdate;
+        
+        /// <summary>
+        /// hdnPriority control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdnPriority;
+        
+        /// <summary>
+        /// divNoCompanies control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divNoCompanies;
     }
 }

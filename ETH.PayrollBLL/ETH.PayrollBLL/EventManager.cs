@@ -50,7 +50,7 @@ namespace ETH.BLL
 
                         parms.Add(new SqlParameter("EventID", objEventManager.EventID));
                         parms.Add(new SqlParameter("EventName", objEventManager.EventName));
-                        parms.Add(new SqlParameter("EventState", objEventManager.EventState));
+                        parms.Add(new SqlParameter("EventState", ((int)objEventManager.EventState).ToString()));
                         parms.Add(new SqlParameter("FormID", objEventManager.FormID));
                         parms.Add(new SqlParameter("ModuleID", objEventManager.ModuleID));
                         parms.Add(new SqlParameter("CreatedDate", objEventManager.CreatedDate));
@@ -59,9 +59,9 @@ namespace ETH.BLL
                         parms.Add(new SqlParameter("ModifiedDate", objEventManager.ModifiedDate));
                         parms.Add(new SqlParameter("ModifiedTime", objEventManager.ModifiedTime));
                         parms.Add(new SqlParameter("ModifiedBy", objEventManager.ModifiedBy));
-                        parms.Add(new SqlParameter("Status", objEventManager.Status));
+                        parms.Add(new SqlParameter("Status", ((int)objEventManager.Status).ToString()));
 
-                        parms.Add(new SqlParameter("Flag", DB_Flags.Insert));
+                        parms.Add(new SqlParameter("Flag", ((int)DB_Flags.Insert).ToString()));
 
                         _result = ObjDB.ExecuteNonQuery(Query, parms.ToArray());
                         break;
@@ -90,15 +90,15 @@ namespace ETH.BLL
 
                         parms.Add(new SqlParameter("EventID", objEventManager.EventID));
                         parms.Add(new SqlParameter("EventName", objEventManager.EventName));
-                        parms.Add(new SqlParameter("EventState", objEventManager.EventState));
+                        parms.Add(new SqlParameter("EventState", ((int)objEventManager.EventState).ToString()));
                         parms.Add(new SqlParameter("FormID", objEventManager.FormID));
                         parms.Add(new SqlParameter("ModuleID", objEventManager.ModuleID));
                         parms.Add(new SqlParameter("ModifiedDate", objEventManager.ModifiedDate));
                         parms.Add(new SqlParameter("ModifiedTime", objEventManager.ModifiedTime));
                         parms.Add(new SqlParameter("ModifiedBy", objEventManager.ModifiedBy));
-                        parms.Add(new SqlParameter("Status", objEventManager.Status));
+                        parms.Add(new SqlParameter("Status", ((int)objEventManager.Status).ToString()));
 
-                        parms.Add(new SqlParameter("Flag", DB_Flags.Update));
+                        parms.Add(new SqlParameter("Flag", ((int)DB_Flags.Update).ToString()));
 
                         _result = ObjDB.ExecuteNonQuery(Query, parms.ToArray());
                         break;
@@ -125,9 +125,9 @@ namespace ETH.BLL
                         List<SqlParameter> parms = new List<SqlParameter>();
 
                         parms.Add(new SqlParameter("EventID", EventID));
-                        parms.Add(new SqlParameter("Status", Status.PartiallyDeleted));
+                        parms.Add(new SqlParameter("Status", ((int)Status.PartiallyDeleted).ToString()));
 
-                        parms.Add(new SqlParameter("Flag", DB_Flags.PartialDelete));
+                        parms.Add(new SqlParameter("Flag", ((int)DB_Flags.PartialDelete).ToString()));
 
                         _result = ObjDB.ExecuteNonQuery(Query, parms.ToArray());
                         break;
@@ -155,9 +155,9 @@ namespace ETH.BLL
                         List<SqlParameter> parms = new List<SqlParameter>();
 
                         parms.Add(new SqlParameter("EventID", EventID));
-                        parms.Add(new SqlParameter("Status", Status.Deleted));
+                        parms.Add(new SqlParameter("Status", ((int)Status.Deleted).ToString()));
 
-                        parms.Add(new SqlParameter("Flag", DB_Flags.FullDelete));
+                        parms.Add(new SqlParameter("Flag", ((int)DB_Flags.FullDelete).ToString()));
 
                         _result = ObjDB.ExecuteNonQuery(Query, parms.ToArray());
                         break;
@@ -188,9 +188,9 @@ namespace ETH.BLL
 
                         if (!ShowAll)
                         {
-                            parms.Add(new SqlParameter("Status", status));
+                            parms.Add(new SqlParameter("Status", ((int)status).ToString()));
                         }
-                        parms.Add(new SqlParameter("Flag", flag));
+                        parms.Add(new SqlParameter("Flag", ((int)flag).ToString()));
 
                         DataTable _data = ObjDB.ExecuteDataTable(Query, parms.ToArray());
                         _result = Helper.DataTableToList<EventManager>(_data);

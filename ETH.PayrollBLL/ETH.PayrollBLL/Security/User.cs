@@ -81,7 +81,7 @@ namespace ETH.BLL.Security
                         parms.Add(new SqlParameter("UserId", objUser.UserId));
                         parms.Add(new SqlParameter("UserName", objUser.UserName));
                         parms.Add(new SqlParameter("Password", objUser.Password));
-                        parms.Add(new SqlParameter("UserType", objUser.UserType));
+                        parms.Add(new SqlParameter("UserType", ((int)objUser.UserType).ToString()));
                         parms.Add(new SqlParameter("CompanyID", objUser.CompanyID));
                         parms.Add(new SqlParameter("WorkAreaID", objUser.WorkAreaID));
                         parms.Add(new SqlParameter("PasswordQuestion1", objUser.PasswordQuestion1));
@@ -91,8 +91,8 @@ namespace ETH.BLL.Security
                         parms.Add(new SqlParameter("FirstName", objUser.FirstName));
                         parms.Add(new SqlParameter("MiddleName", objUser.MiddleName));
                         parms.Add(new SqlParameter("LastName", objUser.LastName));
-                        parms.Add(new SqlParameter("Gender", objUser.Gender));
-                        parms.Add(new SqlParameter("MaritalStatus", objUser.MaritalStatus));
+                        parms.Add(new SqlParameter("Gender", ((int)objUser.Gender).ToString()));
+                        parms.Add(new SqlParameter("MaritalStatus", ((int)objUser.MaritalStatus).ToString()));
                         parms.Add(new SqlParameter("DateOfBirth", objUser.DateOfBirth));
                         parms.Add(new SqlParameter("Age", objUser.Age));
                         parms.Add(new SqlParameter("ProfilePicUrl", objUser.ProfilePicUrl));
@@ -108,9 +108,9 @@ namespace ETH.BLL.Security
                         parms.Add(new SqlParameter("ModifiedDate", objUser.ModifiedDate));
                         parms.Add(new SqlParameter("ModifiedTime", objUser.ModifiedTime));
                         parms.Add(new SqlParameter("ModifiedBy", objUser.ModifiedBy));
-                        parms.Add(new SqlParameter("Status", objUser.Status));
+                        parms.Add(new SqlParameter("Status", ((int)objUser.Status).ToString()));
 
-                        parms.Add(new SqlParameter("Flag", DB_Flags.Insert));
+                        parms.Add(new SqlParameter("Flag", ((int)DB_Flags.Insert).ToString()));
 
                         _result = ObjDB.ExecuteNonQuery(Query, parms.ToArray());
                         break;
@@ -141,7 +141,7 @@ namespace ETH.BLL.Security
                         parms.Add(new SqlParameter("UserId", objUser.UserId));
                         parms.Add(new SqlParameter("UserName", objUser.UserName));
                         parms.Add(new SqlParameter("Password", objUser.Password));
-                        parms.Add(new SqlParameter("UserType", objUser.UserType));
+                        parms.Add(new SqlParameter("UserType", ((int)objUser.UserType).ToString()));
                         parms.Add(new SqlParameter("CompanyID", objUser.CompanyID));
                         parms.Add(new SqlParameter("WorkAreaID", objUser.WorkAreaID));
                         parms.Add(new SqlParameter("PasswordQuestion1", objUser.PasswordQuestion1));
@@ -151,8 +151,8 @@ namespace ETH.BLL.Security
                         parms.Add(new SqlParameter("FirstName", objUser.FirstName));
                         parms.Add(new SqlParameter("MiddleName", objUser.MiddleName));
                         parms.Add(new SqlParameter("LastName", objUser.LastName));
-                        parms.Add(new SqlParameter("Gender", objUser.Gender));
-                        parms.Add(new SqlParameter("MaritalStatus", objUser.MaritalStatus));
+                        parms.Add(new SqlParameter("Gender", ((int)objUser.Gender).ToString()));
+                        parms.Add(new SqlParameter("MaritalStatus", ((int)objUser.MaritalStatus).ToString()));
                         parms.Add(new SqlParameter("DateOfBirth", objUser.DateOfBirth));
                         parms.Add(new SqlParameter("Age", objUser.Age));
                         parms.Add(new SqlParameter("ProfilePicUrl", objUser.ProfilePicUrl));
@@ -168,9 +168,9 @@ namespace ETH.BLL.Security
                         parms.Add(new SqlParameter("ModifiedDate", objUser.ModifiedDate));
                         parms.Add(new SqlParameter("ModifiedTime", objUser.ModifiedTime));
                         parms.Add(new SqlParameter("ModifiedBy", objUser.ModifiedBy));
-                        parms.Add(new SqlParameter("Status", objUser.Status));
+                        parms.Add(new SqlParameter("Status", ((int)objUser.Status).ToString()));
 
-                        parms.Add(new SqlParameter("Flag", DB_Flags.Update));
+                        parms.Add(new SqlParameter("Flag", ((int)DB_Flags.Update).ToString()));
 
                         _result = ObjDB.ExecuteNonQuery(Query, parms.ToArray());
                         break;
@@ -201,9 +201,9 @@ namespace ETH.BLL.Security
                         parms.Add(new SqlParameter("UserId", objUser.UserId));
                         parms.Add(new SqlParameter("CompanyID", objUser.CompanyID));
                         parms.Add(new SqlParameter("WorkAreaID", objUser.WorkAreaID));
-                        parms.Add(new SqlParameter("Status", Status.PartiallyDeleted));
+                        parms.Add(new SqlParameter("Status", ((int)Status.PartiallyDeleted).ToString()));
 
-                        parms.Add(new SqlParameter("Flag", DB_Flags.PartialDelete));
+                        parms.Add(new SqlParameter("Flag", ((int)DB_Flags.PartialDelete).ToString()));
 
                         _result = ObjDB.ExecuteNonQuery(Query, parms.ToArray());
                         break;
@@ -234,9 +234,9 @@ namespace ETH.BLL.Security
                         parms.Add(new SqlParameter("UserId", objUser.UserId));
                         parms.Add(new SqlParameter("CompanyID", objUser.CompanyID));
                         parms.Add(new SqlParameter("WorkAreaID", objUser.WorkAreaID));
-                        parms.Add(new SqlParameter("Status", Status.Deleted));
+                        parms.Add(new SqlParameter("Status", ((int)Status.Deleted).ToString()));
 
-                        parms.Add(new SqlParameter("Flag", DB_Flags.FullDelete));
+                        parms.Add(new SqlParameter("Flag", ((int)DB_Flags.FullDelete).ToString()));
 
                         _result = ObjDB.ExecuteNonQuery(Query, parms.ToArray());
                         break;
@@ -267,9 +267,9 @@ namespace ETH.BLL.Security
 
                         if (!ShowAll)
                         {
-                            parms.Add(new SqlParameter("Status", status));
+                            parms.Add(new SqlParameter("Status", ((int)status).ToString()));
                         }
-                        parms.Add(new SqlParameter("Flag", flag));
+                        parms.Add(new SqlParameter("Flag", ((int)flag).ToString()));
 
                         DataTable _data = ObjDB.ExecuteDataTable(Query, parms.ToArray());
                         _result = Helper.DataTableToList<User>(_data);

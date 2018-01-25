@@ -40,6 +40,15 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 
+    <script>
+        function showMessage(message) {
+            alert(message);
+        }
+        function ConfirmMessage(message) {
+            return confirm(message);
+        }
+    </script>
+
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -54,7 +63,7 @@
                 <!-- Logo -->
                 <a href="../../index2.html" class="logo">
                     <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini"><b>A</b>LT</span>
+                    <span id="shortcode" runat="server" class="logo-mini"></span>
                     <!-- logo for regular state and mobile devices -->
                     <span class="logo-lg"><b>Admin</b>LTE</span>
                 </a>
@@ -529,7 +538,6 @@
             $("#" + id).attr("disabled", "disabled");
         }
         function enable(id) {
-            alert(id);
             $("#" + id).removeattr("disabled");
         }
     </script>

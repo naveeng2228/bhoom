@@ -43,7 +43,7 @@
                     <div class="tab-content">
                         <div class="active tab-pane" id="companydetails">
                             <!-- box -->
-                            <div class="box box-default">
+                            <div id="divUpdateCompany" runat="server" class="box box-default">
                                 <!-- /.box-header -->
                                 <div class="box-body">
                                     <div class="row">
@@ -109,7 +109,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="fuLogo">Company Logo</label>
-                                                <asp:FileUpload ID="fuLogo" runat="server" CssClass="form-control" placeholder="Select Company Logo"></asp:FileUpload>
+                                                <asp:FileUpload ID="fuLogo" runat="server" CssClass="form-control"  accept="image/x-png,image/gif,image/jpeg" placeholder="Select Company Logo"></asp:FileUpload>
 
                                                 <p class="help-block">Logo dimentions 200 X 80 (Width X height).</p>
                                             </div>
@@ -154,8 +154,13 @@
                                 <!-- /.box-body -->
 
                                 <div class="box-footer">
-                                    <asp:Button ID="btnUpdate" runat="server" Text="Update Company Details" CssClass="btn btn-primary" OnClick="btnUpdate_Click" />
+                                    <asp:Button ID="btnUpdate" runat="server" Text="Update Company Details" CssClass="btn btn-primary" OnClientClick="return CustomValidate();" OnClick="btnUpdate_Click" />
+                                    <!-- Hidden Fields -->
+                                    <asp:HiddenField ID="hdnPriority" runat="server" />
                                 </div>
+                            </div>
+                            <div id="divNoCompanies" runat="server">
+                                <p>No companies available for you. Please contact admin.</p>
                             </div>
                             <!-- /.box -->
                         </div>
@@ -181,6 +186,38 @@
         $(liform).attr("class", "active").find("a").css("color", "#FFF");
         $(ulmodule).attr("class", "active");
         $(limodule).attr("class", "active");
+
+        $(document).ready(function (e){
+            var _URL = window.URL || window.webkitURL;
+            $("#" + <%= fuLogo.ClientID %>).change(function (e) {
+                var file, img;
+                if ((file = this.files[0])) {
+                    img = new Image();
+                    img.onload = function () {
+                        alert(this.width + " " + this.height);
+                    };
+                    img.src = _URL.createObjectURL(file);
+                }
+            });
+        });
+
+        function CustomValidate()
+        {
+            var Validated = false;
+
+            // Validating Logo to meet dimentions
+            if(ValidateLogo())
+            {
+                Validated = true;
+            }
+            
+            return Validated;
+        }
+
+        function ValidateLogo()
+        {
+            return true;
+        }
     </script>
 </asp:Content>
 

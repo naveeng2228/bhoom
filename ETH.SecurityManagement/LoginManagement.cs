@@ -143,7 +143,7 @@ namespace ETH.SecurityManagement
                         parms.Add(new SqlParameter("CreatedTime", objLogin.CreatedTime));
 
                         // Flag: 3 refers to Insert record to LoginHistory Table
-                        parms.Add(new SqlParameter("Flag", DB_Flags.Insert));
+                        parms.Add(new SqlParameter("Flag", ((int)DB_Flags.Insert).ToString()));
                         _result = ObjDB.ExecuteNonQuery(Query, parms.ToArray());
                         break;
                     }

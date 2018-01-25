@@ -25,6 +25,7 @@ namespace Website
                     try
                     {
                         BindUserMenu(objConfig.UserInfo.Id);
+                        LoadDefaults();
                     }
                     catch (Exception Ex)
                     {
@@ -32,6 +33,12 @@ namespace Website
                     }
                 }
             }
+        }
+
+        private void LoadDefaults()
+        {
+
+            shortcode.InnerHtml = string.Format("<b>{0}</b>");
         }
 
         private void BindUserMenu(int userId)
