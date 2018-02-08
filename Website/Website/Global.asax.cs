@@ -30,8 +30,20 @@ namespace Website
 
             #region Administration
             routes.MapPageRoute("administration-home", "administration", "~/Administration/Default.aspx");
+
+            // COMPANY ROUTES
             routes.MapPageRoute("administration-managecompany-def", "administration/managecompany", "~/Administration/ManageCompany.aspx");
             routes.MapPageRoute("administration-managecompany", "administration/managecompany/{CompanyId}", "~/Administration/ManageCompany.aspx");
+
+            // WORKAREA ROUTES
+            routes.MapPageRoute("administration-manageworkarea-def-1", "administration/manageworkarea", "~/Administration/ManageWorkarea.aspx");
+            routes.MapPageRoute("administration-manageworkarea-def-2", "administration/manageworkarea/{CompanyId}", "~/Administration/ManageWorkarea.aspx");
+            routes.MapPageRoute("administration-manageworkarea", "administration/manageworkarea/{CompanyId}/{workareaid}", "~/Administration/ManageWorkarea.aspx");
+
+            // LEAVE GROUP ROUTES
+            routes.MapPageRoute("administration-manageleavegroup-def", "leavemanagement/manageleavegroups", "~/Administration/ManageLeaveGroups.aspx");
+            routes.MapPageRoute("administration-manageleavegroup", "leavemanagement/manageleavegroups/{LeaveGroupId}", "~/Administration/ManageLeaveGroups.aspx");
+            routes.MapPageRoute("administration-createleavegroup-def", "leavemanagement/createleavegroups", "~/Administration/AddLeaveGroup.aspx");
             #endregion
 
             #region Attendance

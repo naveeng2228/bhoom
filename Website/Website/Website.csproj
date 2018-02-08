@@ -138,9 +138,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Administration\AddLeaveGroup.aspx" />
     <Content Include="Administration\Default.aspx" />
     <Content Include="Administration\logos\logo_placeholder.png" />
     <Content Include="Administration\ManageCompany.aspx" />
+    <Content Include="Administration\ManageLeaveGroups.aspx" />
+    <Content Include="Administration\ManageWorkarea.aspx" />
     <Content Include="Components\bower_components\bootstrap-colorpicker\dist\css\bootstrap-colorpicker.css" />
     <Content Include="Components\bower_components\bootstrap-colorpicker\dist\css\bootstrap-colorpicker.min.css" />
     <Content Include="Components\bower_components\bootstrap-colorpicker\dist\img\bootstrap-colorpicker\alpha-horizontal.png" />
@@ -6748,6 +6751,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administration\AddLeaveGroup.aspx.cs">
+      <DependentUpon>AddLeaveGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\AddLeaveGroup.aspx.designer.cs">
+      <DependentUpon>AddLeaveGroup.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Administration\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -6761,6 +6771,20 @@
     </Compile>
     <Compile Include="Administration\ManageCompany.aspx.designer.cs">
       <DependentUpon>ManageCompany.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\ManageLeaveGroups.aspx.cs">
+      <DependentUpon>ManageLeaveGroups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\ManageLeaveGroups.aspx.designer.cs">
+      <DependentUpon>ManageLeaveGroups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\ManageWorkarea.aspx.cs">
+      <DependentUpon>ManageWorkarea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\ManageWorkarea.aspx.designer.cs">
+      <DependentUpon>ManageWorkarea.aspx</DependentUpon>
     </Compile>
     <Compile Include="Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>

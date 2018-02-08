@@ -44,10 +44,19 @@ namespace Website
 
             LoginManagement ObjLogin = new LoginManagement();
             LoginHistory ObjLoginHistory = ObjLogin.VerifyLogin(txtEmail.Text, txtPassword.Text);
-            if (ObjLoginHistory != null)
+            if (ObjLoginHistory == null)
             {
-                Response.Redirect("~/Dashboard");
+                return;
             }
+
+            Config ObjConfig = (Config) Session["__Config__"];
+
+            if (ObjConfig.UserInfo.CustomerId != ObjConfig.CustomerID)
+            {
+                return;
+            }
+
+            Response.Redirect("~/Dashboard");
         }
     }
 }

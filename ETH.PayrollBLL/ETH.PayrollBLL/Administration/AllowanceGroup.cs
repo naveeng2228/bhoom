@@ -13,6 +13,7 @@ namespace ETH.BLL.Administration
     public class AllowanceGroup
     {
         public string AllowanceGroupID { get; set; }
+        public string CompanyID { get; set; }
         public string AllowanceGroupName { get; set; }
 
         //Auto Input Fields
@@ -45,6 +46,7 @@ namespace ETH.BLL.Administration
                         List<SqlParameter> parms = new List<SqlParameter>();
 
                         parms.Add(new SqlParameter("AllowanceGroupID", objAllowanceGroup.AllowanceGroupID));
+                        parms.Add(new SqlParameter("CompanyID", objAllowanceGroup.CompanyID));
                         parms.Add(new SqlParameter("AllowanceGroupName", objAllowanceGroup.AllowanceGroupName));
                         parms.Add(new SqlParameter("CreatedDate", objAllowanceGroup.CreatedDate));
                         parms.Add(new SqlParameter("CreatedTime", objAllowanceGroup.CreatedTime));
@@ -82,6 +84,7 @@ namespace ETH.BLL.Administration
                         List<SqlParameter> parms = new List<SqlParameter>();
 
                         parms.Add(new SqlParameter("AllowanceGroupID", objAllowanceGroup.AllowanceGroupID));
+                        parms.Add(new SqlParameter("CompanyID", objAllowanceGroup.CompanyID));
                         parms.Add(new SqlParameter("AllowanceGroupName", objAllowanceGroup.AllowanceGroupName));
                         parms.Add(new SqlParameter("ModifiedDate", objAllowanceGroup.ModifiedDate));
                         parms.Add(new SqlParameter("ModifiedTime", objAllowanceGroup.ModifiedTime));
@@ -242,6 +245,62 @@ namespace ETH.BLL.Administration
         {
             List<AllowanceGroup> _result = null;
             _result = Select(Status.Active, DB_Flags.SelectActive, true);
+            return _result;
+        }
+
+
+        /// <summary>
+        /// Select by CompanyID
+        /// </summary>
+        /// <returns></returns>
+        public List<AllowanceGroup> Select(string CompanyID)
+        {
+            List<AllowanceGroup> _result = null;
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
+            string Query = "SP_AllowanceGroup";
+            switch (ObjConfig.DBType)
+            {
+                // MS-SQL
+                case "0":
+                    {
+                        DBController ObjDB = new DBController(DBController.DBTypes.MSSQL);
+                        List<SqlParameter> parms = new List<SqlParameter>();
+                        parms.Add(new SqlParameter("CompanyID", CompanyID));
+                        parms.Add(new SqlParameter("Status", ((int)Status.Active).ToString()));
+                        parms.Add(new SqlParameter("Flag", 9));
+
+                        DataTable _data = ObjDB.ExecuteDataTable(Query, parms.ToArray());
+                        _result = Helper.DataTableToList<AllowanceGroup>(_data);
+                        break;
+                    }
+            }
+            return _result;
+        }
+
+
+        /// <summary>
+        /// Generate New Id
+        /// </summary>
+        /// <returns></returns>
+        public static string GenerateID()
+        {
+            string _result = string.Empty;
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
+            string Query = "SP_AllowanceGroup";
+            switch (ObjConfig.DBType)
+            {
+                // MS-SQL
+                case "0":
+                    {
+                        DBController ObjDB = new DBController(DBController.DBTypes.MSSQL);
+                        List<SqlParameter> parms = new List<SqlParameter>();
+                        parms.Add(new SqlParameter("Flag", 11));
+
+                        int data = (int)ObjDB.ExecuteScalar(Query, parms.ToArray());
+                        _result = (data + 1).ToString();
+                        break;
+                    }
+            }
             return _result;
         }
     }

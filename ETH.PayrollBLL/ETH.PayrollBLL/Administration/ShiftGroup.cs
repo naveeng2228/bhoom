@@ -13,6 +13,7 @@ namespace ETH.BLL.Administration
     public class ShiftGroup
     {
         public string ShiftGroupID { get; set; }
+        public string CompanyID { get; set; }
         public string ShiftGroupName { get; set; }
 
         //Auto Input Fields
@@ -45,6 +46,7 @@ namespace ETH.BLL.Administration
                         List<SqlParameter> parms = new List<SqlParameter>();
 
                         parms.Add(new SqlParameter("ShiftGroupID", objShiftGroup.ShiftGroupID));
+                        parms.Add(new SqlParameter("CompanyID", objShiftGroup.CompanyID));
                         parms.Add(new SqlParameter("ShiftGroupName", objShiftGroup.ShiftGroupName));
                         parms.Add(new SqlParameter("CreatedDate", objShiftGroup.CreatedDate));
                         parms.Add(new SqlParameter("CreatedTime", objShiftGroup.CreatedTime));
@@ -82,6 +84,7 @@ namespace ETH.BLL.Administration
                         List<SqlParameter> parms = new List<SqlParameter>();
 
                         parms.Add(new SqlParameter("ShiftGroupID", objShiftGroup.ShiftGroupID));
+                        parms.Add(new SqlParameter("CompanyID", objShiftGroup.CompanyID));
                         parms.Add(new SqlParameter("ShiftGroupName", objShiftGroup.ShiftGroupName));
                         parms.Add(new SqlParameter("ModifiedDate", objShiftGroup.ModifiedDate));
                         parms.Add(new SqlParameter("ModifiedTime", objShiftGroup.ModifiedTime));
@@ -243,6 +246,62 @@ namespace ETH.BLL.Administration
         {
             List<ShiftGroup> _result = null;
             _result = Select(Status.Active, DB_Flags.SelectActive, true);
+            return _result;
+        }
+
+
+        /// <summary>
+        /// Select by CompanyID
+        /// </summary>
+        /// <returns></returns>
+        public List<ShiftGroup> Select(string CompanyID)
+        {
+            List<ShiftGroup> _result = null;
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
+            string Query = "SP_ShiftGroup";
+            switch (ObjConfig.DBType)
+            {
+                // MS-SQL
+                case "0":
+                    {
+                        DBController ObjDB = new DBController(DBController.DBTypes.MSSQL);
+                        List<SqlParameter> parms = new List<SqlParameter>();
+                        parms.Add(new SqlParameter("CompanyID", CompanyID));
+                        parms.Add(new SqlParameter("Status", ((int)Status.Active).ToString()));
+                        parms.Add(new SqlParameter("Flag", 9));
+
+                        DataTable _data = ObjDB.ExecuteDataTable(Query, parms.ToArray());
+                        _result = Helper.DataTableToList<ShiftGroup>(_data);
+                        break;
+                    }
+            }
+            return _result;
+        }
+
+
+        /// <summary>
+        /// Generate New Id
+        /// </summary>
+        /// <returns></returns>
+        public static string GenerateID()
+        {
+            string _result = string.Empty;
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
+            string Query = "SP_ShiftGroup";
+            switch (ObjConfig.DBType)
+            {
+                // MS-SQL
+                case "0":
+                    {
+                        DBController ObjDB = new DBController(DBController.DBTypes.MSSQL);
+                        List<SqlParameter> parms = new List<SqlParameter>();
+                        parms.Add(new SqlParameter("Flag", 11));
+
+                        int data = (int)ObjDB.ExecuteScalar(Query, parms.ToArray());
+                        _result = (data + 1).ToString();
+                        break;
+                    }
+            }
             return _result;
         }
     }

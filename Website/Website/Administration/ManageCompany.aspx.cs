@@ -146,6 +146,19 @@ namespace Website.Administration
                         string CompanyDetailsUrl = ResolveUrl("~/") + "administration/managecompany/" + company.CompanyID;
                         _result.Append("<li class='list-group-item'>");
                         _result.AppendFormat("<a href='{0}'><b>{1}</b></a>", CompanyDetailsUrl, company.CompanyName);
+
+                        // Add Workareas link beside menu.
+                        Workarea objWorkArea = new Workarea();
+                        List<Workarea> _workareas = objWorkArea.Select(company.CompanyID);
+                        if (_workareas != null)
+                        {
+                            if(_workareas.Count > 0)
+                            {
+                                string WorkareaListUrl = ResolveUrl("~/") + "administration/manageworkarea/" + company.CompanyID;
+                                _result.AppendFormat(" &rArr; <a href='{0}'>Workareas</a>", WorkareaListUrl);
+                            }
+                        }
+
                         _result.Append("</li>");
                     }
                     _result.Append("</ul>");
@@ -231,7 +244,7 @@ namespace Website.Administration
             return LogoName;
         }
 
-        protected void ddlState_SelectedIndexChanged(object sender, EventArgs e)
+        protected void ddlCountry_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadStates(ddlCountry.SelectedValue);
         }

@@ -306,7 +306,7 @@ namespace ETH.BLL.Administration
         }
 
         /// <summary>
-        /// Select by UserID
+        /// Select by Custormer ID
         /// </summary>
         /// <returns></returns>
         public List<Company> Select(string CustomerID)

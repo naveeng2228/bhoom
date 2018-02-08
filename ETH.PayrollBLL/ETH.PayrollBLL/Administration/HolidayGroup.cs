@@ -13,6 +13,7 @@ namespace ETH.BLL.Administration
     public class HolidayGroup
     {
         public string HolidayGroupID { get; set; }
+        public string CompanyID { get; set; }
         public string HolidayGroupName { get; set; }
 
         //Auto Input Fields
@@ -45,6 +46,7 @@ namespace ETH.BLL.Administration
                         List<SqlParameter> parms = new List<SqlParameter>();
 
                         parms.Add(new SqlParameter("HolidayGroupID", objHolidayGroup.HolidayGroupID));
+                        parms.Add(new SqlParameter("CompanyID", objHolidayGroup.CompanyID));
                         parms.Add(new SqlParameter("HolidayGroupName", objHolidayGroup.HolidayGroupName));
                         parms.Add(new SqlParameter("CreatedDate", objHolidayGroup.CreatedDate));
                         parms.Add(new SqlParameter("CreatedTime", objHolidayGroup.CreatedTime));
@@ -82,6 +84,7 @@ namespace ETH.BLL.Administration
                         List<SqlParameter> parms = new List<SqlParameter>();
 
                         parms.Add(new SqlParameter("HolidayGroupID", objHolidayGroup.HolidayGroupID));
+                        parms.Add(new SqlParameter("CompanyID", objHolidayGroup.CompanyID));
                         parms.Add(new SqlParameter("HolidayGroupName", objHolidayGroup.HolidayGroupName));
                         parms.Add(new SqlParameter("ModifiedDate", objHolidayGroup.ModifiedDate));
                         parms.Add(new SqlParameter("ModifiedTime", objHolidayGroup.ModifiedTime));
@@ -242,6 +245,62 @@ namespace ETH.BLL.Administration
         {
             List<HolidayGroup> _result = null;
             _result = Select(Status.Active, DB_Flags.SelectActive, true);
+            return _result;
+        }
+
+
+        /// <summary>
+        /// Select by CompanyID
+        /// </summary>
+        /// <returns></returns>
+        public List<HolidayGroup> Select(string CompanyID)
+        {
+            List<HolidayGroup> _result = null;
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
+            string Query = "SP_HolidayGroup";
+            switch (ObjConfig.DBType)
+            {
+                // MS-SQL
+                case "0":
+                    {
+                        DBController ObjDB = new DBController(DBController.DBTypes.MSSQL);
+                        List<SqlParameter> parms = new List<SqlParameter>();
+                        parms.Add(new SqlParameter("CompanyID", CompanyID));
+                        parms.Add(new SqlParameter("Status", ((int)Status.Active).ToString()));
+                        parms.Add(new SqlParameter("Flag", 9));
+
+                        DataTable _data = ObjDB.ExecuteDataTable(Query, parms.ToArray());
+                        _result = Helper.DataTableToList<HolidayGroup>(_data);
+                        break;
+                    }
+            }
+            return _result;
+        }
+
+
+        /// <summary>
+        /// Generate New Id
+        /// </summary>
+        /// <returns></returns>
+        public static string GenerateID()
+        {
+            string _result = string.Empty;
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
+            string Query = "SP_HolidayGroup";
+            switch (ObjConfig.DBType)
+            {
+                // MS-SQL
+                case "0":
+                    {
+                        DBController ObjDB = new DBController(DBController.DBTypes.MSSQL);
+                        List<SqlParameter> parms = new List<SqlParameter>();
+                        parms.Add(new SqlParameter("Flag", 11));
+
+                        int data = (int)ObjDB.ExecuteScalar(Query, parms.ToArray());
+                        _result = (data + 1).ToString();
+                        break;
+                    }
+            }
             return _result;
         }
     }

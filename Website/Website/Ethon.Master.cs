@@ -86,5 +86,25 @@ namespace Website
                 Response.Redirect("~/login");
             }
         }
+
+        protected void lnkSignOut_Click(object sender, EventArgs e)
+        {
+            if (Session["__Config__"] != null)
+            {
+                Session["__Config__"] = null;
+                Session.Clear();
+                Session.Abandon();
+            }
+
+            string loggedOutPageUrl = ResolveUrl("~/") + "login";
+            Response.Write("<script language='javascript'>");
+            Response.Write("function ClearHistory()");
+            Response.Write("{");
+            Response.Write(" var backlen=history.length;");
+            Response.Write(" history.go(-backlen);");
+            Response.Write(" window.location.href='" + loggedOutPageUrl + "'; ");
+            Response.Write("}");
+            Response.Write("</script>");
+        }
     }
 }

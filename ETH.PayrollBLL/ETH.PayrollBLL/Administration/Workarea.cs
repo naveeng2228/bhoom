@@ -340,5 +340,61 @@ namespace ETH.BLL.Administration
             return _result;
         }
 
+        /// <summary>
+        /// Select by CompanyID
+        /// </summary>
+        /// <returns></returns>
+        public List<Workarea> Select(string CompanyID)
+        {
+            List<Workarea> _result = null;
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
+            string Query = "SP_Workarea";
+            switch (ObjConfig.DBType)
+            {
+                // MS-SQL
+                case "0":
+                    {
+                        DBController ObjDB = new DBController(DBController.DBTypes.MSSQL);
+                        List<SqlParameter> parms = new List<SqlParameter>();
+                        parms.Add(new SqlParameter("CompanyID", CompanyID));
+                        parms.Add(new SqlParameter("Status", ((int)Status.Active).ToString()));
+                        parms.Add(new SqlParameter("Flag", 10));
+
+                        DataTable _data = ObjDB.ExecuteDataTable(Query, parms.ToArray());
+                        _result = Helper.DataTableToList<Workarea>(_data);
+                        break;
+                    }
+            }
+            return _result;
+        }
+
+        /// <summary>
+        /// Select by CompanyID
+        /// </summary>
+        /// <returns></returns>
+        public List<Workarea> SelectByWorkareaID(string WorkareaID)
+        {
+            List<Workarea> _result = null;
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
+            string Query = "SP_Workarea";
+            switch (ObjConfig.DBType)
+            {
+                // MS-SQL
+                case "0":
+                    {
+                        DBController ObjDB = new DBController(DBController.DBTypes.MSSQL);
+                        List<SqlParameter> parms = new List<SqlParameter>();
+                        parms.Add(new SqlParameter("WorkareaID", WorkareaID));
+                        parms.Add(new SqlParameter("Status", ((int)Status.Active).ToString()));
+                        parms.Add(new SqlParameter("Flag", 11));
+
+                        DataTable _data = ObjDB.ExecuteDataTable(Query, parms.ToArray());
+                        _result = Helper.DataTableToList<Workarea>(_data);
+                        break;
+                    }
+            }
+            return _result;
+        }
+
     }
 }

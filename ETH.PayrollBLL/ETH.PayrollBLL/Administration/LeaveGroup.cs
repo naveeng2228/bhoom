@@ -13,6 +13,7 @@ namespace ETH.BLL.Administration
     public class LeaveGroup
     {
         public string LeaveGroupID { get; set; }
+        public string CompanyID { get; set; }
         public string LeaveGroupName { get; set; }
 
         //Auto Input Fields
@@ -45,6 +46,7 @@ namespace ETH.BLL.Administration
                         List<SqlParameter> parms = new List<SqlParameter>();
 
                         parms.Add(new SqlParameter("LeaveGroupID", objLeaveGroup.LeaveGroupID));
+                        parms.Add(new SqlParameter("CompanyID", objLeaveGroup.CompanyID));
                         parms.Add(new SqlParameter("LeaveGroupName", objLeaveGroup.LeaveGroupName));
                         parms.Add(new SqlParameter("CreatedDate", objLeaveGroup.CreatedDate));
                         parms.Add(new SqlParameter("CreatedTime", objLeaveGroup.CreatedTime));
@@ -82,6 +84,7 @@ namespace ETH.BLL.Administration
                         List<SqlParameter> parms = new List<SqlParameter>();
 
                         parms.Add(new SqlParameter("LeaveGroupID", objLeaveGroup.LeaveGroupID));
+                        parms.Add(new SqlParameter("CompanyID", objLeaveGroup.CompanyID));
                         parms.Add(new SqlParameter("LeaveGroupName", objLeaveGroup.LeaveGroupName));
                         parms.Add(new SqlParameter("ModifiedDate", objLeaveGroup.ModifiedDate));
                         parms.Add(new SqlParameter("ModifiedTime", objLeaveGroup.ModifiedTime));
@@ -243,6 +246,62 @@ namespace ETH.BLL.Administration
         {
             List<LeaveGroup> _result = null;
             _result = Select(Status.Active, DB_Flags.SelectActive, true);
+            return _result;
+        }
+
+
+        /// <summary>
+        /// Select by CompanyID
+        /// </summary>
+        /// <returns></returns>
+        public List<LeaveGroup> Select(string CompanyID)
+        {
+            List<LeaveGroup> _result = null;
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
+            string Query = "SP_LeaveGroup";
+            switch (ObjConfig.DBType)
+            {
+                // MS-SQL
+                case "0":
+                    {
+                        DBController ObjDB = new DBController(DBController.DBTypes.MSSQL);
+                        List<SqlParameter> parms = new List<SqlParameter>();
+                        parms.Add(new SqlParameter("CompanyID", CompanyID));
+                        parms.Add(new SqlParameter("Status", ((int)Status.Active).ToString()));
+                        parms.Add(new SqlParameter("Flag", 9));
+
+                        DataTable _data = ObjDB.ExecuteDataTable(Query, parms.ToArray());
+                        _result = Helper.DataTableToList<LeaveGroup>(_data);
+                        break;
+                    }
+            }
+            return _result;
+        }
+
+
+        /// <summary>
+        /// Generate New Id
+        /// </summary>
+        /// <returns></returns>
+        public static string GenerateID()
+        {
+            string _result = string.Empty;
+            Config ObjConfig = (Config)HttpContext.Current.Session["__Config__"];
+            string Query = "SP_LeaveGroup";
+            switch (ObjConfig.DBType)
+            {
+                // MS-SQL
+                case "0":
+                    {
+                        DBController ObjDB = new DBController(DBController.DBTypes.MSSQL);
+                        List<SqlParameter> parms = new List<SqlParameter>();
+                        parms.Add(new SqlParameter("Flag", 11));
+
+                        int data = (int)ObjDB.ExecuteScalar(Query, parms.ToArray());
+                        _result = (data + 1).ToString();
+                        break;
+                    }
+            }
             return _result;
         }
     }
