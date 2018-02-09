@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="<%=ResolveUrl("~") %>Components/bower_components/font-awesome/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="<%=ResolveUrl("~") %>Components/bower_components/Ionicons/css/ionicons.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="<%=ResolveUrl("~") %>Components/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
 
     <!-- daterange picker -->
     <link rel="stylesheet" href="<%=ResolveUrl("~") %>Components/bower_components/bootstrap-daterangepicker/daterangepicker.css">
@@ -65,7 +67,7 @@
                     <!-- mini logo for sidebar mini 50x50 pixels -->
                     <span id="shortcode" runat="server" class="logo-mini"></span>
                     <!-- logo for regular state and mobile devices -->
-                    <span class="logo-lg"><b>Admin</b>LTE</span>
+                    <span id="spanCompname" runat="server" class="logo-lg">My<b>Office</b></span>
                 </a>
                 <!-- Header Navbar: style can be found in header.less -->
                 <nav class="navbar navbar-static-top">
@@ -165,33 +167,22 @@
                             <!-- User Account: style can be found in dropdown.less -->
                             <li class="dropdown user user-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <img src="../../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                                    <span class="hidden-xs">Alexander Pierce</span>
+                                    <img src="<%=ResolveUrl("~") %>Components/dist/img/f1.png" class="user-image" alt="User Image">
+                                    <span class="hidden-xs">Account</span>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <!-- User image -->
                                     <li class="user-header">
-                                        <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                        <img src="<%=ResolveUrl("~") %>Components/dist/img/f1.png" class="img-circle" alt="User Image">
 
                                         <p>
-                                            Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
+                                            <asp:Label ID="lblLoginUserName" runat="server" Text="User Name"></asp:Label>
+                                            <small>Member since <asp:Label ID="lblRegDate" runat="server"></asp:Label></small>
                                         </p>
                                     </li>
                                     <!-- Menu Body -->
                                     <li class="user-body">
-                                        <div class="row">
-                                            <div class="col-xs-4 text-center">
-                                                <a href="#">Followers</a>
-                                            </div>
-                                            <div class="col-xs-4 text-center">
-                                                <a href="#">Sales</a>
-                                            </div>
-                                            <div class="col-xs-4 text-center">
-                                                <a href="#">Friends</a>
-                                            </div>
-                                        </div>
-                                        <!-- /.row -->
+                                        
                                     </li>
                                     <!-- Menu Footer-->
                                     <li class="user-footer">
@@ -222,10 +213,10 @@
                     <!-- Sidebar user panel -->
                     <div class="user-panel">
                         <div class="pull-left image">
-                            <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                            <img src="<%=ResolveUrl("~") %>Components/dist/img/f1.png" class="img-circle" alt="User Image">
                         </div>
                         <div class="pull-left info">
-                            <p>Alexander Pierce</p>
+                            <p><asp:Label ID="lblSidePanelUsername" runat="server" Text="User Name"></asp:Label></p>
                             <a href="#"><i class="fa fa-circle text-success"></i>Online</a>
                         </div>
                     </div>
@@ -463,6 +454,9 @@
     <script src="<%=ResolveUrl("~") %>Components/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap 3.3.7 -->
     <script src="<%=ResolveUrl("~") %>Components/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- DataTables -->
+    <script src="<%=ResolveUrl("~") %>Components/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="<%=ResolveUrl("~") %>Components/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
     <!-- Select2 -->
     <script src="<%=ResolveUrl("~") %>Components/bower_components/select2/dist/js/select2.full.min.js"></script>
     <!-- date-range-picker -->
@@ -482,10 +476,20 @@
     <script src="<%=ResolveUrl("~") %>Components/dist/js/demo.js"></script>
     <script>
         $(document).ready(function () {
+
             $('.sidebar-menu').tree();
 
             //Initialize Select2 Elements
             $('.select2').select2();
+
+            $('.edatatable').DataTable({
+                'paging': true,
+                'lengthChange': false,
+                'searching': false,
+                'ordering': true,
+                'info': true,
+                'autoWidth': false
+            });
 
             //Date range picker
             $('#reservation').daterangepicker();

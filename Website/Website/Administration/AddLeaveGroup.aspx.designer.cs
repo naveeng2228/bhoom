@@ -58,6 +58,15 @@ namespace Website.Administration {
         protected global::System.Web.UI.WebControls.TextBox txtLeaveGroupID;
         
         /// <summary>
+        /// btnGenerateID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnGenerateID;
+        
+        /// <summary>
         /// ddlCompanies control.
         /// </summary>
         /// <remarks>

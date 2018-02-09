@@ -67,6 +67,7 @@ namespace Website.Administration
 
         private void LoadDefaults()
         {
+            ResetFields();
             CurrentLeaveGroupID = RouteData.Values.Keys.Contains("LeaveGroupId") ? RouteData.Values["LeaveGroupId"].ToString() : "";
 
             var statuses = Enum.GetValues(typeof(Status));
@@ -74,13 +75,31 @@ namespace Website.Administration
             ddlStatus.DataBind();
 
             BindLeaveGroups();
+            BindCompany();
+        }
 
-            GenerateNewLeaveGroupID();
+        private void ResetFields()
+        {
+            CurrentLeaveGroupID = string.Empty;
+            txtLeaveGroupID.Text = "";
+            txtLeaveGroupName.Text = "";
+            ddlCompanies.SelectedIndex = 0;
+            ddlStatus.SelectedIndex = 0;
+        }
+
+        private void BindCompany()
+        {
+            Company objCompany = new Company();
+            List<Company> liCompanies = objCompany.Select(objConfig.CustomerID);
+            ddlCompanies.DataSource = objConfig.UserInfo.CompanyID != "" ? liCompanies.Where(x => x.CompanyID == objConfig.UserInfo.CompanyID) : liCompanies;
+            ddlCompanies.DataValueField = "CompanyID";
+            ddlCompanies.DataTextField = "CompanyName";
+            ddlCompanies.DataBind();
         }
 
         private void GenerateNewLeaveGroupID()
         {
-            txtLeaveGroupID.Text = LeaveGroup.GenerateID();
+            txtLeaveGroupID.Text = "LGI_" + LeaveGroup.GenerateID();
         }
 
         private void BindLeaveGroups()
@@ -120,6 +139,10 @@ namespace Website.Administration
             objLeaveGroup.CompanyID = ddlCompanies.SelectedValue;
             objLeaveGroup.LeaveGroupName = txtLeaveGroupName.Text;
 
+            objLeaveGroup.CreatedBy = objConfig.UserInfo.Id.ToString();
+            objLeaveGroup.CreatedDate = DateTime.Now.ToString(objConfig.AppDateFormat);
+            objLeaveGroup.CreatedTime = DateTime.Now.ToString(objConfig.AppTimeFormat);
+
             objLeaveGroup.ModifiedBy = objConfig.UserInfo.Id.ToString();
             objLeaveGroup.ModifiedDate = DateTime.Now.ToString(objConfig.AppDateFormat);
             objLeaveGroup.ModifiedTime = DateTime.Now.ToString(objConfig.AppTimeFormat);
@@ -150,6 +173,7 @@ namespace Website.Administration
                 LeaveGroup objLeaveGroup = new LeaveGroup();
                 objLeaveGroup.LeaveGroupID = LeaveGroupID;
                 objLeaveGroup.PartialDelete();
+                LoadDefaults();
             }
         }
 
@@ -157,6 +181,11 @@ namespace Website.Administration
         {
             gvLeaveGroups.PageIndex = e.NewPageIndex;
             BindLeaveGroups();
+        }
+
+        protected void btnGenerateID_Click(object sender, EventArgs e)
+        {
+            GenerateNewLeaveGroupID();
         }
     }
 }

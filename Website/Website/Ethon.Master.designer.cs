@@ -40,6 +40,33 @@ namespace Website {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl shortcode;
         
         /// <summary>
+        /// spanCompname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl spanCompname;
+        
+        /// <summary>
+        /// lblLoginUserName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblLoginUserName;
+        
+        /// <summary>
+        /// lblRegDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblRegDate;
+        
+        /// <summary>
         /// lnkSignOut control.
         /// </summary>
         /// <remarks>
@@ -47,6 +74,15 @@ namespace Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lnkSignOut;
+        
+        /// <summary>
+        /// lblSidePanelUsername control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSidePanelUsername;
         
         /// <summary>
         /// divSidemenu control.

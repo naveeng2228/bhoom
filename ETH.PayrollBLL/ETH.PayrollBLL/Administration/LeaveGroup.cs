@@ -295,10 +295,9 @@ namespace ETH.BLL.Administration
                     {
                         DBController ObjDB = new DBController(DBController.DBTypes.MSSQL);
                         List<SqlParameter> parms = new List<SqlParameter>();
-                        parms.Add(new SqlParameter("Flag", 11));
+                        parms.Add(new SqlParameter("Flag", 10));
 
-                        int data = (int)ObjDB.ExecuteScalar(Query, parms.ToArray());
-                        _result = (data + 1).ToString();
+                        _result = ObjDB.ExecuteScalar(Query, parms.ToArray()).ToString();
                         break;
                     }
             }

@@ -1,4 +1,5 @@
 ﻿using ETH.BLL;
+using ETH.BLL.Administration;
 using ETH.BLL.Misc;
 using ETH.BLL.Security;
 using System;
@@ -37,8 +38,24 @@ namespace Website
 
         private void LoadDefaults()
         {
+            shortcode.InnerHtml = string.Format("<b>{0}</b>", "");
+            Company ObjCompany = new Company();
+            List<Company> liCompanies = ObjCompany.Select(objConfig.CustomerID);
+            if (liCompanies.Count > 0)
+            {
+                spanCompname.InnerHtml = string.Format("<b>{0}</b>", liCompanies[0].CompanyCode);
+            }
 
-            shortcode.InnerHtml = string.Format("<b>{0}</b>");
+            lblLoginUserName.Text = objConfig.UserInfo.UserName;
+            lblSidePanelUsername.Text = objConfig.UserInfo.UserName;
+            lblRegDate.Text = objConfig.UserInfo.CreatedDate;
+            switch (objConfig.UserInfo.UserType)
+            {
+                case UserType.SuperAdmin:
+                    {
+                        break;
+                    }
+            }
         }
 
         private void BindUserMenu(int userId)
@@ -96,15 +113,15 @@ namespace Website
                 Session.Abandon();
             }
 
-            string loggedOutPageUrl = ResolveUrl("~/") + "login";
             Response.Write("<script language='javascript'>");
             Response.Write("function ClearHistory()");
             Response.Write("{");
             Response.Write(" var backlen=history.length;");
             Response.Write(" history.go(-backlen);");
-            Response.Write(" window.location.href='" + loggedOutPageUrl + "'; ");
             Response.Write("}");
             Response.Write("</script>");
+
+            Response.Redirect("~/login");
         }
     }
 }

@@ -26,33 +26,33 @@
                 <div class="box box-primary">
                     <div class="box-body box-profile">
                         <h3 class="profile-username">
-                            <asp:Label ID="lblCompanyName" runat="server" Text="Company List"></asp:Label>
+                            <asp:Label ID="lblCompanyName" runat="server" Text="Leave Groups"></asp:Label>
                         </h3>
 
                         <p class="text-muted text-center"></p>
                         <div id="divLeaveGroupList" runat="server">
                             <asp:GridView ID="gvLeaveGroups" runat="server" AutoGenerateColumns="false" 
                                 AllowPaging="true" PageSize="20" OnRowCommand="gvLeaveGroups_RowCommand" 
-                                OnPageIndexChanging="gvLeaveGroups_PageIndexChanging">
+                                OnPageIndexChanging="gvLeaveGroups_PageIndexChanging" CssClass="edatatable table table-bordered table-hover">
                                 <Columns>
                                     <asp:TemplateField HeaderText="Actions">
                                         <ItemTemplate>
                                             <asp:Button ID="btnDelete" runat="server" Text="Delete" CommandArgument='<%# Eval("LeaveGroupID") %>' CommandName="iDel" CssClass="btn btn-danger btn-sm" />
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:TemplateField HeaderImageUrl="Title">
+                                    <asp:TemplateField HeaderText="Title">
                                         <ItemTemplate>
-                                            <asp:HyperLink ID="hlLeaveGroupName" runat="server" Text='<%# Eval("LeaveGroupName") %>' NavigateUrl='~/leavemanagement/manageleavegroups/<%# Eval("LeaveGroupID") %>'></asp:HyperLink>
+                                            <asp:HyperLink ID="hlLeaveGroupName" runat="server" Text='<%# Eval("LeaveGroupName") %>' NavigateUrl='<%# "~/leavemanagement/manageleavegroups/" + Eval("LeaveGroupID") %>'></asp:HyperLink>
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                 </Columns>
                             </asp:GridView>
                         </div>
-                        <div>
-                            <a href="<%=ResolveUrl("~") %>leavemanagement/createleavegroups">New Leave Group</a>
-                        </div>
                     </div>
                     <!-- /.box-body -->
+                    <div class="box-footer">
+                        <a href="<%=ResolveUrl("~") %>leavemanagement/createleavegroups" class="btn btn-primary btn-sm">Create Leave Group</a>
+                    </div>
                 </div>
                 <!-- /.box -->
             </div>
@@ -72,7 +72,13 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="txtLeaveGroupID">Leave Group ID</label>
-                                                <asp:TextBox ID="txtLeaveGroupID" runat="server" CssClass="form-control" placeholder="Leave Group ID" ReadOnly="true"></asp:TextBox>
+                                                <div class="input-group">
+                                                    <asp:TextBox ID="txtLeaveGroupID" runat="server" CssClass="form-control" placeholder="Leave Group ID" ReadOnly="true"></asp:TextBox>    
+                                                    <span class="input-group-btn">
+                                                        <asp:Button ID="btnGenerateID" runat="server" Text="Generate New ID" CssClass="btn btn-default" OnClick="btnGenerateID_Click" />
+                                                    </span>                                                
+                                                </div>
+                                                
                                             </div>
                                             <div class="form-group">
                                                 <label for="ddlCompanies">Select Company</label>

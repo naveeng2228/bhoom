@@ -1025,3 +1025,898 @@ Log Time : 04:26:12 PM
 
 -----------------------------------------------------------------------------
 
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:07:10 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:07:24 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Object reference not set to an instance of an object.
+StackTrace :    at ETH.BLL.Administration.LeaveGroup.GenerateID() in D:\GIT-CLONES\bhoom\ETH.PayrollBLL\ETH.PayrollBLL\Administration\LeaveGroup.cs:line 300
+   at Website.Administration.AddLeaveGroup.GenerateNewLeaveGroupID() in D:\GIT-CLONES\bhoom\Website\Website\Administration\AddLeaveGroup.aspx.cs:line 94
+   at Website.Administration.AddLeaveGroup.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Administration\AddLeaveGroup.aspx.cs:line 79
+   at Website.Administration.AddLeaveGroup.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Administration\AddLeaveGroup.aspx.cs:line 30
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:07:27 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:07:27 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:08:56 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:09:23 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:21:05 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:21:11 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:21:16 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults()
+   at Website.Ethon.Page_Load(Object sender, EventArgs e)
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:25:15 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults()
+   at Website.Ethon.Page_Load(Object sender, EventArgs e)
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:25:21 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults()
+   at Website.Ethon.Page_Load(Object sender, EventArgs e)
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:28:19 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults()
+   at Website.Ethon.Page_Load(Object sender, EventArgs e)
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:28:59 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults()
+   at Website.Ethon.Page_Load(Object sender, EventArgs e)
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:30:09 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:36:09 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:36:32 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:37:35 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:38:05 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:40:26 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:45:28 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:45:32 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:46:02 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:46:59 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:47:47 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:47:54 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:49:14 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:49:19 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:49:50 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:49:54 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:50:38 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:50:42 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:50:50 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:57:23 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:57:40 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:57:50 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:57:54 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Object reference not set to an instance of an object.
+StackTrace :    at Website.Administration.ManageLeaveGroups.LoadLeaveGroupDetails(LeaveGroup ObjLeaveGroup) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageLeaveGroups.aspx.cs:line 107
+   at Website.Administration.ManageLeaveGroups.BindLeaveGroups() in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageLeaveGroups.aspx.cs:line 98
+   at Website.Administration.ManageLeaveGroups.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageLeaveGroups.aspx.cs:line 76
+   at Website.Administration.ManageLeaveGroups.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Administration\ManageLeaveGroups.aspx.cs:line 30
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:58:16 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:58:16 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:58:22 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 12:58:34 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 01:33:10 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 01:33:17 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 01:34:21 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 01:34:37 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 01:35:25 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 01:35:45 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 01:36:28 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 01:37:18 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 01:37:42 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 01:38:13 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 01:42:03 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 01:42:09 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 01:42:14 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 01:42:42 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 01:43:23 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 01:45:55 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 01:49:23 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 02:59:28 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 02:59:33 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 03:05:38 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 03:07:05 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 03:10:19 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 03:11:03 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 03:12:03 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults() in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 41
+   at Website.Ethon.Page_Load(Object sender, EventArgs e) in D:\GIT-CLONES\bhoom\Website\Website\Ethon.Master.cs:line 28
+Log Date : Friday, 09 Feb, 2018
+Log Time : 03:13:08 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults()
+   at Website.Ethon.Page_Load(Object sender, EventArgs e)
+Log Date : Friday, 09 Feb, 2018
+Log Time : 03:13:42 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults()
+   at Website.Ethon.Page_Load(Object sender, EventArgs e)
+Log Date : Friday, 09 Feb, 2018
+Log Time : 03:14:25 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults()
+   at Website.Ethon.Page_Load(Object sender, EventArgs e)
+Log Date : Friday, 09 Feb, 2018
+Log Time : 03:15:21 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults()
+   at Website.Ethon.Page_Load(Object sender, EventArgs e)
+Log Date : Friday, 09 Feb, 2018
+Log Time : 03:15:36 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults()
+   at Website.Ethon.Page_Load(Object sender, EventArgs e)
+Log Date : Friday, 09 Feb, 2018
+Log Time : 03:15:48 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+StackTrace :    at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object[] args)
+   at Website.Ethon.LoadDefaults()
+   at Website.Ethon.Page_Load(Object sender, EventArgs e)
+Log Date : Friday, 09 Feb, 2018
+Log Time : 03:27:14 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Object reference not set to an instance of an object.
+StackTrace :    at Website.Ethon.LoadDefaults()
+   at Website.Ethon.Page_Load(Object sender, EventArgs e)
+Log Date : Friday, 09 Feb, 2018
+Log Time : 03:48:02 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Object reference not set to an instance of an object.
+StackTrace :    at Website.Ethon.LoadDefaults()
+   at Website.Ethon.Page_Load(Object sender, EventArgs e)
+Log Date : Friday, 09 Feb, 2018
+Log Time : 03:48:12 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Object reference not set to an instance of an object.
+StackTrace :    at Website.Ethon.LoadDefaults()
+   at Website.Ethon.Page_Load(Object sender, EventArgs e)
+Log Date : Friday, 09 Feb, 2018
+Log Time : 03:49:24 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Object reference not set to an instance of an object.
+StackTrace :    at Website.Ethon.LoadDefaults()
+   at Website.Ethon.Page_Load(Object sender, EventArgs e)
+Log Date : Friday, 09 Feb, 2018
+Log Time : 03:50:17 PM
+
+-----------------------------------------------------------------------------
+
+Log Type : Exception
+Log Message : Object reference not set to an instance of an object.
+StackTrace :    at Website.Ethon.LoadDefaults()
+   at Website.Ethon.Page_Load(Object sender, EventArgs e)
+Log Date : Friday, 09 Feb, 2018
+Log Time : 03:50:24 PM
+
+-----------------------------------------------------------------------------
+

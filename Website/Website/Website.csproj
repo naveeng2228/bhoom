@@ -144,6 +144,7 @@
     <Content Include="Administration\ManageCompany.aspx" />
     <Content Include="Administration\ManageLeaveGroups.aspx" />
     <Content Include="Administration\ManageWorkarea.aspx" />
+    <Content Include="Administration\UpdateCompany.aspx" />
     <Content Include="Components\bower_components\bootstrap-colorpicker\dist\css\bootstrap-colorpicker.css" />
     <Content Include="Components\bower_components\bootstrap-colorpicker\dist\css\bootstrap-colorpicker.min.css" />
     <Content Include="Components\bower_components\bootstrap-colorpicker\dist\img\bootstrap-colorpicker\alpha-horizontal.png" />
@@ -6785,6 +6786,13 @@
     </Compile>
     <Compile Include="Administration\ManageWorkarea.aspx.designer.cs">
       <DependentUpon>ManageWorkarea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\UpdateCompany.aspx.cs">
+      <DependentUpon>UpdateCompany.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\UpdateCompany.aspx.designer.cs">
+      <DependentUpon>UpdateCompany.aspx</DependentUpon>
     </Compile>
     <Compile Include="Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>

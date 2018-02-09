@@ -67,6 +67,7 @@ namespace Website.Administration
 
         private void LoadDefaults()
         {
+            ResetFields();
             CurrentLeaveGroupID = RouteData.Values.Keys.Contains("LeaveGroupId") ? RouteData.Values["LeaveGroupId"].ToString() : "";
 
             var statuses = Enum.GetValues(typeof(Status));
@@ -74,6 +75,15 @@ namespace Website.Administration
             ddlStatus.DataBind();
 
             BindLeaveGroups();
+        }
+
+        private void ResetFields()
+        {
+            CurrentLeaveGroupID = string.Empty;
+            txtLeaveGroupID.Text = "";
+            txtLeaveGroupName.Text = "";
+            txtCompanyID.Text = "";
+            ddlStatus.SelectedIndex = 0;
         }
 
         private void BindLeaveGroups()
@@ -94,7 +104,8 @@ namespace Website.Administration
                     {
                         if (liLeaveGroups.Count > 0)
                         {
-                            LoadLeaveGroupDetails(liLeaveGroups[0]);
+                            LeaveGroup loadGroup = CurrentLeaveGroupID != "" ? liLeaveGroups.Where(x => x.LeaveGroupID == CurrentLeaveGroupID).FirstOrDefault() : liLeaveGroups[0];
+                            LoadLeaveGroupDetails(loadGroup);
                         }
                     }
                 }
@@ -151,6 +162,7 @@ namespace Website.Administration
                 LeaveGroup objLeaveGroup = new LeaveGroup();
                 objLeaveGroup.LeaveGroupID = LeaveGroupID;
                 objLeaveGroup.PartialDelete();
+                LoadDefaults();
             }
         }
 
